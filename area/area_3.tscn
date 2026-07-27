@@ -52,7 +52,7 @@ size = Vector2(144, 3)
 size = Vector2(18, 5.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
-size = Vector2(20, 2)
+size = Vector2(22, 3)
 
 [node name="Area_3" type="Node2D" unique_id=1163629412]
 
@@ -106,7 +106,7 @@ dialouge_resources = ExtResource("10_7dksl")
 ResuiredStage = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableSemiAuto" unique_id=244620334]
-position = Vector2(91, 113)
+position = Vector2(91, 114.5)
 shape = SubResource("RectangleShape2D_b30ca")
 
 [connection signal="body_entered" from="Area3ToArea2" to="Area3ToArea2" method="_on_body_entered"]

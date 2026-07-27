@@ -2,7 +2,7 @@ extends Node
 
 signal stage_changed
 
-var stage: int = 0
+var stage: int = 8
 
 func set_stage(new_stage: int) -> void:
 	stage = new_stage

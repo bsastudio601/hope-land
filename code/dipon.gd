@@ -1,28 +1,24 @@
-extends CharacterBody2D 
-@onready var path: Path2D = $"../DiponIn"
+extends CharacterBody2D
+@onready var path_in: PathFollow2D = $"../DiponIn/PathFollow2D"
+@onready var path_out: PathFollow2D = $"../DiponOut/PathFollow2D"
+var current_path: PathFollow2D
+@export var move_speed: float = 50.0
 
+func _ready() -> void:
+	GameState.stage_changed.connect(_on_stage_changed)
 
+func _on_stage_changed():
 
-@export var move_speed:float = 50.0 
-@export var loop_path:bool = true
+	if GameState.stage == 9:
+		current_path = path_in
+		current_path.progress = 0
 
-var last_position: Vector2 
-
-func _ready() -> void: 
-	position = path_follow.global_position 
-	last_position = position 
-	path_follow.loop = loop_path
-	pass 
+	elif GameState.stage == 10:
+		current_path = path_out
+		current_path.progress = 0
+		
 func _physics_process(delta: float) -> void:
-
-	if !loop_path:
-		if path_follow.progress >= path.curve.get_baked_length():
-			return
-
-	path_follow.progress += move_speed * delta
-
-	global_position = path_follow.global_position
-
-	var movement = global_position - last_position
-
-	last_position = global_position
+	if current_path:
+		current_path.progress += move_speed * delta
+		global_position = current_path.global_position
+		

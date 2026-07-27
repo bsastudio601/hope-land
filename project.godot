@@ -72,7 +72,7 @@ next={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialouge/area1/leftover_food_story.dialogue", "res://Dialouge/area1/rokeya_notices_story.dialogue", "res://Dialouge/area1/rokeya_talks_1_story.dialogue", "res://Dialouge/area3/behind_the_desk_story.dialogue", "res://Dialouge/area3/preparing_the_flower_pots_on_the_shelves_story.dialogue", "res://Dialouge/area3/first_time_entering_the_shop_story.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialouge/area1/leftover_food_story.dialogue", "res://Dialouge/area1/rokeya_notices_story.dialogue", "res://Dialouge/area1/rokeya_talks_1_story.dialogue", "res://Dialouge/area3/behind_the_desk_story.dialogue", "res://Dialouge/area3/preparing_the_flower_pots_on_the_shelves_story.dialogue", "res://Dialouge/area3/first_time_entering_the_shop_story.dialogue", "res://Dialouge/area3/meeting_dipon_story.dialogue")
 
 [layer_names]
 

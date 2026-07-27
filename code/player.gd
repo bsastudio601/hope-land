@@ -33,9 +33,11 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("next"):
 		var actionable = action_finder.get_overlapping_areas()
+
 		if actionable.size() > 0:
-			actionable[0].action()
-			return
+			if actionable[0].has_method("action"):
+				actionable[0].action()
+				print(actionable)
 
 
 	if Input.is_action_pressed("move_left"):

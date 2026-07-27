@@ -1,0 +1,37 @@
+~ start
+You were reminicing about your happy moments but suddenly, a customer shows up, your first customer,
+
+???: Hello! Is this your shop?
+
+Tithi: Yes.
+
+???: Amazing! This shop is sooo cute oh my god, do you manage everything alone?
+
+You nod
+
+???: The flowers smell sooo good, I really wanna buy everything!
+
+You grin a bit
+
+???: I’m glad there’s such a great flower shop in this town, this street seriously needs more color
+
+You stay silent
+
+Dipon: Oh I’m Dipon, nice to meet you!
+
+Tithi: I’m Tithi, nice to meet you too.
+
+Dipon: Well I’m in a big hurry so I’m gonna scram.
+
+You don’t know what to say
+
+Dipon: I will definitely come back though, this is such a cute place!
+
+Tithi: Thanks.
+
+Dipon: Well see you later.
+
+Tithi: You too.
+
+do GameState.next_stage()
+=> END
