@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c7wn5t7wx1o22"
+path="res://.godot/imported/first_time_entering_the_shop_story.dialogue-2a5661f810e3363c6a333058f337dd5e.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/first_time_entering_the_shop_story.dialogue"
+dest_files=["res://.godot/imported/first_time_entering_the_shop_story.dialogue-2a5661f810e3363c6a333058f337dd5e.tres"]
+
+[params]
+
+defaults=true

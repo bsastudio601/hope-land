@@ -23,7 +23,10 @@
 [ext_resource type="Texture2D" uid="uid://cjkcudj14h51p" path="res://sprite/deco/flowers/flowerpot12.png" id="13_i3pvl"]
 [ext_resource type="Texture2D" uid="uid://bx3ea2g5cy8su" path="res://sprite/deco/flowers/flowerpot3.png" id="14_0efwp"]
 [ext_resource type="Texture2D" uid="uid://btexqas1cjqyj" path="res://sprite/deco/flowers/flowerpot11.png" id="14_xe6qb"]
+[ext_resource type="Texture2D" uid="uid://bu0kxcjntnsmj" path="res://sprite/character/Dipon_test_walk_down_static.png" id="23_i3pvl"]
+[ext_resource type="Script" uid="uid://becpsngo44jjh" path="res://code/dipon.gd" id="23_xe6qb"]
 [ext_resource type="Script" uid="uid://b30xawr1gas3s" path="res://code/level/area_3_sub_1_to_area_3.gd" id="24_dxefv"]
+[ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="27_i6kev"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_riqtw"]
 texture = ExtResource("1_guqvc")
@@ -53,12 +56,17 @@ size = Vector2(10, 41.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pvl"]
 size = Vector2(18, 6.75)
 
-[node name="Area3_Sub1" type="Node2D" unique_id=1055504114]
+[sub_resource type="Curve2D" id="Curve2D_xe6qb"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 283, 193, 0, 0, 0, 0, 283, 149, 0, 0, 0, 0, 192, 148, 0, 0, 0, 0, 192, 128)
+}
+point_count = 4
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=223193144]
-offset_right = 480.0
-offset_bottom = 270.0
-color = Color(0.05882353, 0.06666667, 0.08235294, 1)
+[sub_resource type="Curve2D" id="Curve2D_drd7t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4kkl"]
+
+[node name="Area3_Sub1" type="Node2D" unique_id=1055504114]
 
 [node name="floor" type="TileMapLayer" parent="." unique_id=333667971]
 position = Vector2(-0.85, -1)
@@ -250,5 +258,38 @@ script = ExtResource("24_dxefv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area3Sub1ToArea3" unique_id=1203773757]
 position = Vector2(87, -150)
 shape = SubResource("RectangleShape2D_i3pvl")
+
+[node name="Dipon" type="Node2D" parent="." unique_id=1982362330]
+
+[node name="Dipon" type="CharacterBody2D" parent="Dipon" unique_id=2073272151]
+position = Vector2(284, 218)
+script = ExtResource("23_xe6qb")
+move_speed = 20.0
+loop_path = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dipon/Dipon" unique_id=1644746863]
+texture = ExtResource("23_i3pvl")
+
+[node name="DiponIn" type="Path2D" parent="Dipon" unique_id=880596793]
+curve = SubResource("Curve2D_xe6qb")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Dipon/DiponIn" unique_id=184308860]
+position = Vector2(283, 193)
+rotation = -1.5707964
+
+[node name="DiponOut" type="Path2D" parent="Dipon" unique_id=792593851]
+curve = SubResource("Curve2D_drd7t")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Dipon/DiponOut" unique_id=848341327]
+
+[node name="ActionableSemiAuto" parent="." unique_id=430921512 instance=ExtResource("27_i6kev")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableSemiAuto" unique_id=1603201958]
+position = Vector2(275, 117)
+shape = SubResource("RectangleShape2D_t4kkl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ActionableSemiAuto" unique_id=163860804]
+position = Vector2(192, 134)
+shape = SubResource("RectangleShape2D_t4kkl")
 
 [connection signal="body_entered" from="Area3Sub1ToArea3" to="Area3Sub1ToArea3" method="_on_body_entered"]

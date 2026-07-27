@@ -1,0 +1,4 @@
+~ start
+You decided to prepare the flower pots on the shelves.
+do GameState.next_stage()
+=> END

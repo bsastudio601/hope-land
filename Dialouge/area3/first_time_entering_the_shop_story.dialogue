@@ -1,0 +1,7 @@
+~ start
+You open the shop with a soft smile, this is something truly yours!
+
+Perhaps life is treating you a bit more farely than it used to
+
+do GameState.next_stage()
+=> END

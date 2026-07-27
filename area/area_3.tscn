@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://buxdnwitu1upa" path="res://special_scene/player.tscn" id="5_uul3j"]
 [ext_resource type="Script" uid="uid://bcnpygbk1rhyv" path="res://code/level/area_3_to_area_2.gd" id="7_k1x1i"]
 [ext_resource type="Script" uid="uid://cc545fnq4gnr" path="res://code/level/area_3_to_area_3_sub_1.gd" id="8_1b5nc"]
+[ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="9_uul3j"]
+[ext_resource type="Resource" uid="uid://c7wn5t7wx1o22" path="res://Dialouge/area3/first_time_entering_the_shop_story.dialogue" id="10_7dksl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7dksl"]
 texture = ExtResource("1_gungc")
@@ -48,6 +50,9 @@ size = Vector2(144, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uul3j"]
 size = Vector2(18, 5.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
+size = Vector2(20, 2)
 
 [node name="Area_3" type="Node2D" unique_id=1163629412]
 
@@ -95,6 +100,14 @@ script = ExtResource("8_1b5nc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area3ToArea3Sub1" unique_id=1540101613]
 position = Vector2(-301, -587)
 shape = SubResource("RectangleShape2D_uul3j")
+
+[node name="ActionableSemiAuto" parent="." unique_id=430921512 instance=ExtResource("9_uul3j")]
+dialouge_resources = ExtResource("10_7dksl")
+ResuiredStage = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableSemiAuto" unique_id=244620334]
+position = Vector2(91, 113)
+shape = SubResource("RectangleShape2D_b30ca")
 
 [connection signal="body_entered" from="Area3ToArea2" to="Area3ToArea2" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3ToArea3Sub1" to="Area3ToArea3Sub1" method="_on_body_entered"]

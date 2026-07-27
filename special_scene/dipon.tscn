@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bsh2rcjqgrtjd"]
+
+[ext_resource type="Texture2D" uid="uid://bu0kxcjntnsmj" path="res://sprite/character/Dipon_test_walk_down_static.png" id="1_k40nv"]
+
+[sub_resource type="Curve2D" id="Curve2D_yxj3l"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -10, 10, 0, 0, 0, 0, 1, -24, 0, 0, 0, 0, 93, -24, 0, 0, 0, 0, 92, 47, 0, 0, 0, 0, 17, 43, 0, 0, 0, 0, 23, 9)
+}
+point_count = 6
+
+[node name="Dipon" type="CharacterBody2D" unique_id=505341298]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055269971]
+texture = ExtResource("1_k40nv")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=189935523]
+curve = SubResource("Curve2D_yxj3l")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1102116245]
+position = Vector2(-10, 10)
+rotation = -1.2578951

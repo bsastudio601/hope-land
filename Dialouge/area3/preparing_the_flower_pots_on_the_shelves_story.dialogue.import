@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dsp4sixnuh4us"
+path="res://.godot/imported/preparing_the_flower_pots_on_the_shelves_story.dialogue-58849eae547f03be493bb5eb6127eb77.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/preparing_the_flower_pots_on_the_shelves_story.dialogue"
+dest_files=["res://.godot/imported/preparing_the_flower_pots_on_the_shelves_story.dialogue-58849eae547f03be493bb5eb6127eb77.tres"]
+
+[params]
+
+defaults=true
