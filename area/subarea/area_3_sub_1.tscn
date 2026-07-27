@@ -15,9 +15,14 @@
 [ext_resource type="Texture2D" uid="uid://bvhlbjwst4p5e" path="res://sprite/deco/flowertpot_long.png" id="8_id5sm"]
 [ext_resource type="Texture2D" uid="uid://gv0r5q15lnae" path="res://sprite/deco/plantpot_long.png" id="9_id5sm"]
 [ext_resource type="Texture2D" uid="uid://c6meni87d523m" path="res://sprite/deco/flowers/flowerpot1.png" id="11_id5sm"]
+[ext_resource type="Texture2D" uid="uid://mkmbeu561uxy" path="res://sprite/deco/flowers/flowerpot9.png" id="11_x1cpl"]
 [ext_resource type="Texture2D" uid="uid://0u1lrxi0hali" path="res://sprite/deco/flowers/flowerpot2.png" id="12_8dtp4"]
+[ext_resource type="Texture2D" uid="uid://cbyvaf0bk7sli" path="res://sprite/deco/flowers/flowerpot8.png" id="12_dupjy"]
+[ext_resource type="Texture2D" uid="uid://bqydih7lt6wnp" path="res://sprite/deco/flowers/flowerpot10.png" id="12_dxefv"]
 [ext_resource type="Texture2D" uid="uid://cbmtrioq56xuo" path="res://sprite/deco/flowers/flowerpot5.png" id="13_dupjy"]
+[ext_resource type="Texture2D" uid="uid://cjkcudj14h51p" path="res://sprite/deco/flowers/flowerpot12.png" id="13_i3pvl"]
 [ext_resource type="Texture2D" uid="uid://bx3ea2g5cy8su" path="res://sprite/deco/flowers/flowerpot3.png" id="14_0efwp"]
+[ext_resource type="Texture2D" uid="uid://btexqas1cjqyj" path="res://sprite/deco/flowers/flowerpot11.png" id="14_xe6qb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_riqtw"]
 texture = ExtResource("1_guqvc")
@@ -30,16 +35,19 @@ sources/0 = SubResource("TileSetAtlasSource_riqtw")
 size = Vector2(159, 8.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8dtp4"]
-size = Vector2(34, 10)
+size = Vector2(35, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dupjy"]
-size = Vector2(11.5, 33)
+size = Vector2(10.5, 38)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
 size = Vector2(38, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0efwp"]
 size = Vector2(20, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x1cpl"]
+size = Vector2(10, 41.5)
 
 [node name="Area3_Sub1" type="Node2D" unique_id=1055504114]
 
@@ -63,7 +71,21 @@ y_sort_enabled = true
 position = Vector2(265, 118)
 
 [node name="Player" parent="sorted" unique_id=161175090 instance=ExtResource("7_85ihf")]
-position = Vector2(-3, 41)
+position = Vector2(29, 45)
+
+[node name="onfloor" type="Sprite2D" parent="sorted" unique_id=1983413638]
+
+[node name="flower3" type="Sprite2D" parent="sorted/onfloor" unique_id=1863733931]
+position = Vector2(42, 32)
+texture = ExtResource("14_xe6qb")
+
+[node name="flower2" type="Sprite2D" parent="sorted/onfloor" unique_id=710750165]
+position = Vector2(41, 46)
+texture = ExtResource("12_dxefv")
+
+[node name="flower" type="Sprite2D" parent="sorted/onfloor" unique_id=1612774319]
+position = Vector2(41, 59)
+texture = ExtResource("13_i3pvl")
 
 [node name="repection" type="Sprite2D" parent="sorted" unique_id=1945295516]
 position = Vector2(-8, 1)
@@ -93,21 +115,45 @@ texture = ExtResource("9_id5sm")
 position = Vector2(-50, 47)
 texture = ExtResource("6_nvda2")
 
-[node name="flower" type="Sprite2D" parent="sorted/middle shelf" unique_id=132660991]
-position = Vector2(-12, -6)
-texture = ExtResource("7_riqtw")
+[node name="flower1" type="Sprite2D" parent="sorted/middle shelf" unique_id=1759800493]
+position = Vector2(-15, 5)
+texture = ExtResource("11_x1cpl")
 
-[node name="flower2" type="Sprite2D" parent="sorted/middle shelf" unique_id=790079902]
-position = Vector2(12, -6)
-texture = ExtResource("7_riqtw")
+[node name="flower2" type="Sprite2D" parent="sorted/middle shelf" unique_id=1302877276]
+position = Vector2(9, -9)
+texture = ExtResource("11_x1cpl")
 
-[node name="flower3" type="Sprite2D" parent="sorted/middle shelf" unique_id=174808385]
-position = Vector2(0, -6)
-texture = ExtResource("8_gkqb7")
+[node name="flower4" type="Sprite2D" parent="sorted/middle shelf" unique_id=1884994287]
+position = Vector2(15, 5)
+texture = ExtResource("12_dxefv")
 
-[node name="Sprite2D" type="Sprite2D" parent="sorted" unique_id=634737043]
+[node name="flower5" type="Sprite2D" parent="sorted/middle shelf" unique_id=105282724]
+position = Vector2(0, 5)
+texture = ExtResource("13_i3pvl")
+
+[node name="flower6" type="Sprite2D" parent="sorted/middle shelf" unique_id=1204118167]
+position = Vector2(-7, -9)
+texture = ExtResource("14_xe6qb")
+
+[node name="side shelf" type="Sprite2D" parent="sorted" unique_id=634737043]
 position = Vector2(-94, 32)
 texture = ExtResource("5_wwe2u")
+
+[node name="flower" type="Sprite2D" parent="sorted/side shelf" unique_id=132660991]
+position = Vector2(0, -22)
+texture = ExtResource("12_dupjy")
+
+[node name="flower3" type="Sprite2D" parent="sorted/side shelf" unique_id=174808385]
+position = Vector2(1, -12)
+texture = ExtResource("8_gkqb7")
+
+[node name="flower2" type="Sprite2D" parent="sorted/side shelf" unique_id=790079902]
+position = Vector2(0, -2)
+texture = ExtResource("12_dupjy")
+
+[node name="flower5" type="Sprite2D" parent="sorted/side shelf" unique_id=592107474]
+position = Vector2(1, 9)
+texture = ExtResource("7_riqtw")
 
 [node name="shelf" type="Sprite2D" parent="sorted" unique_id=395693282]
 position = Vector2(-61, -18)
@@ -161,11 +207,11 @@ position = Vector2(239.5, 201)
 shape = SubResource("RectangleShape2D_id5sm")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="roomborder" unique_id=1085594025]
-position = Vector2(215, 168)
+position = Vector2(215.5, 169.5)
 shape = SubResource("RectangleShape2D_8dtp4")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="roomborder" unique_id=444635091]
-position = Vector2(171.25, 150.5)
+position = Vector2(170.75, 153)
 shape = SubResource("RectangleShape2D_dupjy")
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="roomborder" unique_id=1442465855]
@@ -183,3 +229,7 @@ shape = SubResource("RectangleShape2D_0efwp")
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="roomborder" unique_id=137859647]
 position = Vector2(238, 136)
 shape = SubResource("RectangleShape2D_0efwp")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="roomborder" unique_id=1296697646]
+position = Vector2(307, 163.75)
+shape = SubResource("RectangleShape2D_x1cpl")
