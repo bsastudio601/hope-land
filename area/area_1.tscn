@@ -14,8 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://bernbnjmtnfl4" path="res://area/deco/flower_pot_long.tscn" id="12_c8be8"]
 [ext_resource type="PackedScene" uid="uid://crmb7ban0l8nx" path="res://area/deco/plant_pot_small.tscn" id="13_rfaka"]
 [ext_resource type="Script" uid="uid://bfcye46web3eq" path="res://code/level/area_1_to_sub_1.gd" id="14_nww8t"]
+[ext_resource type="Script" uid="uid://c5or14hsj0cpo" path="res://code/level/area_1_to_area_2.gd" id="15_esjm4"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wfdv8"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nww8t"]
 texture = ExtResource("1_wjdma")
 0:0/0 = 0
 1:0/0 = 0
@@ -36,13 +37,19 @@ texture = ExtResource("1_wjdma")
 8:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_t4kkl"]
-sources/0 = SubResource("TileSetAtlasSource_wfdv8")
+sources/0 = SubResource("TileSetAtlasSource_nww8t")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4kkl"]
-size = Vector2(480, 20)
+size = Vector2(480, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_esjm4"]
+size = Vector2(480, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
 size = Vector2(18, 2.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qniho"]
+size = Vector2(3, 107)
 
 [node name="Area_1" type="Node2D" unique_id=1387682372]
 
@@ -123,9 +130,13 @@ texture = ExtResource("5_nww8t")
 collision_layer = 2
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/buildign collision" unique_id=1731614553]
-position = Vector2(240, 150)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Buildings/buildign collision" unique_id=1476852597]
+position = Vector2(240, 268)
 shape = SubResource("RectangleShape2D_t4kkl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/buildign collision" unique_id=1731614553]
+position = Vector2(240, 157)
+shape = SubResource("RectangleShape2D_esjm4")
 
 [node name="deco" type="Node2D" parent="." unique_id=69159639]
 
@@ -155,4 +166,13 @@ script = ExtResource("14_nww8t")
 position = Vector2(101, -13.25)
 shape = SubResource("RectangleShape2D_b30ca")
 
+[node name="Area1ToArea2" type="Area2D" parent="." unique_id=1541966820]
+position = Vector2(196, 348)
+script = ExtResource("15_esjm4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area1ToArea2" unique_id=602818119]
+position = Vector2(-194.5, -135.5)
+shape = SubResource("RectangleShape2D_qniho")
+
 [connection signal="body_entered" from="Area1ToSub1" to="Area1ToSub1" method="_on_body_entered"]
+[connection signal="body_entered" from="Area1ToArea2" to="Area1ToArea2" method="_on_body_entered"]
