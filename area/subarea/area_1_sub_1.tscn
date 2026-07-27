@@ -1,0 +1,56 @@
+[gd_scene format=4 uid="uid://coo8a6mtrdrns"]
+
+[ext_resource type="Texture2D" uid="uid://djhvmvgt5axe1" path="res://sprite/buildings/building_home_inside_tiles.png" id="1_bla3c"]
+[ext_resource type="Texture2D" uid="uid://cv1ug7tpxdhjg" path="res://sprite/buildings/Area1_sub1_stair1.png" id="2_mmyt5"]
+[ext_resource type="PackedScene" uid="uid://buxdnwitu1upa" path="res://special_scene/player.tscn" id="3_pknjr"]
+[ext_resource type="Texture2D" uid="uid://bgja23mmxemnt" path="res://sprite/buildings/Area1_sub1_stair1_1.png" id="4_q57sm"]
+[ext_resource type="PackedScene" uid="uid://beyrr56tgobmd" path="res://special_scene/rokeya.tscn" id="5_pknjr"]
+[ext_resource type="Texture2D" uid="uid://12tgvrip3fsp" path="res://sprite/deco/item_repection_desk.png" id="6_q57sm"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hj2e4"]
+texture = ExtResource("1_bla3c")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_b30ca"]
+sources/0 = SubResource("TileSetAtlasSource_hj2e4")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
+size = Vector2(160, 8.25)
+
+[node name="Area1_Sub1" type="Node2D" unique_id=233714471]
+
+[node name="floor" type="TileMapLayer" parent="." unique_id=1092059982]
+position = Vector2(-1, -1)
+tile_map_data = PackedByteArray("AAAKAAgAAAAAAAAAAAALAAgAAAAAAAAAAAAMAAgAAAAAAAAAAAANAAgAAAAAAAAAAAAOAAgAAAAAAAAAAAAPAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAARAAgAAAAAAAAAAAASAAgAAAAAAAAAAAATAAgAAAAAAAAAAAATAAkAAAAAAAAAAAATAAoAAAAAAAAAAAASAAoAAAAAAAAAAAARAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAALAAoAAAAAAAAAAAAKAAoAAAAAAAAAAAAKAAkAAAAAAAAAAAALAAkAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAAOAAkAAAAAAAAAAAAPAAkAAAAAAAAAAAAQAAkAAAAAAAAAAAARAAkAAAAAAAAAAAASAAkAAAAAAAAAAAASAAcAAAAAAAAAAAARAAcAAAAAAAAAAAAQAAcAAAAAAAAAAAAPAAcAAAAAAAAAAAAOAAcAAAAAAAAAAAANAAcAAAAAAAAAAAAMAAcAAAAAAAAAAAALAAcAAAAAAAAAAAAKAAcAAAAAAAAAAAATAAcAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_b30ca")
+
+[node name="room1" type="Sprite2D" parent="." unique_id=1915937776]
+position = Vector2(239, 142)
+texture = ExtResource("2_mmyt5")
+
+[node name="Rokeya" parent="." unique_id=1848540236 instance=ExtResource("5_pknjr")]
+position = Vector2(283, 123)
+
+[node name="deco" type="Node2D" parent="." unique_id=1735687641]
+
+[node name="reception desk" type="Sprite2D" parent="deco" unique_id=1087444922]
+position = Vector2(272, 137)
+texture = ExtResource("6_q57sm")
+
+[node name="Player" parent="." unique_id=161175090 instance=ExtResource("3_pknjr")]
+position = Vector2(189, 152)
+
+[node name="room2" type="Sprite2D" parent="." unique_id=536096333]
+position = Vector2(239, 142)
+texture = ExtResource("4_q57sm")
+
+[node name="roomborder" type="StaticBody2D" parent="." unique_id=14257613]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="roomborder" unique_id=618936193]
+polygon = PackedVector2Array(159, 94, 159, 190, 165, 190, 165, 126, 213, 126, 213, 146, 244, 146, 313, 146, 313, 190, 319, 190, 319, 94)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="roomborder" unique_id=2009574742]
+position = Vector2(239, 185.875)
+shape = SubResource("RectangleShape2D_b30ca")
