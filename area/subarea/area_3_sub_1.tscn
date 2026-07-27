@@ -38,6 +38,9 @@ size = Vector2(11.5, 33)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
 size = Vector2(38, 7)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0efwp"]
+size = Vector2(20, 8)
+
 [node name="Area3_Sub1" type="Node2D" unique_id=1055504114]
 
 [node name="floor" type="TileMapLayer" parent="." unique_id=333667971]
@@ -60,7 +63,7 @@ y_sort_enabled = true
 position = Vector2(265, 118)
 
 [node name="Player" parent="sorted" unique_id=161175090 instance=ExtResource("7_85ihf")]
-position = Vector2(7, 40)
+position = Vector2(-3, 41)
 
 [node name="repection" type="Sprite2D" parent="sorted" unique_id=1945295516]
 position = Vector2(-8, 1)
@@ -79,7 +82,7 @@ position = Vector2(-19, 15)
 texture = ExtResource("8_id5sm")
 
 [node name="flower4" type="Sprite2D" parent="sorted/repection" unique_id=579343359]
-position = Vector2(17, 15)
+position = Vector2(-42, 15)
 texture = ExtResource("8_id5sm")
 
 [node name="flower5" type="Sprite2D" parent="sorted/repection" unique_id=1633510544]
@@ -147,7 +150,6 @@ position = Vector2(239, 142)
 texture = ExtResource("8_ib64r")
 
 [node name="roomborder" type="StaticBody2D" parent="." unique_id=707927446]
-visible = false
 collision_layer = 2
 collision_mask = 0
 
@@ -173,3 +175,11 @@ polygon = PackedVector2Array(235, 102, 235, 137, 294, 137, 294, 123, 250, 123, 2
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="roomborder" unique_id=1884028578]
 position = Vector2(204, 114)
 shape = SubResource("RectangleShape2D_b30ca")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="roomborder" unique_id=1204339952]
+position = Vector2(215, 136)
+shape = SubResource("RectangleShape2D_0efwp")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="roomborder" unique_id=137859647]
+position = Vector2(238, 136)
+shape = SubResource("RectangleShape2D_0efwp")
