@@ -1,0 +1,78 @@
+[gd_scene format=4 uid="uid://calowryl2nwve"]
+
+[ext_resource type="Texture2D" uid="uid://djhvmvgt5axe1" path="res://sprite/buildings/building_home_inside_tiles.png" id="1_eblm0"]
+[ext_resource type="Texture2D" uid="uid://ptiw4xa4rjdn" path="res://sprite/buildings/area1_sub2_stair1.png" id="2_7g8ba"]
+[ext_resource type="PackedScene" uid="uid://crmb7ban0l8nx" path="res://area/deco/plant_pot_small.tscn" id="3_d5v3k"]
+[ext_resource type="PackedScene" uid="uid://buxdnwitu1upa" path="res://special_scene/player.tscn" id="4_mvxys"]
+[ext_resource type="Texture2D" uid="uid://cdk3rio1h06xy" path="res://sprite/buildings/area1_sub2_stair2.png" id="5_kvdhe"]
+[ext_resource type="Script" uid="uid://3rvmveg45hv1" path="res://code/level/sub_2_to_sub_3.gd" id="6_7g8ba"]
+[ext_resource type="Script" uid="uid://bqb700q8mudqs" path="res://code/level/sub_2_to_sub_1.gd" id="7_d5v3k"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d5v3k"]
+texture = ExtResource("1_eblm0")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_affse"]
+sources/0 = SubResource("TileSetAtlasSource_d5v3k")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26hco"]
+size = Vector2(112, 8.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvxys"]
+size = Vector2(16, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5v3k"]
+size = Vector2(4, 32)
+
+[node name="Area1_Sub2" type="Node2D" unique_id=142454865]
+
+[node name="floor" type="TileMapLayer" parent="." unique_id=660065980]
+position = Vector2(2, -1)
+tile_map_data = PackedByteArray("AAAMAAgAAAAAAAAAAAANAAgAAAAAAAAAAAAOAAgAAAAAAAAAAAAPAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAARAAgAAAAAAAAAAAARAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAAOAAkAAAAAAAAAAAAPAAkAAAAAAAAAAAAQAAkAAAAAAAAAAAARAAkAAAAAAAAAAAARAAcAAAAAAAAAAAAQAAcAAAAAAAAAAAAPAAcAAAAAAAAAAAAOAAcAAAAAAAAAAAANAAcAAAAAAAAAAAAMAAcAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_affse")
+
+[node name="room1" type="Sprite2D" parent="." unique_id=1196674381]
+position = Vector2(239, 142)
+texture = ExtResource("2_7g8ba")
+
+[node name="deco" type="Node2D" parent="." unique_id=1623729438]
+
+[node name="plant_pot_small" parent="deco" unique_id=765640966 instance=ExtResource("3_d5v3k")]
+position = Vector2(282, 122)
+
+[node name="Player" parent="." unique_id=161175090 instance=ExtResource("4_mvxys")]
+position = Vector2(259, 141)
+
+[node name="room2" type="Sprite2D" parent="." unique_id=1062068569]
+position = Vector2(239, 142)
+texture = ExtResource("5_kvdhe")
+
+[node name="roomborder" type="StaticBody2D" parent="." unique_id=1852310226]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="roomborder" unique_id=795075258]
+polygon = PackedVector2Array(184, 94, 184, 190, 223, 190, 223, 125, 289, 125, 289, 190, 295, 190, 295, 94)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="roomborder" unique_id=315210490]
+position = Vector2(239, 185.875)
+shape = SubResource("RectangleShape2D_26hco")
+
+[node name="Sub2ToSub3" type="Area2D" parent="." unique_id=936019728]
+position = Vector2(196, 348)
+script = ExtResource("6_7g8ba")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sub2ToSub3" unique_id=571373403]
+position = Vector2(65, -222)
+shape = SubResource("RectangleShape2D_mvxys")
+
+[node name="Sub2ToSub1" type="Area2D" parent="." unique_id=221834251]
+position = Vector2(392, 696)
+script = ExtResource("7_d5v3k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sub2ToSub1" unique_id=698723779]
+position = Vector2(-167, -531)
+shape = SubResource("RectangleShape2D_d5v3k")
+
+[connection signal="body_entered" from="Sub2ToSub3" to="Sub2ToSub3" method="_on_body_entered"]
+[connection signal="body_entered" from="Sub2ToSub1" to="Sub2ToSub1" method="_on_body_entered"]

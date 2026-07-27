@@ -6,16 +6,24 @@
 [ext_resource type="Texture2D" uid="uid://bgja23mmxemnt" path="res://sprite/buildings/Area1_sub1_stair1_1.png" id="4_q57sm"]
 [ext_resource type="PackedScene" uid="uid://beyrr56tgobmd" path="res://special_scene/rokeya.tscn" id="5_pknjr"]
 [ext_resource type="Texture2D" uid="uid://12tgvrip3fsp" path="res://sprite/deco/item_repection_desk.png" id="6_q57sm"]
+[ext_resource type="Script" uid="uid://k2vfsoolnpq0" path="res://code/level/sub_1_to_area_1.gd" id="7_q57sm"]
+[ext_resource type="Script" uid="uid://i7ruvsnic1td" path="res://code/level/sub_1_to_sub_2.gd" id="8_hj2e4"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hj2e4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xf8n"]
 texture = ExtResource("1_bla3c")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_b30ca"]
-sources/0 = SubResource("TileSetAtlasSource_hj2e4")
+sources/0 = SubResource("TileSetAtlasSource_5xf8n")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
 size = Vector2(160, 8.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xf8n"]
+size = Vector2(20, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hj2e4"]
+size = Vector2(5, 16)
 
 [node name="Area1_Sub1" type="Node2D" unique_id=233714471]
 
@@ -54,3 +62,22 @@ polygon = PackedVector2Array(159, 94, 159, 190, 165, 190, 165, 126, 213, 126, 21
 [node name="CollisionShape2D" type="CollisionShape2D" parent="roomborder" unique_id=2009574742]
 position = Vector2(239, 185.875)
 shape = SubResource("RectangleShape2D_b30ca")
+
+[node name="Sub1ToArea1" type="Area2D" parent="." unique_id=964365104]
+position = Vector2(98, 174)
+script = ExtResource("7_q57sm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sub1ToArea1" unique_id=1669117375]
+position = Vector2(90, 6.5)
+shape = SubResource("RectangleShape2D_5xf8n")
+
+[node name="Sub1ToSub2" type="Area2D" parent="." unique_id=653760014]
+position = Vector2(196, 348)
+script = ExtResource("8_hj2e4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sub1ToSub2" unique_id=2076584250]
+position = Vector2(14.5, -214)
+shape = SubResource("RectangleShape2D_hj2e4")
+
+[connection signal="body_entered" from="Sub1ToArea1" to="Sub1ToArea1" method="_on_body_entered"]
+[connection signal="body_entered" from="Sub1ToSub2" to="Sub1ToSub2" method="_on_body_entered"]

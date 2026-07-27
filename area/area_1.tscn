@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ddf2gfryk6vjt" path="res://area/deco/plant_pot_long.tscn" id="10_07rkk"]
 [ext_resource type="PackedScene" uid="uid://bernbnjmtnfl4" path="res://area/deco/flower_pot_long.tscn" id="12_c8be8"]
 [ext_resource type="PackedScene" uid="uid://crmb7ban0l8nx" path="res://area/deco/plant_pot_small.tscn" id="13_rfaka"]
+[ext_resource type="Script" uid="uid://bfcye46web3eq" path="res://code/level/area_1_to_sub_1.gd" id="14_nww8t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wfdv8"]
 texture = ExtResource("1_wjdma")
@@ -39,6 +40,9 @@ sources/0 = SubResource("TileSetAtlasSource_wfdv8")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4kkl"]
 size = Vector2(480, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
+size = Vector2(18, 2.5)
 
 [node name="Area_1" type="Node2D" unique_id=1387682372]
 
@@ -142,3 +146,13 @@ position = Vector2(173, 149)
 
 [node name="Player" parent="." unique_id=161175090 instance=ExtResource("2_wfdv8")]
 position = Vector2(98, 174)
+
+[node name="Area1ToSub1" type="Area2D" parent="." unique_id=1977632159]
+position = Vector2(98, 174)
+script = ExtResource("14_nww8t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area1ToSub1" unique_id=1385905162]
+position = Vector2(101, -13.25)
+shape = SubResource("RectangleShape2D_b30ca")
+
+[connection signal="body_entered" from="Area1ToSub1" to="Area1ToSub1" method="_on_body_entered"]

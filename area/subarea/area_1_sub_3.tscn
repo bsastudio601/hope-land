@@ -1,0 +1,151 @@
+[gd_scene format=4 uid="uid://djaibg8oco6a2"]
+
+[ext_resource type="Texture2D" uid="uid://djhvmvgt5axe1" path="res://sprite/buildings/building_home_inside_tiles.png" id="1_sjf37"]
+[ext_resource type="Texture2D" uid="uid://c7hgh3sb10utv" path="res://sprite/buildings/area1_sub3_room_1.png" id="2_6n1wv"]
+[ext_resource type="Texture2D" uid="uid://c2dl8i07qohwi" path="res://sprite/deco/item_old_stove.png" id="3_b4m4j"]
+[ext_resource type="Texture2D" uid="uid://b7b1m81nucipc" path="res://sprite/deco/item_old_sink.png" id="4_j4vd5"]
+[ext_resource type="Texture2D" uid="uid://dy6y1m6ysd34s" path="res://sprite/deco/item_old_wooden_cabinet_bottom.png" id="5_ij0yu"]
+[ext_resource type="Texture2D" uid="uid://brclo48tjv6u3" path="res://sprite/deco/item_wooden_kitchen_cabiner.png" id="6_tejr2"]
+[ext_resource type="Texture2D" uid="uid://donaho6i57p5t" path="res://sprite/deco/item_cardboard_box_closed.png" id="7_sg47r"]
+[ext_resource type="Texture2D" uid="uid://caodggkxmoxvl" path="res://sprite/deco/item_matress_with_pillow_and_blanket.png" id="8_iantu"]
+[ext_resource type="Texture2D" uid="uid://co4i2vcchq2jf" path="res://sprite/deco/item_wooden_closet.png" id="9_cnm7h"]
+[ext_resource type="Texture2D" uid="uid://b5busrabl5kc6" path="res://sprite/deco/item_cardboard_box_open.png" id="10_40x3i"]
+[ext_resource type="Texture2D" uid="uid://b08ul3ou8n20y" path="res://sprite/deco/item_old_wooden_chair_cw90.png" id="11_nhoi6"]
+[ext_resource type="Texture2D" uid="uid://c8j06vftpdweq" path="res://sprite/deco/item_old_table_90CW.png" id="12_nu7rv"]
+[ext_resource type="Texture2D" uid="uid://d37wx84dbadx1" path="res://sprite/deco/item_old_wooden_chair.png" id="13_b8qeb"]
+[ext_resource type="PackedScene" uid="uid://buxdnwitu1upa" path="res://special_scene/player.tscn" id="14_f6map"]
+[ext_resource type="Texture2D" uid="uid://eqg25j0pl0hd" path="res://sprite/buildings/area1_sub3_room_2.png" id="15_cih7r"]
+[ext_resource type="Script" uid="uid://drdmhit5mnq5k" path="res://code/level/sub_3_to_sub_2.gd" id="16_6n1wv"]
+[ext_resource type="PackedScene" uid="uid://cfq4gw3ntc534" path="res://special_scene/cutscene.tscn" id="17_b4m4j"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdl2k"]
+texture = ExtResource("1_sjf37")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_lqec7"]
+sources/0 = SubResource("TileSetAtlasSource_kdl2k")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnywl"]
+size = Vector2(159, 8.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sr5tr"]
+size = Vector2(20, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjf37"]
+size = Vector2(15, 14)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b30ca"]
+radius = 8.0
+height = 58.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4m4j"]
+size = Vector2(18, 2)
+
+[node name="Area1_Sub3" type="Node2D" unique_id=1156910619]
+
+[node name="floor" type="TileMapLayer" parent="." unique_id=671333916]
+position = Vector2(-0.85, -1)
+tile_map_data = PackedByteArray("AAAMAAgAAAAAAAAAAAANAAgAAAAAAAAAAAAOAAgAAAAAAAAAAAAPAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAARAAgAAAAAAAAAAAARAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAAOAAkAAAAAAAAAAAAPAAkAAAAAAAAAAAAQAAkAAAAAAAAAAAARAAkAAAAAAAAAAAARAAcAAAAAAAAAAAAQAAcAAAAAAAAAAAAPAAcAAAAAAAAAAAAOAAcAAAAAAAAAAAANAAcAAAAAAAAAAAAMAAcAAAAAAAAAAAASAAcAAAAAAAAAAAATAAcAAAAAAAAAAAASAAgAAAAAAAAAAAATAAgAAAAAAAAAAAATAAkAAAAAAAAAAAATAAoAAAAAAAAAAAATAAsAAAAAAAAAAAASAAsAAAAAAAAAAAARAAsAAAAAAAAAAAAQAAsAAAAAAAAAAAAPAAsAAAAAAAAAAAAOAAsAAAAAAAAAAAANAAsAAAAAAAAAAAAMAAsAAAAAAAAAAAALAAsAAAAAAAAAAAAKAAsAAAAAAAAAAAAKAAoAAAAAAAAAAAAKAAkAAAAAAAAAAAAKAAgAAAAAAAAAAAALAAgAAAAAAAAAAAALAAkAAAAAAAAAAAALAAoAAAAAAAAAAAAKAAcAAAAAAAAAAAALAAcAAAAAAAAAAAASAAkAAAAAAAAAAAASAAoAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_lqec7")
+
+[node name="room1" type="Sprite2D" parent="." unique_id=29328000]
+position = Vector2(239, 142)
+texture = ExtResource("2_6n1wv")
+
+[node name="deco" type="Node2D" parent="." unique_id=1305495971]
+
+[node name="Sprite2D2" type="Sprite2D" parent="deco" unique_id=1500294661]
+position = Vector2(208, 115)
+texture = ExtResource("3_b4m4j")
+
+[node name="Sprite2D2" type="Sprite2D" parent="deco/Sprite2D2" unique_id=1445774036]
+position = Vector2(-17, 0)
+texture = ExtResource("4_j4vd5")
+
+[node name="Sprite2D3" type="Sprite2D" parent="deco/Sprite2D2" unique_id=335491236]
+position = Vector2(-34, 0)
+texture = ExtResource("5_ij0yu")
+
+[node name="Sprite2D4" type="Sprite2D" parent="deco/Sprite2D2" unique_id=1495165191]
+position = Vector2(17, 0)
+texture = ExtResource("5_ij0yu")
+
+[node name="Sprite2D3" type="Sprite2D" parent="deco" unique_id=753042132]
+position = Vector2(174, 94)
+texture = ExtResource("6_tejr2")
+
+[node name="Sprite2D3" type="Sprite2D" parent="deco/Sprite2D3" unique_id=2080679600]
+position = Vector2(17, 0)
+texture = ExtResource("6_tejr2")
+
+[node name="Sprite2D" type="Sprite2D" parent="deco" unique_id=654224983]
+position = Vector2(173, 147)
+texture = ExtResource("7_sg47r")
+
+[node name="matress" type="Sprite2D" parent="deco" unique_id=1110849928]
+position = Vector2(178, 167)
+texture = ExtResource("8_iantu")
+
+[node name="Sprite2D4" type="Sprite2D" parent="deco" unique_id=922014595]
+position = Vector2(242, 111)
+texture = ExtResource("9_cnm7h")
+
+[node name="Sprite2D5" type="Sprite2D" parent="deco" unique_id=195834748]
+position = Vector2(225, 106)
+texture = ExtResource("10_40x3i")
+
+[node name="Sprite2D7" type="Sprite2D" parent="deco" unique_id=2032047603]
+position = Vector2(303, 142)
+texture = ExtResource("11_nhoi6")
+
+[node name="Sprite2D6" type="Sprite2D" parent="deco" unique_id=593845926]
+position = Vector2(303, 162)
+texture = ExtResource("12_nu7rv")
+
+[node name="Sprite2D8" type="Sprite2D" parent="deco" unique_id=641941467]
+position = Vector2(303, 177)
+texture = ExtResource("13_b8qeb")
+flip_h = true
+
+[node name="Player" parent="." unique_id=161175090 instance=ExtResource("14_f6map")]
+position = Vector2(277, 140)
+
+[node name="room2" type="Sprite2D" parent="." unique_id=92817699]
+position = Vector2(239, 142)
+texture = ExtResource("15_cih7r")
+
+[node name="roomborder" type="StaticBody2D" parent="." unique_id=1730584692]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="roomborder" unique_id=938587399]
+polygon = PackedVector2Array(159, 78, 159, 197, 165, 197, 165, 125, 251, 126, 251, 110, 313, 110, 313, 197, 319, 197, 319, 78)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="roomborder" unique_id=1620174579]
+position = Vector2(239.5, 201)
+shape = SubResource("RectangleShape2D_lnywl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="roomborder" unique_id=948994223]
+position = Vector2(178, 166.5)
+shape = SubResource("RectangleShape2D_sr5tr")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="roomborder" unique_id=872279014]
+position = Vector2(172.5, 147)
+shape = SubResource("RectangleShape2D_sjf37")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="roomborder" unique_id=195745702]
+position = Vector2(303, 160)
+shape = SubResource("CapsuleShape2D_b30ca")
+
+[node name="Sub3ToSub2" type="Area2D" parent="." unique_id=4488631]
+position = Vector2(392, 696)
+script = ExtResource("16_6n1wv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sub3ToSub2" unique_id=543525900]
+position = Vector2(-102, -585)
+shape = SubResource("RectangleShape2D_b4m4j")
+
+[node name="cutscene" parent="." unique_id=696761095 instance=ExtResource("17_b4m4j")]
+text = "aswdadsa"
+
+[connection signal="body_entered" from="Sub3ToSub2" to="Sub3ToSub2" method="_on_body_entered"]
