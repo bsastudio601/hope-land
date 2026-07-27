@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://crmb7ban0l8nx"]
+
+[ext_resource type="Texture2D" uid="uid://c0u4g015th2hr" path="res://sprite/deco/plantpot_1.png" id="1_eek6o"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b30ca"]
+radius = 7.0
+height = 24.0
+
+[node name="plant_pot_small" type="StaticBody2D" unique_id=765640966]
+collision_layer = 2
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=257671999]
+texture = ExtResource("1_eek6o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1344727651]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_b30ca")

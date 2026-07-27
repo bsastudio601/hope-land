@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://bxcf6o7xs6l6r" path="res://sprite/character/32x32GirlwalkCycleLeft1t.png" id="5_temte"]
 [ext_resource type="Texture2D" uid="uid://cj2nrxmtibfhw" path="res://sprite/character/32x32GirlwalkCycleRightt1t.png" id="6_to5wb"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4kkl"]
+size = Vector2(15, 3)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_yfpwy"]
 atlas = ExtResource("1_7at3j")
 region = Rect2(0, 0, 32, 32)
@@ -179,21 +182,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4kkl"]
-size = Vector2(15, 3)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_b30ca"]
 
 [node name="Player" type="CharacterBody2D" unique_id=161175090]
+collision_mask = 2
 script = ExtResource("1_vit0a")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=977109518]
-sprite_frames = SubResource("SpriteFrames_b30ca")
-animation = &"walkdown"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1020196240]
 position = Vector2(0.5, 11.5)
 shape = SubResource("RectangleShape2D_t4kkl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=977109518]
+sprite_frames = SubResource("SpriteFrames_b30ca")
+animation = &"walkdown"
 
 [node name="ActionFinder" type="Area2D" parent="." unique_id=1162027420]
 

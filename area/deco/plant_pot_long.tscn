@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ddf2gfryk6vjt"]
+
+[ext_resource type="Texture2D" uid="uid://gv0r5q15lnae" path="res://sprite/deco/plantpot_long.png" id="1_5u7v8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
+size = Vector2(20, 8)
+
+[node name="plant_pot_long" type="StaticBody2D" unique_id=46962436]
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2044225708]
+texture = ExtResource("1_5u7v8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=366546569]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_b30ca")
