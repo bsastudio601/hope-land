@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cniaqxh4jx1kn"
+path="res://.godot/imported/rokeya_talks_1_story.dialogue-87d281a177f36a5e5d9cf55189d3acb8.tres"
+
+[deps]
+
+source_file="res://Dialouge/area1/rokeya_talks_1_story.dialogue"
+dest_files=["res://.godot/imported/rokeya_talks_1_story.dialogue-87d281a177f36a5e5d9cf55189d3acb8.tres"]
+
+[params]
+
+defaults=true

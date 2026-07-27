@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://0n2jag7tvx6x"]
+
+[ext_resource type="Script" uid="uid://cb0melgj2wti4" path="res://special_scene/code/actionable_semi_auto.gd" id="1_hgxu2"]
+
+[node name="ActionableSemiAuto" type="Area2D" unique_id=430921512]
+script = ExtResource("1_hgxu2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

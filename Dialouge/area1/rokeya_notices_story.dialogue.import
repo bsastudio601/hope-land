@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://byjwb6c41f6on"
+path="res://.godot/imported/rokeya_notices_story.dialogue-5ee908e21e311941c2a11077c0a128cd.tres"
+
+[deps]
+
+source_file="res://Dialouge/area1/rokeya_notices_story.dialogue"
+dest_files=["res://.godot/imported/rokeya_notices_story.dialogue-5ee908e21e311941c2a11077c0a128cd.tres"]
+
+[params]
+
+defaults=true

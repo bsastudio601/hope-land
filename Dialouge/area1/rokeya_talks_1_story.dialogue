@@ -1,0 +1,40 @@
+~ start
+Tithi: Good morning.
+
+Rokeya: Good morning Tithi, have you slept well?
+
+Tithi : yes.
+
+Rokeya: Glad to hear that
+
+Rokeya: ...
+
+Rokeya: You overslept again?
+
+You looked surprised,
+
+Tithi: How did you guess?
+
+Rokeya: You’ve been here for a month and I see you like everyday, so it’s quite natural I am used to your routine.
+
+You’re listening with a natural silence
+
+Rokeya: Besides you’re just like my daughter Aysha, she’s a lazy brat who slept until the afternoon.
+
+Rokeya smiles like a caring mother
+
+Rokeya: Anyways today is your first day opening your very own flower shop! Here’s a small gift from me, consider it as a lucky charm.
+
+You receive a watering can keychain.
+
+You look at it for a long time while ruminating
+
+Tithi: Thank you.
+
+Rokeya: Good luck with your first day as a flower shop owner! Also remember to eat the lunch I packed.
+
+Tithi: ... Thanks ,I will
+
+do GameState.next_stage()
+
+=> END

@@ -30,7 +30,7 @@ func play() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if not active:
 		return
-	if event.is_action_pressed("Space"):
+	if event.is_action_pressed("next"):
 		active = false
 		await fade_text_out()
 		GameState.next_stage()

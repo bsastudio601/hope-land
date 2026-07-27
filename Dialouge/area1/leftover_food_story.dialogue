@@ -1,0 +1,4 @@
+~ start
+Left over food from the night. You eat the food with a blank mind and the smell of an old apartment.
+do GameState.next_stage()
+=> END

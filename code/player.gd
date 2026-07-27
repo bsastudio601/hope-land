@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 		return
 	var direction = Vector2.ZERO
 	
-	if Input.is_action_just_pressed("space"):
+	if Input.is_action_just_pressed("next"):
 		var actionable = action_finder.get_overlapping_areas()
 		if actionable.size() > 0:
 			actionable[0].action()

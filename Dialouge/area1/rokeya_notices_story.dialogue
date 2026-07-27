@@ -1,0 +1,4 @@
+~ start
+Rokeya: Tithi! Come to me for a bit.
+do GameState.next_stage()
+=> END

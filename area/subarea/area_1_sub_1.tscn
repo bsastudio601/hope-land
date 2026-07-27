@@ -8,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://12tgvrip3fsp" path="res://sprite/deco/item_repection_desk.png" id="6_q57sm"]
 [ext_resource type="Script" uid="uid://k2vfsoolnpq0" path="res://code/level/sub_1_to_area_1.gd" id="7_q57sm"]
 [ext_resource type="Script" uid="uid://i7ruvsnic1td" path="res://code/level/sub_1_to_sub_2.gd" id="8_hj2e4"]
+[ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="9_5xf8n"]
+[ext_resource type="Resource" uid="uid://byjwb6c41f6on" path="res://Dialouge/area1/rokeya_notices_story.dialogue" id="10_t6i5d"]
+[ext_resource type="PackedScene" uid="uid://om06agmdfc33" path="res://special_scene/actionable.tscn" id="11_t8bax"]
+[ext_resource type="Resource" uid="uid://cniaqxh4jx1kn" path="res://Dialouge/area1/rokeya_talks_1_story.dialogue" id="12_533kg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xf8n"]
 texture = ExtResource("1_bla3c")
@@ -24,6 +28,11 @@ size = Vector2(20, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hj2e4"]
 size = Vector2(5, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4kkl"]
+size = Vector2(36, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tpifi"]
 
 [node name="Area1_Sub1" type="Node2D" unique_id=233714471]
 
@@ -46,7 +55,7 @@ position = Vector2(272, 137)
 texture = ExtResource("6_q57sm")
 
 [node name="Player" parent="." unique_id=161175090 instance=ExtResource("3_pknjr")]
-position = Vector2(189, 152)
+position = Vector2(189, 129)
 
 [node name="room2" type="Sprite2D" parent="." unique_id=536096333]
 position = Vector2(239, 142)
@@ -78,6 +87,22 @@ script = ExtResource("8_hj2e4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sub1ToSub2" unique_id=2076584250]
 position = Vector2(14.5, -214)
 shape = SubResource("RectangleShape2D_hj2e4")
+
+[node name="ActionableSemiAuto" parent="." unique_id=430921512 instance=ExtResource("9_5xf8n")]
+dialouge_resources = ExtResource("10_t6i5d")
+ResuiredStage = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableSemiAuto" unique_id=145717467]
+position = Vector2(185, 156)
+shape = SubResource("RectangleShape2D_t4kkl")
+
+[node name="Actionable" parent="." unique_id=1292003970 instance=ExtResource("11_t8bax")]
+dialouge_resources = ExtResource("12_533kg")
+ResuiredStage = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable" unique_id=681411911]
+position = Vector2(283, 126)
+shape = SubResource("RectangleShape2D_tpifi")
 
 [connection signal="body_entered" from="Sub1ToArea1" to="Sub1ToArea1" method="_on_body_entered"]
 [connection signal="body_entered" from="Sub1ToSub2" to="Sub1ToSub2" method="_on_body_entered"]

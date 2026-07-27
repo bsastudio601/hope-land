@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://db76ntjihmbpf"
+path="res://.godot/imported/leftover_food_story.dialogue-a2ca8c34180abcb13bbaae5d6f470fbd.tres"
+
+[deps]
+
+source_file="res://Dialouge/area1/leftover_food_story.dialogue"
+dest_files=["res://.godot/imported/leftover_food_story.dialogue-a2ca8c34180abcb13bbaae5d6f470fbd.tres"]
+
+[params]
+
+defaults=true

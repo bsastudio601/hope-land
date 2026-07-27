@@ -17,6 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://eqg25j0pl0hd" path="res://sprite/buildings/area1_sub3_room_2.png" id="15_cih7r"]
 [ext_resource type="Script" uid="uid://drdmhit5mnq5k" path="res://code/level/sub_3_to_sub_2.gd" id="16_6n1wv"]
 [ext_resource type="PackedScene" uid="uid://cfq4gw3ntc534" path="res://special_scene/cutscene.tscn" id="17_b4m4j"]
+[ext_resource type="PackedScene" uid="uid://om06agmdfc33" path="res://special_scene/actionable.tscn" id="18_j4vd5"]
+[ext_resource type="Resource" uid="uid://db76ntjihmbpf" path="res://Dialouge/area1/leftover_food_story.dialogue" id="19_ij0yu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdl2k"]
 texture = ExtResource("1_sjf37")
@@ -40,6 +42,9 @@ height = 58.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b4m4j"]
 size = Vector2(18, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
+size = Vector2(23, 21)
 
 [node name="Area1_Sub3" type="Node2D" unique_id=1156910619]
 
@@ -146,6 +151,30 @@ position = Vector2(-102, -585)
 shape = SubResource("RectangleShape2D_b4m4j")
 
 [node name="cutscene" parent="." unique_id=696761095 instance=ExtResource("17_b4m4j")]
-text = "aswdadsa"
+visible = false
+text = "ACT 1"
+
+[node name="cutscene2" parent="." unique_id=1842260510 instance=ExtResource("17_b4m4j")]
+visible = false
+text = "The sun lands on your eyelids, and the jarring sound of your alarm breaks your sleep."
+required_stage = 1
+
+[node name="cutscene3" parent="." unique_id=1429860894 instance=ExtResource("17_b4m4j")]
+visible = false
+text = "You wanted to wake up with the sun but you were too tired, too tired from everything"
+required_stage = 2
+
+[node name="cutscene4" parent="." unique_id=1768637271 instance=ExtResource("17_b4m4j")]
+visible = false
+text = "You freshen up, and find your leftover dinner from the night  on a dusty table that you aren’t motivated enough to clean."
+required_stage = 3
+
+[node name="Actionable" parent="." unique_id=1292003970 instance=ExtResource("18_j4vd5")]
+dialouge_resources = ExtResource("19_ij0yu")
+ResuiredStage = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable" unique_id=50134807]
+position = Vector2(302.5, 159.5)
+shape = SubResource("RectangleShape2D_b30ca")
 
 [connection signal="body_entered" from="Sub3ToSub2" to="Sub3ToSub2" method="_on_body_entered"]
