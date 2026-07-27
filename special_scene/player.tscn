@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cj2nrxmtibfhw" path="res://sprite/character/32x32GirlwalkCycleRightt1t.png" id="6_to5wb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4kkl"]
-size = Vector2(15, 3)
+size = Vector2(13, 3)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yfpwy"]
 atlas = ExtResource("1_7at3j")

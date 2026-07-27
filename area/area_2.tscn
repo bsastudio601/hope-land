@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ccrbms2spluyo" path="res://sprite/buildings/building_2.png" id="3_5hykm"]
 [ext_resource type="Texture2D" uid="uid://dhyjun35gpnny" path="res://sprite/buildings/building_3.png" id="4_yiafa"]
 [ext_resource type="Texture2D" uid="uid://brk7a888rnvf4" path="res://sprite/buildings/building_4.png" id="5_vxbcg"]
+[ext_resource type="Script" uid="uid://cvvs1lhpaxd8u" path="res://code/level/area_2_to_area_3.gd" id="9_1blg8"]
 [ext_resource type="PackedScene" uid="uid://buxdnwitu1upa" path="res://special_scene/player.tscn" id="9_6nvy1"]
 [ext_resource type="Script" uid="uid://dno08qpj32cyq" path="res://code/level/area_2_to_area_1.gd" id="10_81kng"]
 
@@ -45,6 +46,9 @@ size = Vector2(480, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hykm"]
 size = Vector2(3, 107)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81kng"]
+size = Vector2(144, 5)
 
 [node name="Area_2" type="Node2D" unique_id=1661015884]
 
@@ -99,4 +103,13 @@ script = ExtResource("10_81kng")
 position = Vector2(283, -135)
 shape = SubResource("RectangleShape2D_5hykm")
 
+[node name="Area2ToArea3" type="Area2D" parent="." unique_id=558726333]
+position = Vector2(392, 696)
+script = ExtResource("9_1blg8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2ToArea3" unique_id=620038015]
+position = Vector2(-176, -693.5)
+shape = SubResource("RectangleShape2D_81kng")
+
 [connection signal="body_entered" from="Area2ToArea1" to="Area2ToArea1" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2ToArea3" to="Area2ToArea3" method="_on_body_entered"]
