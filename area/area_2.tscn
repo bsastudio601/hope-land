@@ -6,9 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://ccrbms2spluyo" path="res://sprite/buildings/building_2.png" id="3_5hykm"]
 [ext_resource type="Texture2D" uid="uid://dhyjun35gpnny" path="res://sprite/buildings/building_3.png" id="4_yiafa"]
 [ext_resource type="Texture2D" uid="uid://brk7a888rnvf4" path="res://sprite/buildings/building_4.png" id="5_vxbcg"]
+[ext_resource type="Texture2D" uid="uid://c517ft84812c0" path="res://sprite/buildings/building_shop_1.png" id="7_vxbcg"]
+[ext_resource type="PackedScene" uid="uid://crmb7ban0l8nx" path="res://area/deco/plant_pot_small.tscn" id="8_pnx2f"]
 [ext_resource type="Script" uid="uid://cvvs1lhpaxd8u" path="res://code/level/area_2_to_area_3.gd" id="9_1blg8"]
 [ext_resource type="PackedScene" uid="uid://buxdnwitu1upa" path="res://special_scene/player.tscn" id="9_6nvy1"]
+[ext_resource type="PackedScene" uid="uid://bernbnjmtnfl4" path="res://area/deco/flower_pot_long.tscn" id="9_skbhc"]
 [ext_resource type="Script" uid="uid://dno08qpj32cyq" path="res://code/level/area_2_to_area_1.gd" id="10_81kng"]
+[ext_resource type="PackedScene" uid="uid://ddf2gfryk6vjt" path="res://area/deco/plant_pot_long.tscn" id="10_omlhb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2wl6i"]
 texture = ExtResource("1_1blg8")
@@ -81,6 +85,10 @@ texture = ExtResource("2_81kng")
 position = Vector2(327, 95)
 texture = ExtResource("5_vxbcg")
 
+[node name="cafe" type="Sprite2D" parent="Buildings" unique_id=1456114595]
+position = Vector2(76, 112)
+texture = ExtResource("7_vxbcg")
+
 [node name="buildign collision" type="StaticBody2D" parent="Buildings" unique_id=697205999]
 collision_layer = 2
 collision_mask = 0
@@ -91,6 +99,21 @@ shape = SubResource("RectangleShape2D_c7tsm")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Buildings/buildign collision" unique_id=1309164377]
 polygon = PackedVector2Array(287, 158, 367, 158, 367, 151, 400, 151, 400, 158, 480, 158, 480, 0, 288, 0)
+
+[node name="deco" type="Node2D" parent="." unique_id=325783548]
+position = Vector2(76, 112)
+
+[node name="plant_pot_small" parent="deco" unique_id=765640966 instance=ExtResource("8_pnx2f")]
+position = Vector2(204, 29)
+
+[node name="plant_pot_small2" parent="deco" unique_id=476180424 instance=ExtResource("8_pnx2f")]
+position = Vector2(332, 38)
+
+[node name="flower_pot_long" parent="deco" unique_id=827975198 instance=ExtResource("9_skbhc")]
+position = Vector2(232, 44)
+
+[node name="plant_pot_long" parent="deco" unique_id=46962436 instance=ExtResource("10_omlhb")]
+position = Vector2(353, 43)
 
 [node name="Player" parent="." unique_id=161175090 instance=ExtResource("9_6nvy1")]
 position = Vector2(98, 174)
