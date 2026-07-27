@@ -1,0 +1,87 @@
+[gd_scene format=4 uid="uid://c1hlgqercppt3"]
+
+[ext_resource type="Texture2D" uid="uid://djhvmvgt5axe1" path="res://sprite/buildings/building_home_inside_tiles.png" id="1_guqvc"]
+[ext_resource type="Texture2D" uid="uid://dnq5x2niolbxp" path="res://sprite/buildings/flowershop_inside_1.png" id="2_lwgw3"]
+[ext_resource type="Texture2D" uid="uid://cjfa2348y80ck" path="res://sprite/deco/flower_shop_table_2.png" id="3_f0gw0"]
+[ext_resource type="Texture2D" uid="uid://htwjk3lp3ydn" path="res://sprite/deco/flower_shop_table_1.png" id="4_p1pcn"]
+[ext_resource type="Texture2D" uid="uid://b1yocb2qoeagv" path="res://sprite/deco/flower_shop_table_3.png" id="5_wwe2u"]
+[ext_resource type="Texture2D" uid="uid://8s0ewl032qpd" path="res://sprite/deco/flower_shop_table_4.png" id="6_nvda2"]
+[ext_resource type="PackedScene" uid="uid://buxdnwitu1upa" path="res://special_scene/player.tscn" id="7_85ihf"]
+[ext_resource type="Texture2D" uid="uid://bu84un7e6uqkq" path="res://sprite/buildings/flowershop_inside_2.png" id="8_ib64r"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_riqtw"]
+texture = ExtResource("1_guqvc")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_gkqb7"]
+sources/0 = SubResource("TileSetAtlasSource_riqtw")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_id5sm"]
+size = Vector2(159, 8.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dtp4"]
+size = Vector2(34, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dupjy"]
+size = Vector2(11.5, 33)
+
+[node name="Area3_Sub1" type="Node2D" unique_id=1055504114]
+
+[node name="floor" type="TileMapLayer" parent="." unique_id=333667971]
+position = Vector2(-0.85, -1)
+tile_map_data = PackedByteArray("AAAMAAgAAAAAAAAAAAANAAgAAAAAAAAAAAAOAAgAAAAAAAAAAAAPAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAARAAgAAAAAAAAAAAARAAoAAAAAAAAAAAAQAAoAAAAAAAAAAAAPAAoAAAAAAAAAAAAOAAoAAAAAAAAAAAANAAoAAAAAAAAAAAAMAAoAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAAOAAkAAAAAAAAAAAAPAAkAAAAAAAAAAAAQAAkAAAAAAAAAAAARAAkAAAAAAAAAAAARAAcAAAAAAAAAAAAQAAcAAAAAAAAAAAAPAAcAAAAAAAAAAAAOAAcAAAAAAAAAAAANAAcAAAAAAAAAAAAMAAcAAAAAAAAAAAASAAcAAAAAAAAAAAATAAcAAAAAAAAAAAASAAgAAAAAAAAAAAATAAgAAAAAAAAAAAATAAkAAAAAAAAAAAATAAoAAAAAAAAAAAATAAsAAAAAAAAAAAASAAsAAAAAAAAAAAARAAsAAAAAAAAAAAAQAAsAAAAAAAAAAAAPAAsAAAAAAAAAAAAOAAsAAAAAAAAAAAANAAsAAAAAAAAAAAAMAAsAAAAAAAAAAAALAAsAAAAAAAAAAAAKAAsAAAAAAAAAAAAKAAoAAAAAAAAAAAAKAAkAAAAAAAAAAAAKAAgAAAAAAAAAAAALAAgAAAAAAAAAAAALAAkAAAAAAAAAAAALAAoAAAAAAAAAAAAKAAcAAAAAAAAAAAALAAcAAAAAAAAAAAASAAkAAAAAAAAAAAASAAoAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_gkqb7")
+
+[node name="room1" type="Sprite2D" parent="." unique_id=1825216199]
+position = Vector2(239, 142)
+texture = ExtResource("2_lwgw3")
+
+[node name="sorted" type="Node2D" parent="." unique_id=1912963300]
+y_sort_enabled = true
+position = Vector2(265, 118)
+
+[node name="Player" parent="sorted" unique_id=161175090 instance=ExtResource("7_85ihf")]
+position = Vector2(12, 22)
+
+[node name="repection" type="Sprite2D" parent="sorted" unique_id=1945295516]
+texture = ExtResource("4_p1pcn")
+
+[node name="Sprite2D2" type="Sprite2D" parent="sorted" unique_id=1240397070]
+position = Vector2(-50, 47)
+texture = ExtResource("6_nvda2")
+
+[node name="Sprite2D" type="Sprite2D" parent="sorted" unique_id=634737043]
+position = Vector2(-94, 32)
+texture = ExtResource("5_wwe2u")
+
+[node name="table behind" type="Node2D" parent="." unique_id=957622986]
+
+[node name="shelf" type="Sprite2D" parent="table behind" unique_id=395693282]
+position = Vector2(207, 100)
+texture = ExtResource("3_f0gw0")
+
+[node name="room2" type="Sprite2D" parent="." unique_id=1792320035]
+position = Vector2(239, 142)
+texture = ExtResource("8_ib64r")
+
+[node name="roomborder" type="StaticBody2D" parent="." unique_id=707927446]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="roomborder" unique_id=936193236]
+polygon = PackedVector2Array(159, 78, 159, 197, 165, 197, 165, 111, 251, 111, 313, 111, 313, 197, 319, 197, 319, 78)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="roomborder" unique_id=1275185670]
+position = Vector2(239.5, 201)
+shape = SubResource("RectangleShape2D_id5sm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="roomborder" unique_id=1085594025]
+position = Vector2(215, 167.5)
+shape = SubResource("RectangleShape2D_8dtp4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="roomborder" unique_id=444635091]
+position = Vector2(171.25, 150.5)
+shape = SubResource("RectangleShape2D_dupjy")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="roomborder" unique_id=1442465855]
+polygon = PackedVector2Array(236, 102, 236, 132, 294, 132, 294, 121, 251, 121, 251, 102)

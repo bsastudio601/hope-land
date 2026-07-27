@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dtj08puljga7s" path="res://sprite/buildings/grasslandtestt2.png" id="2_7v6d8"]
 [ext_resource type="Texture2D" uid="uid://cvk54u1cia605" path="res://sprite/buildings/building_1.png" id="3_k1x1i"]
 [ext_resource type="Texture2D" uid="uid://brk7a888rnvf4" path="res://sprite/buildings/building_4.png" id="4_1b5nc"]
+[ext_resource type="Texture2D" uid="uid://c517ft84812c0" path="res://sprite/buildings/building_shop_1.png" id="5_7v6d8"]
 [ext_resource type="PackedScene" uid="uid://buxdnwitu1upa" path="res://special_scene/player.tscn" id="5_uul3j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7dksl"]
@@ -47,14 +48,13 @@ tile_map_data = PackedByteArray("AAAAAAUAAAAHAAAAAAAAAAYAAAAAAAEAAAAAAAcAAAACAAA
 tile_set = SubResource("TileSet_382xb")
 
 [node name="Buildings" type="Node2D" parent="." unique_id=2003245598]
-visible = false
 
 [node name="building_1" type="Sprite2D" parent="Buildings" unique_id=950152347]
-position = Vector2(440, 95)
+position = Vector2(328, 188)
 texture = ExtResource("3_k1x1i")
 
 [node name="building_3" type="Sprite2D" parent="Buildings" unique_id=1325461928]
-position = Vector2(327, 95)
+position = Vector2(423, 197)
 texture = ExtResource("4_1b5nc")
 
 [node name="buildign collision" type="StaticBody2D" parent="Buildings" unique_id=1294619128]
@@ -64,6 +64,10 @@ collision_mask = 0
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Buildings/buildign collision" unique_id=1657309217]
 position = Vector2(240, 268)
 shape = SubResource("RectangleShape2D_r2eoa")
+
+[node name="flower_shop" type="Sprite2D" parent="Buildings" unique_id=765258017]
+position = Vector2(72, 63)
+texture = ExtResource("5_7v6d8")
 
 [node name="Player" parent="." unique_id=161175090 instance=ExtResource("5_uul3j")]
 position = Vector2(98, 174)
