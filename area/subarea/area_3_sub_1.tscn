@@ -3,11 +3,21 @@
 [ext_resource type="Texture2D" uid="uid://djhvmvgt5axe1" path="res://sprite/buildings/building_home_inside_tiles.png" id="1_guqvc"]
 [ext_resource type="Texture2D" uid="uid://dnq5x2niolbxp" path="res://sprite/buildings/flowershop_inside_1.png" id="2_lwgw3"]
 [ext_resource type="Texture2D" uid="uid://cjfa2348y80ck" path="res://sprite/deco/flower_shop_table_2.png" id="3_f0gw0"]
+[ext_resource type="PackedScene" uid="uid://crmb7ban0l8nx" path="res://area/deco/plant_pot_small.tscn" id="3_lwgw3"]
 [ext_resource type="Texture2D" uid="uid://htwjk3lp3ydn" path="res://sprite/deco/flower_shop_table_1.png" id="4_p1pcn"]
 [ext_resource type="Texture2D" uid="uid://b1yocb2qoeagv" path="res://sprite/deco/flower_shop_table_3.png" id="5_wwe2u"]
 [ext_resource type="Texture2D" uid="uid://8s0ewl032qpd" path="res://sprite/deco/flower_shop_table_4.png" id="6_nvda2"]
 [ext_resource type="PackedScene" uid="uid://buxdnwitu1upa" path="res://special_scene/player.tscn" id="7_85ihf"]
+[ext_resource type="Texture2D" uid="uid://cdhm7thend72q" path="res://sprite/deco/flowers/flowerpot4.png" id="7_gkqb7"]
+[ext_resource type="Texture2D" uid="uid://d0upfqnsk5vxg" path="res://sprite/deco/flowers/flowerpot6.png" id="7_riqtw"]
+[ext_resource type="Texture2D" uid="uid://j2sdfpqwh4tf" path="res://sprite/deco/flowers/flowerpot7.png" id="8_gkqb7"]
 [ext_resource type="Texture2D" uid="uid://bu84un7e6uqkq" path="res://sprite/buildings/flowershop_inside_2.png" id="8_ib64r"]
+[ext_resource type="Texture2D" uid="uid://bvhlbjwst4p5e" path="res://sprite/deco/flowertpot_long.png" id="8_id5sm"]
+[ext_resource type="Texture2D" uid="uid://gv0r5q15lnae" path="res://sprite/deco/plantpot_long.png" id="9_id5sm"]
+[ext_resource type="Texture2D" uid="uid://c6meni87d523m" path="res://sprite/deco/flowers/flowerpot1.png" id="11_id5sm"]
+[ext_resource type="Texture2D" uid="uid://0u1lrxi0hali" path="res://sprite/deco/flowers/flowerpot2.png" id="12_8dtp4"]
+[ext_resource type="Texture2D" uid="uid://cbmtrioq56xuo" path="res://sprite/deco/flowers/flowerpot5.png" id="13_dupjy"]
+[ext_resource type="Texture2D" uid="uid://bx3ea2g5cy8su" path="res://sprite/deco/flowers/flowerpot3.png" id="14_0efwp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_riqtw"]
 texture = ExtResource("1_guqvc")
@@ -39,33 +49,105 @@ tile_set = SubResource("TileSet_gkqb7")
 position = Vector2(239, 142)
 texture = ExtResource("2_lwgw3")
 
+[node name="plant_pot_small" parent="." unique_id=765640966 instance=ExtResource("3_lwgw3")]
+position = Vector2(174, 102)
+
+[node name="plant_pot_small2" parent="." unique_id=1494033456 instance=ExtResource("3_lwgw3")]
+position = Vector2(305, 102)
+
 [node name="sorted" type="Node2D" parent="." unique_id=1912963300]
 y_sort_enabled = true
 position = Vector2(265, 118)
 
 [node name="Player" parent="sorted" unique_id=161175090 instance=ExtResource("7_85ihf")]
-position = Vector2(12, 22)
+position = Vector2(7, 40)
 
 [node name="repection" type="Sprite2D" parent="sorted" unique_id=1945295516]
+position = Vector2(-8, 1)
 texture = ExtResource("4_p1pcn")
 
-[node name="Sprite2D2" type="Sprite2D" parent="sorted" unique_id=1240397070]
+[node name="flower" type="Sprite2D" parent="sorted/repection" unique_id=816771887]
+position = Vector2(23, 1)
+texture = ExtResource("7_riqtw")
+
+[node name="flower2" type="Sprite2D" parent="sorted/repection" unique_id=1768975325]
+position = Vector2(-21, -15)
+texture = ExtResource("7_gkqb7")
+
+[node name="flower3" type="Sprite2D" parent="sorted/repection" unique_id=1572859067]
+position = Vector2(-19, 15)
+texture = ExtResource("8_id5sm")
+
+[node name="flower4" type="Sprite2D" parent="sorted/repection" unique_id=579343359]
+position = Vector2(17, 15)
+texture = ExtResource("8_id5sm")
+
+[node name="flower5" type="Sprite2D" parent="sorted/repection" unique_id=1633510544]
+position = Vector2(-18, -1)
+texture = ExtResource("9_id5sm")
+
+[node name="middle shelf" type="Sprite2D" parent="sorted" unique_id=1240397070]
 position = Vector2(-50, 47)
 texture = ExtResource("6_nvda2")
+
+[node name="flower" type="Sprite2D" parent="sorted/middle shelf" unique_id=132660991]
+position = Vector2(-12, -6)
+texture = ExtResource("7_riqtw")
+
+[node name="flower2" type="Sprite2D" parent="sorted/middle shelf" unique_id=790079902]
+position = Vector2(12, -6)
+texture = ExtResource("7_riqtw")
+
+[node name="flower3" type="Sprite2D" parent="sorted/middle shelf" unique_id=174808385]
+position = Vector2(0, -6)
+texture = ExtResource("8_gkqb7")
 
 [node name="Sprite2D" type="Sprite2D" parent="sorted" unique_id=634737043]
 position = Vector2(-94, 32)
 texture = ExtResource("5_wwe2u")
 
 [node name="shelf" type="Sprite2D" parent="sorted" unique_id=395693282]
-position = Vector2(-58, -18)
+position = Vector2(-61, -18)
 texture = ExtResource("3_f0gw0")
+
+[node name="flower" type="Sprite2D" parent="sorted/shelf" unique_id=308616]
+position = Vector2(-14, -9)
+texture = ExtResource("11_id5sm")
+
+[node name="flower7" type="Sprite2D" parent="sorted/shelf" unique_id=765876365]
+position = Vector2(14, 4)
+texture = ExtResource("11_id5sm")
+
+[node name="flower2" type="Sprite2D" parent="sorted/shelf" unique_id=1537768812]
+position = Vector2(-14, 5)
+texture = ExtResource("12_8dtp4")
+
+[node name="flower4" type="Sprite2D" parent="sorted/shelf" unique_id=517425203]
+position = Vector2(6, -9)
+texture = ExtResource("13_dupjy")
+
+[node name="flower3" type="Sprite2D" parent="sorted/shelf" unique_id=771531948]
+position = Vector2(-5, -9)
+texture = ExtResource("12_8dtp4")
+
+[node name="flower5" type="Sprite2D" parent="sorted/shelf" unique_id=1743009890]
+position = Vector2(-4, 4)
+texture = ExtResource("13_dupjy")
+
+[node name="flower6" type="Sprite2D" parent="sorted/shelf" unique_id=605860377]
+position = Vector2(5, 5)
+texture = ExtResource("14_0efwp")
+
+[node name="flower8" type="Sprite2D" parent="sorted/shelf" unique_id=1771399311]
+position = Vector2(14, -9)
+texture = ExtResource("12_8dtp4")
 
 [node name="room2" type="Sprite2D" parent="." unique_id=1792320035]
 position = Vector2(239, 142)
 texture = ExtResource("8_ib64r")
 
 [node name="roomborder" type="StaticBody2D" parent="." unique_id=707927446]
+visible = false
 collision_layer = 2
 collision_mask = 0
 
@@ -85,8 +167,9 @@ position = Vector2(171.25, 150.5)
 shape = SubResource("RectangleShape2D_dupjy")
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="roomborder" unique_id=1442465855]
-polygon = PackedVector2Array(236, 102, 236, 132, 294, 132, 294, 123, 250, 123, 250, 102)
+position = Vector2(-7, 0)
+polygon = PackedVector2Array(235, 102, 235, 137, 294, 137, 294, 123, 250, 123, 250, 102)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="roomborder" unique_id=1884028578]
-position = Vector2(207, 113.5)
+position = Vector2(204, 114)
 shape = SubResource("RectangleShape2D_b30ca")
