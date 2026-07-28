@@ -195,6 +195,7 @@ position = Vector2(180, 165.5)
 shape = SubResource("RectangleShape2D_t4kkl")
 
 [node name="cutscene5" parent="." unique_id=1895124505 instance=ExtResource("17_b4m4j")]
+visible = false
 text = "End of ACT 1       act 2 is in undermaking. but it took me too long to make this act 1 and im starting my college from next week so i didnt have enough time to complete chapter 1 right now fully. but will continue to work on the game in my free time."
 required_stage = 25
 

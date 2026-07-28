@@ -30,7 +30,10 @@
 [ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="27_i6kev"]
 [ext_resource type="Resource" uid="uid://dsp4sixnuh4us" path="res://Dialouge/area3/preparing_the_flower_pots_on_the_shelves_story.dialogue" id="28_77bp7"]
 [ext_resource type="Resource" uid="uid://cpqwh2xuxhp08" path="res://Dialouge/area3/meeting_dipon_story.dialogue" id="28_86tpe"]
+[ext_resource type="Texture2D" uid="uid://ds822m4e5jpyh" path="res://sprite/character/farhan_walk_down.png" id="28_kdhec"]
+[ext_resource type="Texture2D" uid="uid://bmx80vwfl542t" path="res://sprite/character/farhan_idle.png" id="28_r22nd"]
 [ext_resource type="Resource" uid="uid://ulw6l7oafbae" path="res://Dialouge/area3/farhan_diallouge_not_known_story.dialogue" id="29_ioo4o"]
+[ext_resource type="Texture2D" uid="uid://dxfhiswibne0m" path="res://sprite/character/farhan_walk_up.png" id="29_r22nd"]
 [ext_resource type="PackedScene" uid="uid://om06agmdfc33" path="res://special_scene/actionable.tscn" id="30_86tpe"]
 [ext_resource type="Resource" uid="uid://jxsjtol8ilay" path="res://Dialouge/area3/farhan_dialouge_2_story.dialogue" id="30_kuiob"]
 [ext_resource type="Resource" uid="uid://driqm2bghblvg" path="res://Dialouge/area3/prompting_to_wait_behind_the_desk.dialogue" id="31_rewcx"]
@@ -49,7 +52,7 @@ texture = ExtResource("1_guqvc")
 sources/0 = SubResource("TileSetAtlasSource_riqtw")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bri4n"]
-size = Vector2(11, 12)
+size = Vector2(9, 4)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b30ca"]
 radius = 26.172504
@@ -65,6 +68,87 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 283, 140, 0, 0, 0, 0, 284, 217)
 }
 point_count = 2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4git"]
+atlas = ExtResource("28_r22nd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q67at"]
+atlas = ExtResource("28_kdhec")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avvd1"]
+atlas = ExtResource("28_kdhec")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvnip"]
+atlas = ExtResource("28_kdhec")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k34hx"]
+atlas = ExtResource("28_kdhec")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuea6"]
+atlas = ExtResource("29_r22nd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6a16x"]
+atlas = ExtResource("29_r22nd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36u8s"]
+atlas = ExtResource("29_r22nd")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyjfi"]
+atlas = ExtResource("29_r22nd")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b30ca"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4git")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q67at")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avvd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvnip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k34hx")
+}],
+"loop": 1,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuea6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6a16x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36u8s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lyjfi")
+}],
+"loop": 1,
+"name": &"walk_up",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tpifi"]
 radius = 29.017237
@@ -300,13 +384,10 @@ loop = false
 position = Vector2(280, 221)
 script = ExtResource("27_7bqp3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sorted/Dipon and Farhan/Farhan" unique_id=1757339866]
-position = Vector2(-0.5, 7)
-shape = SubResource("RectangleShape2D_bri4n")
-
-[node name="Sprite2D" type="Sprite2D" parent="sorted/Dipon and Farhan/Farhan/CollisionShape2D" unique_id=357052174]
-position = Vector2(0.5, -7)
-texture = ExtResource("23_i3pvl")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="sorted/Dipon and Farhan/Farhan" unique_id=1071406050]
+sprite_frames = SubResource("SpriteFrames_b30ca")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="ActionableSemiAuto" parent="sorted/Dipon and Farhan/Farhan" unique_id=430921512 instance=ExtResource("27_i6kev")]
 dialouge_resources = ExtResource("29_ioo4o")
@@ -431,10 +512,12 @@ position = Vector2(241, 147)
 shape = SubResource("RectangleShape2D_t4kkl")
 
 [node name="cutscene" parent="." unique_id=696761095 instance=ExtResource("40_xig2b")]
+visible = false
 text = "It's evening. The flowers are starting to dry up but you had your first sale and you got some experience so It's a great first day"
 required_stage = 18
 
 [node name="cutscene2" parent="." unique_id=379852201 instance=ExtResource("40_xig2b")]
+visible = false
 text = "You finlly closed the shop to go home. but its quite dark outside."
 required_stage = 19
 
