@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ulw6l7oafbae"
+path="res://.godot/imported/farhan_diallouge_not_known_story.dialogue-5d05912727c79c7c2df89c7d95057f76.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/farhan_diallouge_not_known_story.dialogue"
+dest_files=["res://.godot/imported/farhan_diallouge_not_known_story.dialogue-5d05912727c79c7c2df89c7d95057f76.tres"]
+
+[params]
+
+defaults=true

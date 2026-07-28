@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cg88v2qdnmylu"
+path="res://.godot/imported/waiting_behind_the_desk_sudden_story.dialogue-f0bc36bb1f8127290f535e0a15db38cd.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/waiting_behind_the_desk_sudden_story.dialogue"
+dest_files=["res://.godot/imported/waiting_behind_the_desk_sudden_story.dialogue-f0bc36bb1f8127290f535e0a15db38cd.tres"]
+
+[params]
+
+defaults=true

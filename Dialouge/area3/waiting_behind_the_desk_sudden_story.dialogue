@@ -1,0 +1,4 @@
+~ start
+While thinking about what to do next, suddenly another customer shows up.
+do GameState.next_stage()
+=> END

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://jxsjtol8ilay"
+path="res://.godot/imported/farhan_dialouge_2_story.dialogue-286c8d5886bb221122a5043051dabb29.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/farhan_dialouge_2_story.dialogue"
+dest_files=["res://.godot/imported/farhan_dialouge_2_story.dialogue-286c8d5886bb221122a5043051dabb29.tres"]
+
+[params]
+
+defaults=true

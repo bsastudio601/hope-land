@@ -26,9 +26,18 @@
 [ext_resource type="Texture2D" uid="uid://bu0kxcjntnsmj" path="res://sprite/character/Dipon_test_walk_down_static.png" id="23_i3pvl"]
 [ext_resource type="Script" uid="uid://becpsngo44jjh" path="res://code/dipon.gd" id="23_xe6qb"]
 [ext_resource type="Script" uid="uid://b30xawr1gas3s" path="res://code/level/area_3_sub_1_to_area_3.gd" id="24_dxefv"]
+[ext_resource type="Script" uid="uid://brj07gtdxinvj" path="res://code/farhan.gd" id="27_7bqp3"]
 [ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="27_i6kev"]
 [ext_resource type="Resource" uid="uid://dsp4sixnuh4us" path="res://Dialouge/area3/preparing_the_flower_pots_on_the_shelves_story.dialogue" id="28_77bp7"]
 [ext_resource type="Resource" uid="uid://cpqwh2xuxhp08" path="res://Dialouge/area3/meeting_dipon_story.dialogue" id="28_86tpe"]
+[ext_resource type="Resource" uid="uid://ulw6l7oafbae" path="res://Dialouge/area3/farhan_diallouge_not_known_story.dialogue" id="29_ioo4o"]
+[ext_resource type="PackedScene" uid="uid://om06agmdfc33" path="res://special_scene/actionable.tscn" id="30_86tpe"]
+[ext_resource type="Resource" uid="uid://jxsjtol8ilay" path="res://Dialouge/area3/farhan_dialouge_2_story.dialogue" id="30_kuiob"]
+[ext_resource type="Resource" uid="uid://driqm2bghblvg" path="res://Dialouge/area3/prompting_to_wait_behind_the_desk.dialogue" id="31_rewcx"]
+[ext_resource type="Resource" uid="uid://cg88v2qdnmylu" path="res://Dialouge/area3/waiting_behind_the_desk_sudden_story.dialogue" id="33_ioo4o"]
+[ext_resource type="Resource" uid="uid://bwrrnstfflxhg" path="res://Dialouge/area3/you_need_somethig_to cut_the_flowers.dialogue" id="35_fqi1v"]
+[ext_resource type="Resource" uid="uid://dl0kk421uf0vq" path="res://Dialouge/area3/grabbing_the_knife_from_the_desk.dialogue" id="36_3yt3i"]
+[ext_resource type="Resource" uid="uid://cgi4iir8q3auu" path="res://Dialouge/area3/finally_picking_up_the_flowers.dialogue" id="36_jmwm7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_riqtw"]
 texture = ExtResource("1_guqvc")
@@ -36,6 +45,30 @@ texture = ExtResource("1_guqvc")
 
 [sub_resource type="TileSet" id="TileSet_gkqb7"]
 sources/0 = SubResource("TileSetAtlasSource_riqtw")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bri4n"]
+size = Vector2(11, 12)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b30ca"]
+radius = 26.172504
+
+[sub_resource type="Curve2D" id="Curve2D_xe6qb"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 283, 193, 0, 0, 0, 0, 283, 140)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_drd7t"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 283, 140, 0, 0, 0, 0, 284, 217)
+}
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tpifi"]
+radius = 29.017237
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_82tj2"]
+radius = 26.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_id5sm"]
 size = Vector2(159, 8.25)
@@ -58,22 +91,23 @@ size = Vector2(10, 41.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pvl"]
 size = Vector2(18, 6.75)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_t4kkl"]
-radius = 23.021729
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tpifi"]
+size = Vector2(38, 17)
 
-[sub_resource type="Curve2D" id="Curve2D_xe6qb"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 283, 193, 0, 0, 0, 0, 283, 149, 0, 0, 0, 0, 192, 148, 0, 0, 0, 0, 192, 128)
-}
-point_count = 4
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pipyi"]
+size = Vector2(48, 43)
 
-[sub_resource type="Curve2D" id="Curve2D_drd7t"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 192, 128, 0, 0, 0, 0, 192, 147, 0, 0, 0, 0, 186, 144, 0, 0, 0, 0, 186, 185, 0, 0, 0, 0, 283, 183, 0, 0, 0, 0, 283, 201)
-}
-point_count = 6
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dev4u"]
+size = Vector2(44, 22)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4kkl"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i44i3"]
+size = Vector2(36, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r66fx"]
+size = Vector2(34, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_472sl"]
+size = Vector2(32, 20)
 
 [node name="Area3_Sub1" type="Node2D" unique_id=1055504114]
 
@@ -98,6 +132,7 @@ position = Vector2(265, 118)
 
 [node name="Player" parent="sorted" unique_id=161175090 instance=ExtResource("7_85ihf")]
 position = Vector2(29, 45)
+collision_mask = 3
 
 [node name="onfloor" type="Sprite2D" parent="sorted" unique_id=1983413638]
 
@@ -217,6 +252,71 @@ texture = ExtResource("14_0efwp")
 position = Vector2(14, -9)
 texture = ExtResource("12_8dtp4")
 
+[node name="Dipon and Farhan" type="Node2D" parent="sorted" unique_id=1982362330]
+y_sort_enabled = true
+position = Vector2(-265, -118)
+
+[node name="Dipon" type="CharacterBody2D" parent="sorted/Dipon and Farhan" unique_id=2073272151]
+position = Vector2(284, 218)
+script = ExtResource("23_xe6qb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorted/Dipon and Farhan/Dipon" unique_id=1941110899]
+position = Vector2(-0.5, 7)
+shape = SubResource("RectangleShape2D_bri4n")
+
+[node name="Sprite2D" type="Sprite2D" parent="sorted/Dipon and Farhan/Dipon/CollisionShape2D" unique_id=1644746863]
+position = Vector2(0.5, -7)
+texture = ExtResource("23_i3pvl")
+
+[node name="Actionable" parent="sorted/Dipon and Farhan/Dipon" unique_id=1292003970 instance=ExtResource("30_86tpe")]
+dialouge_resources = ExtResource("28_86tpe")
+ResuiredStage = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorted/Dipon and Farhan/Dipon/Actionable" unique_id=1151688776]
+shape = SubResource("CircleShape2D_b30ca")
+
+[node name="DiponIn" type="Path2D" parent="sorted/Dipon and Farhan" unique_id=880596793]
+curve = SubResource("Curve2D_xe6qb")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="sorted/Dipon and Farhan/DiponIn" unique_id=184308860]
+position = Vector2(283, 193)
+rotation = -1.5707964
+loop = false
+
+[node name="DiponOut" type="Path2D" parent="sorted/Dipon and Farhan" unique_id=792593851]
+curve = SubResource("Curve2D_drd7t")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="sorted/Dipon and Farhan/DiponOut" unique_id=848341327]
+position = Vector2(283, 140)
+rotation = 1.5578101
+loop = false
+
+[node name="Farhan" type="CharacterBody2D" parent="sorted/Dipon and Farhan" unique_id=1275816429]
+position = Vector2(280, 221)
+script = ExtResource("27_7bqp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorted/Dipon and Farhan/Farhan" unique_id=1757339866]
+position = Vector2(-0.5, 7)
+shape = SubResource("RectangleShape2D_bri4n")
+
+[node name="Sprite2D" type="Sprite2D" parent="sorted/Dipon and Farhan/Farhan/CollisionShape2D" unique_id=357052174]
+position = Vector2(0.5, -7)
+texture = ExtResource("23_i3pvl")
+
+[node name="ActionableSemiAuto" parent="sorted/Dipon and Farhan/Farhan" unique_id=430921512 instance=ExtResource("27_i6kev")]
+dialouge_resources = ExtResource("29_ioo4o")
+ResuiredStage = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorted/Dipon and Farhan/Farhan/ActionableSemiAuto" unique_id=654623424]
+shape = SubResource("CircleShape2D_tpifi")
+
+[node name="Actionable" parent="sorted/Dipon and Farhan/Farhan" unique_id=685989204 instance=ExtResource("30_86tpe")]
+dialouge_resources = ExtResource("30_kuiob")
+ResuiredStage = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorted/Dipon and Farhan/Farhan/Actionable" unique_id=830560858]
+shape = SubResource("CircleShape2D_82tj2")
+
 [node name="room2" type="Sprite2D" parent="." unique_id=1792320035]
 position = Vector2(239, 142)
 texture = ExtResource("8_ib64r")
@@ -268,46 +368,53 @@ script = ExtResource("24_dxefv")
 position = Vector2(87, -150)
 shape = SubResource("RectangleShape2D_i3pvl")
 
-[node name="Dipon" type="Node2D" parent="." unique_id=1982362330]
-
-[node name="Dipon" type="CharacterBody2D" parent="Dipon" unique_id=2073272151]
-position = Vector2(284, 218)
-script = ExtResource("23_xe6qb")
-
-[node name="ActionableSemiAuto2" parent="Dipon/Dipon" unique_id=430921512 instance=ExtResource("27_i6kev")]
-position = Vector2(-284, -218)
-dialouge_resources = ExtResource("28_86tpe")
-ResuiredStage = 9
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Dipon/Dipon/ActionableSemiAuto2" unique_id=723354463]
-position = Vector2(283, 217)
-shape = SubResource("CircleShape2D_t4kkl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Dipon/Dipon" unique_id=1644746863]
-texture = ExtResource("23_i3pvl")
-
-[node name="DiponIn" type="Path2D" parent="Dipon" unique_id=880596793]
-curve = SubResource("Curve2D_xe6qb")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Dipon/DiponIn" unique_id=184308860]
-position = Vector2(283, 193)
-rotation = -1.5707964
-loop = false
-
-[node name="DiponOut" type="Path2D" parent="Dipon" unique_id=792593851]
-curve = SubResource("Curve2D_drd7t")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Dipon/DiponOut" unique_id=848341327]
-position = Vector2(192, 128)
-rotation = 1.5707964
-loop = false
-
-[node name="ActionableSemiAuto" parent="." unique_id=792692020 instance=ExtResource("27_i6kev")]
+[node name="Actionable" parent="." unique_id=1510267585 instance=ExtResource("30_86tpe")]
 dialouge_resources = ExtResource("28_77bp7")
 ResuiredStage = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableSemiAuto" unique_id=163860804]
-position = Vector2(192, 134)
-shape = SubResource("RectangleShape2D_t4kkl")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable" unique_id=209321307]
+position = Vector2(215, 163.5)
+shape = SubResource("RectangleShape2D_tpifi")
+
+[node name="ActionableSemiAuto" parent="." unique_id=1345676699 instance=ExtResource("27_i6kev")]
+position = Vector2(279, 227)
+dialouge_resources = ExtResource("31_rewcx")
+ResuiredStage = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableSemiAuto" unique_id=1357895706]
+position = Vector2(3, -75)
+shape = SubResource("RectangleShape2D_pipyi")
+
+[node name="Actionable2" parent="." unique_id=1238030836 instance=ExtResource("30_86tpe")]
+dialouge_resources = ExtResource("33_ioo4o")
+ResuiredStage = 11
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable2" unique_id=269461067]
+position = Vector2(265, 121)
+shape = SubResource("RectangleShape2D_dev4u")
+
+[node name="Actionable3" parent="." unique_id=1711794981 instance=ExtResource("30_86tpe")]
+dialouge_resources = ExtResource("35_fqi1v")
+ResuiredStage = 13
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable3" unique_id=179004628]
+position = Vector2(215, 161.5)
+shape = SubResource("RectangleShape2D_i44i3")
+
+[node name="Actionable4" parent="." unique_id=1858368011 instance=ExtResource("30_86tpe")]
+dialouge_resources = ExtResource("36_3yt3i")
+ResuiredStage = 14
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable4" unique_id=2140391831]
+position = Vector2(244, 116.5)
+shape = SubResource("RectangleShape2D_r66fx")
+
+[node name="Actionable5" parent="." unique_id=1607518580 instance=ExtResource("30_86tpe")]
+dialouge_resources = ExtResource("36_jmwm7")
+ResuiredStage = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable5" unique_id=1899549142]
+position = Vector2(215, 162)
+shape = SubResource("RectangleShape2D_472sl")
 
 [connection signal="body_entered" from="Area3Sub1ToArea3" to="Area3Sub1ToArea3" method="_on_body_entered"]

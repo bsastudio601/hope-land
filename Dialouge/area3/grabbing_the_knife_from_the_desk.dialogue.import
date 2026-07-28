@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dl0kk421uf0vq"
+path="res://.godot/imported/grabbing_the_knife_from_the_desk.dialogue-26306671463dc8b4baead2fb45674981.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/grabbing_the_knife_from_the_desk.dialogue"
+dest_files=["res://.godot/imported/grabbing_the_knife_from_the_desk.dialogue-26306671463dc8b4baead2fb45674981.tres"]
+
+[params]
+
+defaults=true

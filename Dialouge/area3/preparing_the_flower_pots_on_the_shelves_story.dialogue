@@ -1,4 +1,7 @@
 ~ start
-You decided to prepare the flower pots on the shelves.
+The roses brushes and white lilies against each other, the lilies emit a soft and gentle scent while dancing along the sping gale.
+
+You were reminicing about your happy moments but suddenly, a customer shows up, your first customer,
+
 do GameState.next_stage()
 => END

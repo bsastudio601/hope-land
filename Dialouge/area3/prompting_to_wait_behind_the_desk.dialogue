@@ -1,0 +1,7 @@
+~ start
+That wasn’t necessarily a customer but you though he was a great potential buyer.
+
+you are getting quite tired. you should site behind the desk for a while.
+
+do GameState.next_stage()
+=> END

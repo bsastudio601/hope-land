@@ -1,0 +1,9 @@
+~ start
+Tithi: That’ll be 250 taka.
+
+???: Here you go, thank you! Nice shop by the way
+
+Tithi: Thanks.
+
+do GameState.next_stage()
+=> END

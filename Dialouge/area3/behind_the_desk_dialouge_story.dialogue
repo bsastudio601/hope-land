@@ -1,0 +1,4 @@
+~ start
+You decided to sit by the flowers, trying to take care of them
+do GameState.next_stage()
+=> END

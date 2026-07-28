@@ -1,0 +1,4 @@
+~ start
+you picked up 3 white lilies
+do GameState.next_stage()
+=> END

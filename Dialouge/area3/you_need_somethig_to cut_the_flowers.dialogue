@@ -1,0 +1,4 @@
+~ start
+You need somthing to cut the flowers with. you remember you had a swiss knife somewhere in the desk.
+do GameState.next_stage()
+=> END

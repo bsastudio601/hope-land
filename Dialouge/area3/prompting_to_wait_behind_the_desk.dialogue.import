@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://driqm2bghblvg"
+path="res://.godot/imported/prompting_to_wait_behind_the_desk.dialogue-ab961e29f072d2b28de790e5a28c4d1d.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/prompting_to_wait_behind_the_desk.dialogue"
+dest_files=["res://.godot/imported/prompting_to_wait_behind_the_desk.dialogue-ab961e29f072d2b28de790e5a28c4d1d.tres"]
+
+[params]
+
+defaults=true

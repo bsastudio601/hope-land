@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cgi4iir8q3auu"
+path="res://.godot/imported/finally_picking_up_the_flowers.dialogue-3a9bd007850847a443beec06f83c5975.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/finally_picking_up_the_flowers.dialogue"
+dest_files=["res://.godot/imported/finally_picking_up_the_flowers.dialogue-3a9bd007850847a443beec06f83c5975.tres"]
+
+[params]
+
+defaults=true

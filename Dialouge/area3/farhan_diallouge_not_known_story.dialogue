@@ -1,0 +1,6 @@
+~ start
+???:Hey I’m in a hurry, could you pack up 3 of those white lilies?
+
+Pick up the lilies from the big flower pots
+do GameState.next_stage()
+=> END

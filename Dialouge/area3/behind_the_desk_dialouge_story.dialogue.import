@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b2uvnbdfutnkn"
+path="res://.godot/imported/behind_the_desk_dialouge_story.dialogue-4debc979423370f77ad4dd537bd11153.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/behind_the_desk_dialouge_story.dialogue"
+dest_files=["res://.godot/imported/behind_the_desk_dialouge_story.dialogue-4debc979423370f77ad4dd537bd11153.tres"]
+
+[params]
+
+defaults=true

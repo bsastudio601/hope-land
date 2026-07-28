@@ -72,7 +72,7 @@ next={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialouge/area1/leftover_food_story.dialogue", "res://Dialouge/area1/rokeya_notices_story.dialogue", "res://Dialouge/area1/rokeya_talks_1_story.dialogue", "res://Dialouge/area3/behind_the_desk_story.dialogue", "res://Dialouge/area3/preparing_the_flower_pots_on_the_shelves_story.dialogue", "res://Dialouge/area3/first_time_entering_the_shop_story.dialogue", "res://Dialouge/area3/meeting_dipon_story.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialouge/area1/leftover_food_story.dialogue", "res://Dialouge/area1/rokeya_notices_story.dialogue", "res://Dialouge/area1/rokeya_talks_1_story.dialogue", "res://Dialouge/area3/behind_the_desk_story.dialogue", "res://Dialouge/area3/preparing_the_flower_pots_on_the_shelves_story.dialogue", "res://Dialouge/area3/first_time_entering_the_shop_story.dialogue", "res://Dialouge/area3/meeting_dipon_story.dialogue", "res://Dialouge/area3/behind_the_desk_dialouge_story.dialogue", "res://Dialouge/area3/prompting_to_wait_behind_the_desk.dialogue", "res://Dialouge/area3/waiting_behind_the_desk_sudden_story.dialogue", "res://Dialouge/area3/farhan_diallouge_not_known_story.dialogue", "res://Dialouge/area3/you_need_somethig_to cut_the_flowers.dialogue", "res://Dialouge/area3/grabbing_the_knife_from_the_desk.dialogue", "res://Dialouge/area3/finally_picking_up_the_flowers.dialogue", "res://Dialouge/area3/farhan_dialouge_2_story.dialogue")
 
 [layer_names]
 

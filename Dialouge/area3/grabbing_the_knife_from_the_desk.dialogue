@@ -1,0 +1,7 @@
+~ start
+You found the swiss knife that was given to you by your grandfather.
+
+It is your only beloved item.
+
+do GameState.next_stage()
+=> END

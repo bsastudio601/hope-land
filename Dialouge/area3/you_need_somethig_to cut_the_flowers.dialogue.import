@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bwrrnstfflxhg"
+path="res://.godot/imported/you_need_somethig_to cut_the_flowers.dialogue-4f68b4fdbc9c58255649b5861242466a.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/you_need_somethig_to cut_the_flowers.dialogue"
+dest_files=["res://.godot/imported/you_need_somethig_to cut_the_flowers.dialogue-4f68b4fdbc9c58255649b5861242466a.tres"]
+
+[params]
+
+defaults=true
