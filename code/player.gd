@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 50
 var facing_left = false
+var facing_up = false
 const OFFSET = 12
 var dialouge_active = false
 
@@ -17,11 +18,13 @@ func _ready() -> void:
 func on_dialouge_start(_resource)-> void:
 	dialouge_active = true
 	velocity = Vector2.ZERO
-	if facing_left:
+	if facing_up:
+		sprite.play("idleup")
+	elif facing_left:
 		sprite.play("idleleft")
 	else:
 		sprite.play("idleright")
-	
+
 func on_dialouge_end(_resource)-> void:
 	dialouge_active = false 
 	
@@ -58,26 +61,32 @@ func _physics_process(delta: float) -> void:
 
 		if direction.x < 0:
 			sprite.play("walkleft")
-			facing_left = true 
+			facing_left = true
+			facing_up = false
 			action_finder.position = Vector2(-OFFSET, 0)
 
 		elif direction.x > 0:
 			sprite.play("walkright")
 			facing_left = false
+			facing_up = false
 			action_finder.position = Vector2(OFFSET, 0)
 
 		elif direction.y < 0:
 			sprite.play("walkup")
+			facing_up = true
 			action_finder.position = Vector2(0, -OFFSET)
 
 		elif direction.y > 0:
 			sprite.play("walkdown")
+			facing_up = false
 			action_finder.position = Vector2(0, OFFSET)
 
 	else:
 		velocity = Vector2.ZERO
-		
-		if facing_left:
+
+		if facing_up:
+			sprite.play("idleup")
+		elif facing_left:
 			sprite.play("idleleft")
 		else:
 			sprite.play("idleright")

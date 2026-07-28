@@ -134,6 +134,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bri4n"]
+size = Vector2(9, 4)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_b30ca"]
 radius = 26.172504
 
@@ -279,11 +282,6 @@ size = Vector2(32, 20)
 size = Vector2(112.5, 66)
 
 [node name="Area3_Sub1" type="Node2D" unique_id=1055504114]
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1279240703]
-offset_right = 480.0
-offset_bottom = 270.0
-color = Color(0.05882353, 0.06666667, 0.08235294, 1)
 
 [node name="floor" type="TileMapLayer" parent="." unique_id=333667971]
 position = Vector2(-0.85, -1)
@@ -439,6 +437,10 @@ sprite_frames = SubResource("SpriteFrames_t4kkl")
 animation = &"walk_down"
 autoplay = "idle"
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorted/Dipon and Farhan/Dipon" unique_id=1941110899]
+position = Vector2(-0.5, 7)
+shape = SubResource("RectangleShape2D_bri4n")
+
 [node name="Actionable" parent="sorted/Dipon and Farhan/Dipon" unique_id=1292003970 instance=ExtResource("30_86tpe")]
 dialouge_resources = ExtResource("28_86tpe")
 ResuiredStage = 9
@@ -488,12 +490,6 @@ shape = SubResource("CircleShape2D_82tj2")
 [node name="room2" type="Sprite2D" parent="." unique_id=1792320035]
 position = Vector2(239, 142)
 texture = ExtResource("8_ib64r")
-
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=1046243337]
-offset_top = 206.0
-offset_right = 480.0
-offset_bottom = 270.0
-color = Color(0.05882353, 0.06666667, 0.08235294, 1)
 
 [node name="roomborder" type="StaticBody2D" parent="." unique_id=707927446]
 collision_layer = 2
