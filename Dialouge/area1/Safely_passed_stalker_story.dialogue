@@ -1,0 +1,4 @@
+~ start
+You walk past him and safely reached your apartment complex.
+do GameState.next_stage()
+=> END

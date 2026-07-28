@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dtv7hh3scgskf"
+path="res://.godot/imported/rokeya_talks_evening_story.dialogue-20d0eb971220ddca4faf61b40481f805.tres"
+
+[deps]
+
+source_file="res://Dialouge/area1/rokeya_talks_evening_story.dialogue"
+dest_files=["res://.godot/imported/rokeya_talks_evening_story.dialogue-20d0eb971220ddca4faf61b40481f805.tres"]
+
+[params]
+
+defaults=true

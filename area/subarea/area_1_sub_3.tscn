@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cfq4gw3ntc534" path="res://special_scene/cutscene.tscn" id="17_b4m4j"]
 [ext_resource type="PackedScene" uid="uid://om06agmdfc33" path="res://special_scene/actionable.tscn" id="18_j4vd5"]
 [ext_resource type="Resource" uid="uid://db76ntjihmbpf" path="res://Dialouge/area1/leftover_food_story.dialogue" id="19_ij0yu"]
+[ext_resource type="Resource" uid="uid://criiyg4tq3n2f" path="res://Dialouge/area1/goodnightt_bed_dialouge_story.dialogue" id="20_tejr2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdl2k"]
 texture = ExtResource("1_sjf37")
@@ -45,6 +46,9 @@ size = Vector2(18, 2)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
 size = Vector2(23, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4kkl"]
+size = Vector2(20, 27)
 
 [node name="Area1_Sub3" type="Node2D" unique_id=1156910619]
 
@@ -181,5 +185,17 @@ ResuiredStage = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable" unique_id=50134807]
 position = Vector2(302.5, 159.5)
 shape = SubResource("RectangleShape2D_b30ca")
+
+[node name="Actionable2" parent="." unique_id=1160896972 instance=ExtResource("18_j4vd5")]
+dialouge_resources = ExtResource("20_tejr2")
+ResuiredStage = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable2" unique_id=781550451]
+position = Vector2(180, 165.5)
+shape = SubResource("RectangleShape2D_t4kkl")
+
+[node name="cutscene5" parent="." unique_id=1895124505 instance=ExtResource("17_b4m4j")]
+text = "End of ACT 1       act 2 is in undermaking. but it took me too long to make this act 1 and im starting my college from next week so i didnt have enough time to complete chapter 1 right now fully. but will continue to work on the game in my free time."
+required_stage = 25
 
 [connection signal="body_entered" from="Sub3ToSub2" to="Sub3ToSub2" method="_on_body_entered"]

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dgk62usrkuvnx"
+path="res://.godot/imported/Safely_passed_stalker_story.dialogue-b8636947a944b97ab79a08544d9c80a9.tres"
+
+[deps]
+
+source_file="res://Dialouge/area1/Safely_passed_stalker_story.dialogue"
+dest_files=["res://.godot/imported/Safely_passed_stalker_story.dialogue-b8636947a944b97ab79a08544d9c80a9.tres"]
+
+[params]
+
+defaults=true

@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://bernbnjmtnfl4" path="res://area/deco/flower_pot_long.tscn" id="9_skbhc"]
 [ext_resource type="Script" uid="uid://dno08qpj32cyq" path="res://code/level/area_2_to_area_1.gd" id="10_81kng"]
 [ext_resource type="PackedScene" uid="uid://ddf2gfryk6vjt" path="res://area/deco/plant_pot_long.tscn" id="10_omlhb"]
+[ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="14_omlhb"]
+[ext_resource type="Resource" uid="uid://b8fp6k8fwgqtf" path="res://Dialouge/area2/stalker_dialouge_1.dialogue" id="15_6nvy1"]
+[ext_resource type="Texture2D" uid="uid://bu0kxcjntnsmj" path="res://sprite/character/Dipon_test_walk_down_static.png" id="16_2wl6i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2wl6i"]
 texture = ExtResource("1_1blg8")
@@ -53,6 +56,9 @@ size = Vector2(3, 107)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81kng"]
 size = Vector2(144, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
+size = Vector2(20, 110)
 
 [node name="Area_2" type="Node2D" unique_id=1661015884]
 
@@ -133,6 +139,20 @@ script = ExtResource("9_1blg8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2ToArea3" unique_id=620038015]
 position = Vector2(-176, -693.5)
 shape = SubResource("RectangleShape2D_81kng")
+
+[node name="stalker" type="Node2D" parent="." unique_id=1124951920]
+
+[node name="ActionableSemiAuto" parent="stalker" unique_id=430921512 instance=ExtResource("14_omlhb")]
+dialouge_resources = ExtResource("15_6nvy1")
+ResuiredStage = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stalker/ActionableSemiAuto" unique_id=1011550056]
+position = Vector2(387, 211)
+shape = SubResource("RectangleShape2D_b30ca")
+
+[node name="Sprite2D" type="Sprite2D" parent="stalker" unique_id=1919414750]
+position = Vector2(383, 145)
+texture = ExtResource("16_2wl6i")
 
 [connection signal="body_entered" from="Area2ToArea1" to="Area2ToArea1" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2ToArea3" to="Area2ToArea3" method="_on_body_entered"]

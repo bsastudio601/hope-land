@@ -12,6 +12,8 @@
 [ext_resource type="Resource" uid="uid://byjwb6c41f6on" path="res://Dialouge/area1/rokeya_notices_story.dialogue" id="10_t6i5d"]
 [ext_resource type="PackedScene" uid="uid://om06agmdfc33" path="res://special_scene/actionable.tscn" id="11_t8bax"]
 [ext_resource type="Resource" uid="uid://cniaqxh4jx1kn" path="res://Dialouge/area1/rokeya_talks_1_story.dialogue" id="12_533kg"]
+[ext_resource type="Resource" uid="uid://dsaijjtgaim2h" path="res://Dialouge/area1/Rokeya_at_evening_story.dialogue" id="13_x5jm1"]
+[ext_resource type="Resource" uid="uid://dtv7hh3scgskf" path="res://Dialouge/area1/rokeya_talks_evening_story.dialogue" id="14_tg4ru"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xf8n"]
 texture = ExtResource("1_bla3c")
@@ -33,6 +35,12 @@ size = Vector2(5, 16)
 size = Vector2(36, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tpifi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82tj2"]
+size = Vector2(39, 5.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t4kkl"]
+radius = 15.0
 
 [node name="Area1_Sub1" type="Node2D" unique_id=233714471]
 
@@ -106,8 +114,24 @@ dialouge_resources = ExtResource("12_533kg")
 ResuiredStage = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable" unique_id=681411911]
-position = Vector2(283, 126)
+position = Vector2(283, 132)
 shape = SubResource("RectangleShape2D_tpifi")
+
+[node name="ActionableSemiAuto2" parent="." unique_id=1152794084 instance=ExtResource("9_5xf8n")]
+dialouge_resources = ExtResource("13_x5jm1")
+ResuiredStage = 22
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableSemiAuto2" unique_id=982271387]
+position = Vector2(185.5, 147)
+shape = SubResource("RectangleShape2D_82tj2")
+
+[node name="Actionable2" parent="." unique_id=209032342 instance=ExtResource("11_t8bax")]
+dialouge_resources = ExtResource("14_tg4ru")
+ResuiredStage = 23
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable2" unique_id=668190295]
+position = Vector2(283, 133)
+shape = SubResource("CircleShape2D_t4kkl")
 
 [connection signal="body_entered" from="Sub1ToArea1" to="Sub1ToArea1" method="_on_body_entered"]
 [connection signal="body_entered" from="Sub1ToSub2" to="Sub1ToSub2" method="_on_body_entered"]

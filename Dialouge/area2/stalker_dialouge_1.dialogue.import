@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b8fp6k8fwgqtf"
+path="res://.godot/imported/stalker_dialouge_1.dialogue-c785df470ee9e6b85e78439e51fad64b.tres"
+
+[deps]
+
+source_file="res://Dialouge/area2/stalker_dialouge_1.dialogue"
+dest_files=["res://.godot/imported/stalker_dialouge_1.dialogue-c785df470ee9e6b85e78439e51fad64b.tres"]
+
+[params]
+
+defaults=true

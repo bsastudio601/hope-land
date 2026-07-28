@@ -1,0 +1,49 @@
+~ start
+Rokeya: I know you like coffee but I feel like you might like this tea.
+
+She gave you a steaming cup of tea
+
+Tithi: Thank you.
+
+You take a sip of the tea, it’s almost like tes has that coffee charm.
+
+Rokeya: So how was your day? First day as a flower shop owner.
+
+Tithi: It was alright.
+
+Rokeya: Any customers?
+
+Tithi: A few.
+
+Rokeya: That’s great for a first day!
+
+Rokeya: Had any problems with anything?
+
+Tithi: No, everything was okay.
+
+Rokeya: I’m glad to hear that Tithi.
+
+Rokeya: You’ve been a good kid you know, and I’m proud of you for everything.
+
+You stay quite for a bit, then suddenly your chest tightens a bit.
+
+You aren’t great with sudden affections.
+
+Tithi: Thank you.
+
+Rokeya: You should go upstairs, you seem really tired.
+
+Tithi: I am a bit.
+
+Rokeya: Alright go then, heres some food for you, not much but this is the best I can give.
+
+You receive some curry in a box from rokeya
+
+Tithi: Thank you.
+
+Rokeya: Goodnight, Tithi.
+
+Tithi: Goodnight.
+
+do GameState.next_stage()
+=> END

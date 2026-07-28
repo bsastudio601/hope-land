@@ -1,0 +1,4 @@
+~ start
+You're grateful to Rokeya for helping you start over in this town.
+do GameState.next_stage()
+=> END

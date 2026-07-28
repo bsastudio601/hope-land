@@ -1,0 +1,9 @@
+~ start
+The bed is still messy but you are tired 
+
+too tired of life 
+
+so you decided to crash in without even eating the dinner rokeya gave you.
+
+do GameState.next_stage()
+=> END

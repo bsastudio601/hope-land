@@ -38,6 +38,8 @@
 [ext_resource type="Resource" uid="uid://bwrrnstfflxhg" path="res://Dialouge/area3/you_need_somethig_to cut_the_flowers.dialogue" id="35_fqi1v"]
 [ext_resource type="Resource" uid="uid://dl0kk421uf0vq" path="res://Dialouge/area3/grabbing_the_knife_from_the_desk.dialogue" id="36_3yt3i"]
 [ext_resource type="Resource" uid="uid://cgi4iir8q3auu" path="res://Dialouge/area3/finally_picking_up_the_flowers.dialogue" id="36_jmwm7"]
+[ext_resource type="Resource" uid="uid://dw81lxa36xe5e" path="res://Dialouge/area3/before_evening_closing_story.dialogue" id="39_6dkk7"]
+[ext_resource type="PackedScene" uid="uid://cfq4gw3ntc534" path="res://special_scene/cutscene.tscn" id="40_xig2b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_riqtw"]
 texture = ExtResource("1_guqvc")
@@ -108,6 +110,9 @@ size = Vector2(34, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_472sl"]
 size = Vector2(32, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4kkl"]
+size = Vector2(112.5, 66)
 
 [node name="Area3_Sub1" type="Node2D" unique_id=1055504114]
 
@@ -416,5 +421,21 @@ ResuiredStage = 15
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable5" unique_id=1899549142]
 position = Vector2(215, 162)
 shape = SubResource("RectangleShape2D_472sl")
+
+[node name="Actionable6" parent="." unique_id=1394253568 instance=ExtResource("30_86tpe")]
+dialouge_resources = ExtResource("39_6dkk7")
+ResuiredStage = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable6" unique_id=1181072557]
+position = Vector2(241, 147)
+shape = SubResource("RectangleShape2D_t4kkl")
+
+[node name="cutscene" parent="." unique_id=696761095 instance=ExtResource("40_xig2b")]
+text = "It's evening. The flowers are starting to dry up but you had your first sale and you got some experience so It's a great first day"
+required_stage = 18
+
+[node name="cutscene2" parent="." unique_id=379852201 instance=ExtResource("40_xig2b")]
+text = "You finlly closed the shop to go home. but its quite dark outside."
+required_stage = 19
 
 [connection signal="body_entered" from="Area3Sub1ToArea3" to="Area3Sub1ToArea3" method="_on_body_entered"]

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dsaijjtgaim2h"
+path="res://.godot/imported/Rokeya_at_evening_story.dialogue-6ac70c566b379a8d32eec0557f0d7deb.tres"
+
+[deps]
+
+source_file="res://Dialouge/area1/Rokeya_at_evening_story.dialogue"
+dest_files=["res://.godot/imported/Rokeya_at_evening_story.dialogue-6ac70c566b379a8d32eec0557f0d7deb.tres"]
+
+[params]
+
+defaults=true

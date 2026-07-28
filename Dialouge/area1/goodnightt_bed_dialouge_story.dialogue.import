@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://criiyg4tq3n2f"
+path="res://.godot/imported/goodnightt_bed_dialouge_story.dialogue-2619d0c15bf832d2dfca0055576f516a.tres"
+
+[deps]
+
+source_file="res://Dialouge/area1/goodnightt_bed_dialouge_story.dialogue"
+dest_files=["res://.godot/imported/goodnightt_bed_dialouge_story.dialogue-2619d0c15bf832d2dfca0055576f516a.tres"]
+
+[params]
+
+defaults=true

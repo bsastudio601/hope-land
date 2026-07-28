@@ -1,0 +1,9 @@
+~ start
+???: Hey are you new here?
+
+You avoid him, trying not to make eye contact,
+
+The unknown person stays silent and doesn’t chase you
+
+do GameState.next_stage()
+=> END

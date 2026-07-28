@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dw81lxa36xe5e"
+path="res://.godot/imported/before_evening_closing_story.dialogue-180a86a4f931dc97f67fc8cea10b52b9.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/before_evening_closing_story.dialogue"
+dest_files=["res://.godot/imported/before_evening_closing_story.dialogue-180a86a4f931dc97f67fc8cea10b52b9.tres"]
+
+[params]
+
+defaults=true

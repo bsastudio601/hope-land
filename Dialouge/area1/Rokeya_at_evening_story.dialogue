@@ -1,0 +1,13 @@
+~ start
+Rokeya: Hey Tithi, you’re finally back. I’ve been waiting for you.
+
+You nod
+
+Tithi: Yeah.
+
+Rokeya: Come here
+
+you walk up to rokeya
+
+do GameState.next_stage()
+=> END
