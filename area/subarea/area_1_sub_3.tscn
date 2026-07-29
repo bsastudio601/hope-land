@@ -20,6 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://om06agmdfc33" path="res://special_scene/actionable.tscn" id="18_j4vd5"]
 [ext_resource type="Resource" uid="uid://db76ntjihmbpf" path="res://Dialouge/area1/leftover_food_story.dialogue" id="19_ij0yu"]
 [ext_resource type="Resource" uid="uid://criiyg4tq3n2f" path="res://Dialouge/area1/goodnightt_bed_dialouge_story.dialogue" id="20_tejr2"]
+[ext_resource type="PackedScene" uid="uid://cm0lv73ka36tk" path="res://special_scene/actionable_range.tscn" id="21_iantu"]
+[ext_resource type="Resource" uid="uid://de21o852u3iqe" path="res://Dialouge/area1/defaults/bed.dialogue" id="22_cnm7h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdl2k"]
 texture = ExtResource("1_sjf37")
@@ -49,6 +51,9 @@ size = Vector2(23, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4kkl"]
 size = Vector2(20, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tpifi"]
+size = Vector2(20, 34)
 
 [node name="Area1_Sub3" type="Node2D" unique_id=1156910619]
 
@@ -198,5 +203,13 @@ shape = SubResource("RectangleShape2D_t4kkl")
 visible = false
 text = "End of ACT 1       act 2 is in undermaking. but it took me too long to make this act 1 and im starting my college from next week so i didnt have enough time to complete chapter 1 right now fully. but will continue to work on the game in my free time."
 required_stage = 25
+
+[node name="ActionableRange" parent="." unique_id=269722015 instance=ExtResource("21_iantu")]
+dialouge_resources = ExtResource("22_cnm7h")
+until = 23
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRange" unique_id=723471253]
+position = Vector2(179, 166)
+shape = SubResource("RectangleShape2D_tpifi")
 
 [connection signal="body_entered" from="Sub3ToSub2" to="Sub3ToSub2" method="_on_body_entered"]

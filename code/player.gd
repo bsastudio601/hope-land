@@ -25,18 +25,21 @@ func on_dialouge_start(_resource)-> void:
 	else:
 		sprite.play("idleright")
 
+var input_cooldown = false
+
 func on_dialouge_end(_resource)-> void:
-	dialouge_active = false 
-	
+	dialouge_active = false
+	input_cooldown = true
+	await get_tree().create_timer(0.2).timeout
+	input_cooldown = false
 
 func _physics_process(delta: float) -> void:
 	if dialouge_active:
 		return
 	var direction = Vector2.ZERO
 	
-	if Input.is_action_just_pressed("next"):
+	if Input.is_action_just_pressed("next") and not input_cooldown:
 		var actionable = action_finder.get_overlapping_areas()
-
 		if actionable.size() > 0:
 			if actionable[0].has_method("action"):
 				actionable[0].action()
