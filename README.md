@@ -28,7 +28,8 @@ ESC to go back to main menu from credit scene
 * has a unique story!
 # How to install
 clone the repo
-```bash git clone https://github.com/YOUR_USERNAME/HopeLand.git```
+```bash 
+git clone https://github.com/bsastudio601/hope-land.git```
 
 Open the project using Godot 4.7 !
 After opening press F5 or click the play button
