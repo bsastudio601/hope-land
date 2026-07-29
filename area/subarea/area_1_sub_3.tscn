@@ -161,7 +161,7 @@ shape = SubResource("RectangleShape2D_b4m4j")
 
 [node name="cutscene" parent="." unique_id=696761095 instance=ExtResource("17_b4m4j")]
 visible = false
-text = "ACT 1"
+text = "This game is meant to be finisht in one sitting."
 
 [node name="cutscene2" parent="." unique_id=1842260510 instance=ExtResource("17_b4m4j")]
 visible = false
