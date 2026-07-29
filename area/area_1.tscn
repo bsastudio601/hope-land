@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://bernbnjmtnfl4" path="res://area/deco/flower_pot_long.tscn" id="12_c8be8"]
 [ext_resource type="PackedScene" uid="uid://crmb7ban0l8nx" path="res://area/deco/plant_pot_small.tscn" id="13_rfaka"]
 [ext_resource type="PackedScene" uid="uid://dh0amhe0p8k0y" path="res://light.tscn" id="14_07rkk"]
-[ext_resource type="Script" uid="uid://bfcye46web3eq" path="res://code/level/area_1_to_sub_1.gd" id="14_nww8t"]
 [ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="17_brs75"]
 [ext_resource type="PackedScene" uid="uid://lobddgmqlf6r" path="res://special_scene/exit_scene.tscn" id="18_xqpte"]
 [ext_resource type="Resource" uid="uid://dgk62usrkuvnx" path="res://Dialouge/area1/Safely_passed_stalker_story.dialogue" id="18_y8ft6"]
@@ -53,14 +52,14 @@ size = Vector2(6, 108.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_esjm4"]
 size = Vector2(480, 4)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
-size = Vector2(18, 2.5)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qniho"]
-size = Vector2(3, 107)
+size = Vector2(4, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tpifi"]
 size = Vector2(18, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07rkk"]
+size = Vector2(21, 4)
 
 [node name="Area_1" type="Node2D" unique_id=1387682372]
 
@@ -205,7 +204,7 @@ position = Vector2(-159, 92)
 position = Vector2(289, 176)
 
 [node name="Player" parent="player and light" unique_id=161175090 groups=["player"] instance=ExtResource("2_wfdv8")]
-position = Vector2(-74, 94)
+position = Vector2(32, 84)
 
 [node name="light8" parent="player and light" unique_id=1798131979 instance=ExtResource("14_07rkk")]
 position = Vector2(145, 177)
@@ -213,21 +212,13 @@ position = Vector2(145, 177)
 [node name="light9" parent="player and light" unique_id=124952994 instance=ExtResource("14_07rkk")]
 position = Vector2(1, 176)
 
-[node name="Area1ToSub1" type="Area2D" parent="." unique_id=1977632159]
-position = Vector2(98, 174)
-script = ExtResource("14_nww8t")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area1ToSub1" unique_id=1385905162]
-position = Vector2(101, -13.25)
-shape = SubResource("RectangleShape2D_b30ca")
-
 [node name="exit_scene" parent="." unique_id=1561895768 instance=ExtResource("18_xqpte")]
 position = Vector2(196, 348)
 target_scene = "uid://mv0ofh5672hf"
 target_spawn_point = "from_area2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit_scene" unique_id=602818119]
-position = Vector2(-194.5, -135.5)
+position = Vector2(-194, -164)
 shape = SubResource("RectangleShape2D_qniho")
 
 [node name="ActionableSemiAuto" parent="." unique_id=430921512 instance=ExtResource("17_brs75")]
@@ -238,10 +229,14 @@ ResuiredStage = 21
 position = Vector2(199, 166)
 shape = SubResource("RectangleShape2D_tpifi")
 
-[node name="default" type="Marker2D" parent="." unique_id=1833787333 groups=["spawn_points"]]
-position = Vector2(4, 183)
+[node name="exit_scene2" parent="." unique_id=1056377543 instance=ExtResource("18_xqpte")]
+position = Vector2(316, 462)
+target_scene = "uid://coo8a6mtrdrns"
+target_spawn_point = "from_area1_main"
 
-[node name="from_area1" type="Marker2D" parent="." unique_id=362223202 groups=["spawn_points"]]
-position = Vector2(5, 183)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit_scene2" unique_id=703771154]
+position = Vector2(-116.5, -301)
+shape = SubResource("RectangleShape2D_07rkk")
 
-[connection signal="body_entered" from="Area1ToSub1" to="Area1ToSub1" method="_on_body_entered"]
+[node name="from_area1_sub1" type="Marker2D" parent="exit_scene2" unique_id=1303489135 groups=["spawn_points"]]
+position = Vector2(-117, -293)

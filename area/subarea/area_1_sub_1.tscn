@@ -6,13 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://bgja23mmxemnt" path="res://sprite/buildings/Area1_sub1_stair1_1.png" id="4_q57sm"]
 [ext_resource type="PackedScene" uid="uid://beyrr56tgobmd" path="res://special_scene/rokeya.tscn" id="5_pknjr"]
 [ext_resource type="Texture2D" uid="uid://12tgvrip3fsp" path="res://sprite/deco/item_repection_desk.png" id="6_q57sm"]
-[ext_resource type="Script" uid="uid://k2vfsoolnpq0" path="res://code/level/sub_1_to_area_1.gd" id="7_q57sm"]
 [ext_resource type="Script" uid="uid://i7ruvsnic1td" path="res://code/level/sub_1_to_sub_2.gd" id="8_hj2e4"]
 [ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="9_5xf8n"]
 [ext_resource type="Resource" uid="uid://byjwb6c41f6on" path="res://Dialouge/area1/rokeya_notices_story.dialogue" id="10_t6i5d"]
 [ext_resource type="PackedScene" uid="uid://om06agmdfc33" path="res://special_scene/actionable.tscn" id="11_t8bax"]
 [ext_resource type="Resource" uid="uid://cniaqxh4jx1kn" path="res://Dialouge/area1/rokeya_talks_1_story.dialogue" id="12_533kg"]
 [ext_resource type="Resource" uid="uid://dsaijjtgaim2h" path="res://Dialouge/area1/Rokeya_at_evening_story.dialogue" id="13_x5jm1"]
+[ext_resource type="PackedScene" uid="uid://lobddgmqlf6r" path="res://special_scene/exit_scene.tscn" id="14_gjs2o"]
 [ext_resource type="Resource" uid="uid://dtv7hh3scgskf" path="res://Dialouge/area1/rokeya_talks_evening_story.dialogue" id="14_tg4ru"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xf8n"]
@@ -24,9 +24,6 @@ sources/0 = SubResource("TileSetAtlasSource_5xf8n")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
 size = Vector2(160, 8.25)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xf8n"]
-size = Vector2(20, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hj2e4"]
 size = Vector2(5, 16)
@@ -41,6 +38,9 @@ size = Vector2(39, 5.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t4kkl"]
 radius = 15.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bri4n"]
+size = Vector2(22, 9)
 
 [node name="Area1_Sub1" type="Node2D" unique_id=233714471]
 
@@ -67,8 +67,8 @@ position = Vector2(283, 123)
 position = Vector2(272, 137)
 texture = ExtResource("6_q57sm")
 
-[node name="Player" parent="." unique_id=161175090 instance=ExtResource("3_pknjr")]
-position = Vector2(189, 129)
+[node name="Player" parent="." unique_id=161175090 groups=["player"] instance=ExtResource("3_pknjr")]
+position = Vector2(185, 126)
 
 [node name="room2" type="Sprite2D" parent="." unique_id=536096333]
 position = Vector2(239, 142)
@@ -84,14 +84,6 @@ polygon = PackedVector2Array(159, 94, 159, 190, 165, 190, 165, 126, 213, 126, 21
 [node name="CollisionShape2D" type="CollisionShape2D" parent="roomborder" unique_id=2009574742]
 position = Vector2(239, 185.875)
 shape = SubResource("RectangleShape2D_b30ca")
-
-[node name="Sub1ToArea1" type="Area2D" parent="." unique_id=964365104]
-position = Vector2(98, 174)
-script = ExtResource("7_q57sm")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sub1ToArea1" unique_id=1669117375]
-position = Vector2(90, 6.5)
-shape = SubResource("RectangleShape2D_5xf8n")
 
 [node name="Sub1ToSub2" type="Area2D" parent="." unique_id=653760014]
 position = Vector2(196, 348)
@@ -133,5 +125,15 @@ ResuiredStage = 23
 position = Vector2(283, 133)
 shape = SubResource("CircleShape2D_t4kkl")
 
-[connection signal="body_entered" from="Sub1ToArea1" to="Sub1ToArea1" method="_on_body_entered"]
+[node name="exit_scene" parent="." unique_id=1561895768 instance=ExtResource("14_gjs2o")]
+target_scene = "uid://x1e7867wda5r"
+target_spawn_point = "from_area1_sub1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit_scene" unique_id=1221596342]
+position = Vector2(188, 177.5)
+shape = SubResource("RectangleShape2D_bri4n")
+
+[node name="from_area1_main" type="Marker2D" parent="exit_scene" unique_id=575881156 groups=["spawn_points"]]
+position = Vector2(187, 157)
+
 [connection signal="body_entered" from="Sub1ToSub2" to="Sub1ToSub2" method="_on_body_entered"]

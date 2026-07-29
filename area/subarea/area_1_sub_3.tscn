@@ -122,7 +122,7 @@ texture = ExtResource("13_b8qeb")
 flip_h = true
 
 [node name="Player" parent="." unique_id=161175090 instance=ExtResource("14_f6map")]
-position = Vector2(277, 140)
+position = Vector2(242, 148)
 
 [node name="room2" type="Sprite2D" parent="." unique_id=92817699]
 position = Vector2(239, 142)

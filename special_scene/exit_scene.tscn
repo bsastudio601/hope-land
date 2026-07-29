@@ -3,4 +3,5 @@
 [ext_resource type="Script" uid="uid://dyyj71dlwcvtf" path="res://special_scene/code/exit_scene.gd" id="1_qkaal"]
 
 [node name="exit_scene" type="Area2D" unique_id=1561895768]
+collision_layer = 0
 script = ExtResource("1_qkaal")
