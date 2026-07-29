@@ -151,28 +151,28 @@ y_sort_enabled = true
 position = Vector2(167, 90)
 
 [node name="light7" parent="player and light" unique_id=1717198676 instance=ExtResource("15_qansi")]
-position = Vector2(81, 127)
+position = Vector2(96, 111)
 
 [node name="light2" parent="player and light" unique_id=1442854746 instance=ExtResource("15_qansi")]
-position = Vector2(112, 30)
+position = Vector2(113, 15)
 
 [node name="light5" parent="player and light" unique_id=1319016375 instance=ExtResource("15_qansi")]
-position = Vector2(-15, 29)
+position = Vector2(-15, 15)
 
 [node name="light4" parent="player and light" unique_id=416145304 instance=ExtResource("15_qansi")]
-position = Vector2(-15, 128)
+position = Vector2(1, 111)
 
 [node name="light3" parent="player and light" unique_id=153892739 instance=ExtResource("15_qansi")]
-position = Vector2(-143, 31)
+position = Vector2(-143, 15)
 
 [node name="light" parent="player and light" unique_id=2080729141 instance=ExtResource("15_qansi")]
-position = Vector2(-142, 126)
+position = Vector2(-143, 111)
 
 [node name="light6" parent="player and light" unique_id=1778441086 instance=ExtResource("15_qansi")]
 position = Vector2(241, 28)
 
 [node name="Player" parent="player and light" unique_id=161175090 instance=ExtResource("5_uul3j")]
-position = Vector2(-129, 106)
+position = Vector2(-64, 123)
 
 [node name="Area3ToArea2" type="Area2D" parent="." unique_id=1333461680]
 position = Vector2(196, 348)
@@ -198,7 +198,7 @@ ResuiredStage = 7
 position = Vector2(91, 115)
 shape = SubResource("RectangleShape2D_b30ca")
 
-[node name="DayNight" parent="." unique_id=125602509 instance=ExtResource("16_dp41y")]
+[node name="DayNight" parent="." unique_id=785252588 instance=ExtResource("16_dp41y")]
 color = Color(1, 1, 1, 1)
 
 [connection signal="body_entered" from="Area3ToArea2" to="Area3ToArea2" method="_on_body_entered"]
