@@ -175,7 +175,7 @@ position = Vector2(-143, 111)
 position = Vector2(241, 28)
 
 [node name="Player" parent="player and light" unique_id=161175090 groups=["player"] instance=ExtResource("5_uul3j")]
-position = Vector2(-64, 123)
+position = Vector2(-77, 21)
 
 [node name="Area3ToArea3Sub1" type="Area2D" parent="." unique_id=1991700041]
 position = Vector2(392, 696)

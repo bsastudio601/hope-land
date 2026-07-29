@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cphxwo3ksa3x5"]
+
+[node name="main_menu" type="Control" unique_id=1001158622]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="." unique_id=476245712]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 10.0
+offset_right = 39.0
+offset_bottom = 18.0
+theme_override_colors/font_hover_color = Color(0.9882353, 0, 0, 1)
+text = "qwqwqw"

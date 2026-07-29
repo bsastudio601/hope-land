@@ -194,7 +194,9 @@ shape = SubResource("RectangleShape2D_t4kkl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=977109518]
 sprite_frames = SubResource("SpriteFrames_b30ca")
-animation = &"idleup"
+animation = &"walkleft"
+autoplay = "walkleft"
+frame_progress = 0.99458194
 
 [node name="ActionFinder" type="Area2D" parent="." unique_id=1162027420]
 

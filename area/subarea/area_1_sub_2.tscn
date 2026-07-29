@@ -46,7 +46,7 @@ texture = ExtResource("2_7g8ba")
 position = Vector2(282, 122)
 
 [node name="Player" parent="." unique_id=161175090 instance=ExtResource("4_mvxys")]
-position = Vector2(259, 141)
+position = Vector2(260, 153)
 
 [node name="room2" type="Sprite2D" parent="." unique_id=1062068569]
 position = Vector2(239, 142)

@@ -305,7 +305,7 @@ y_sort_enabled = true
 position = Vector2(265, 118)
 
 [node name="Player" parent="sorted" unique_id=161175090 instance=ExtResource("7_85ihf")]
-position = Vector2(29, 45)
+position = Vector2(18, 49)
 collision_mask = 3
 
 [node name="onfloor" type="Sprite2D" parent="sorted" unique_id=1983413638]
