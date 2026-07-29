@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b0tynt5bematq" path="res://special_scene/code/control.gd" id="1_30ukn"]
 [ext_resource type="Texture2D" uid="uid://bcr323k8kbyjw" path="res://sprite/buildings/sidewalk and road tilemap.png" id="1_fubeh"]
-[ext_resource type="PackedScene" uid="uid://dh0amhe0p8k0y" path="res://light.tscn" id="3_30ukn"]
+[ext_resource type="PackedScene" uid="uid://dh0amhe0p8k0y" path="res://special_scene/light.tscn" id="3_30ukn"]
 [ext_resource type="Script" uid="uid://cmeu4v6ktnikk" path="res://special_scene/code/tile_map_layer.gd" id="3_f3xbt"]
 [ext_resource type="Texture2D" uid="uid://bxcf6o7xs6l6r" path="res://sprite/character/32x32GirlwalkCycleLeft1t.png" id="4_f3xbt"]
 [ext_resource type="FontFile" uid="uid://dc84y38d6ghs1" path="res://fonts/static/Cinzel-Medium.ttf" id="5_6w8fv"]
@@ -189,6 +189,71 @@ text = "quit
 
 "
 script = ExtResource("9_f3xbt")
+
+[node name="ContentWarning" type="CanvasLayer" parent="." unique_id=1169077742]
+
+[node name="ColorRect" type="ColorRect" parent="ContentWarning" unique_id=1602603597]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ContentWarning/ColorRect" unique_id=407891377]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.5
+offset_top = -26.5
+offset_right = 226.5
+offset_bottom = 26.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_6w8fv")
+theme_override_font_sizes/font_size = 8
+text = "Content Warning
+
+This story contains depictions of emotional abuse, stalking, violence, death, and other mature themes. 
+Some players may find certain scenes distressing. Player discretion is advised."
+horizontal_alignment = 1
+
+[node name="ContentTutorial" type="CanvasLayer" parent="." unique_id=1667369250]
+
+[node name="ColorRect" type="ColorRect" parent="ContentTutorial" unique_id=832773753]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ContentTutorial/ColorRect" unique_id=1563178720]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -109.5
+offset_top = -51.0
+offset_right = 109.5
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_6w8fv")
+theme_override_font_sizes/font_size = 8
+text = "Controls
+
+Up Down Left Right  /  W A S D                              Move
+Enter                                               Interact / Continue
+
+
+"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/start" to="CanvasLayer/VBoxContainer/start" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/credits" to="CanvasLayer/VBoxContainer/credits" method="_on_pressed"]

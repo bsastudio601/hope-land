@@ -1,6 +1,7 @@
 extends CanvasLayer
 @export var text: String = "[Inset TEXT]"
 @export var required_stage: int = 0
+@export var is_last_cutscene: bool = false
 @onready var color_rect: ColorRect = $ColorRect
 @onready var label: Label = $Label
 var active: bool = false
@@ -33,8 +34,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("next"):
 		active = false
 		await fade_text_out()
-		GameState.next_stage()
-		queue_free()
+		if is_last_cutscene:
+			get_tree().change_scene_to_file("res://special_scene/main_menu.tscn")
+		else:
+			GameState.next_stage()
+			queue_free()
 
 func fade_text_out() -> void:
 	var tween = create_tween()

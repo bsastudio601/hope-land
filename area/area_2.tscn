@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://ddf2gfryk6vjt" path="res://area/deco/plant_pot_long.tscn" id="10_omlhb"]
 [ext_resource type="Texture2D" uid="uid://cgyfow73yj6uk" path="res://sprite/character/stalker_idle.png" id="11_2wl6i"]
 [ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="14_omlhb"]
-[ext_resource type="PackedScene" uid="uid://dh0amhe0p8k0y" path="res://light.tscn" id="15_2wl6i"]
+[ext_resource type="PackedScene" uid="uid://dh0amhe0p8k0y" path="res://special_scene/light.tscn" id="15_2wl6i"]
 [ext_resource type="Resource" uid="uid://b8fp6k8fwgqtf" path="res://Dialouge/area2/stalker_dialouge_1.dialogue" id="15_6nvy1"]
 [ext_resource type="PackedScene" uid="uid://lobddgmqlf6r" path="res://special_scene/exit_scene.tscn" id="18_n778j"]
 [ext_resource type="PackedScene" uid="uid://cm0lv73ka36tk" path="res://special_scene/actionable_range.tscn" id="19_c7tsm"]

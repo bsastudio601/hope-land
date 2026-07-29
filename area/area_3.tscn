@@ -16,7 +16,7 @@
 [ext_resource type="Resource" uid="uid://c7wn5t7wx1o22" path="res://Dialouge/area3/first_time_entering_the_shop_story.dialogue" id="10_7dksl"]
 [ext_resource type="PackedScene" uid="uid://bernbnjmtnfl4" path="res://area/deco/flower_pot_long.tscn" id="10_itbh6"]
 [ext_resource type="PackedScene" uid="uid://ddf2gfryk6vjt" path="res://area/deco/plant_pot_long.tscn" id="11_33j1a"]
-[ext_resource type="PackedScene" uid="uid://dh0amhe0p8k0y" path="res://light.tscn" id="15_qansi"]
+[ext_resource type="PackedScene" uid="uid://dh0amhe0p8k0y" path="res://special_scene/light.tscn" id="15_qansi"]
 [ext_resource type="PackedScene" uid="uid://bkalk28w085wh" path="res://special_scene/day_night.tscn" id="16_dp41y"]
 [ext_resource type="PackedScene" uid="uid://lobddgmqlf6r" path="res://special_scene/exit_scene.tscn" id="16_my0vn"]
 [ext_resource type="PackedScene" uid="uid://cm0lv73ka36tk" path="res://special_scene/actionable_range.tscn" id="19_5mggs"]

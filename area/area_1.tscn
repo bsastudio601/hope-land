@@ -13,9 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://ywuq88rtd7ru" path="res://sprite/buildings/building_home.png" id="8_brs75"]
 [ext_resource type="Texture2D" uid="uid://c517ft84812c0" path="res://sprite/buildings/building_shop_1.png" id="9_y8ft6"]
 [ext_resource type="PackedScene" uid="uid://ddf2gfryk6vjt" path="res://area/deco/plant_pot_long.tscn" id="10_07rkk"]
+[ext_resource type="Texture2D" uid="uid://donaho6i57p5t" path="res://sprite/deco/item_cardboard_box_closed.png" id="12_4pws1"]
 [ext_resource type="PackedScene" uid="uid://bernbnjmtnfl4" path="res://area/deco/flower_pot_long.tscn" id="12_c8be8"]
+[ext_resource type="Texture2D" uid="uid://b5busrabl5kc6" path="res://sprite/deco/item_cardboard_box_open.png" id="13_bgvv4"]
 [ext_resource type="PackedScene" uid="uid://crmb7ban0l8nx" path="res://area/deco/plant_pot_small.tscn" id="13_rfaka"]
-[ext_resource type="PackedScene" uid="uid://dh0amhe0p8k0y" path="res://light.tscn" id="14_07rkk"]
+[ext_resource type="PackedScene" uid="uid://dh0amhe0p8k0y" path="res://special_scene/light.tscn" id="14_07rkk"]
 [ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="17_brs75"]
 [ext_resource type="PackedScene" uid="uid://lobddgmqlf6r" path="res://special_scene/exit_scene.tscn" id="18_xqpte"]
 [ext_resource type="Resource" uid="uid://dgk62usrkuvnx" path="res://Dialouge/area1/Safely_passed_stalker_story.dialogue" id="18_y8ft6"]
@@ -151,6 +153,14 @@ texture = ExtResource("3_c8be8")
 [node name="building_shop" type="Sprite2D" parent="Buildings" unique_id=262317068]
 position = Vector2(399, 111)
 texture = ExtResource("9_y8ft6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Buildings/building_shop" unique_id=1493308767]
+position = Vector2(5, 49)
+texture = ExtResource("12_4pws1")
+
+[node name="Sprite2D" type="Sprite2D" parent="Buildings/building_shop/Sprite2D" unique_id=872443206]
+position = Vector2(-1, -7)
+texture = ExtResource("13_bgvv4")
 
 [node name="building_3" type="Sprite2D" parent="Buildings" unique_id=1031887616]
 position = Vector2(488, 95)

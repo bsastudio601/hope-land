@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://dc84y38d6ghs1" path="res://fonts/static/Cinzel-Medium.ttf" id="1_vei2h"]
 [ext_resource type="Texture2D" uid="uid://bcr323k8kbyjw" path="res://sprite/buildings/sidewalk and road tilemap.png" id="2_esryu"]
 [ext_resource type="Script" uid="uid://cmeu4v6ktnikk" path="res://special_scene/code/tile_map_layer.gd" id="3_38pmn"]
-[ext_resource type="PackedScene" uid="uid://dh0amhe0p8k0y" path="res://light.tscn" id="4_pnh24"]
+[ext_resource type="PackedScene" uid="uid://dh0amhe0p8k0y" path="res://special_scene/light.tscn" id="4_pnh24"]
 [ext_resource type="Texture2D" uid="uid://bxcf6o7xs6l6r" path="res://sprite/character/32x32GirlwalkCycleLeft1t.png" id="5_hh88a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cl6q4"]
