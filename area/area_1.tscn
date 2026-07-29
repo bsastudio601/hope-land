@@ -17,8 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://crmb7ban0l8nx" path="res://area/deco/plant_pot_small.tscn" id="13_rfaka"]
 [ext_resource type="PackedScene" uid="uid://dh0amhe0p8k0y" path="res://light.tscn" id="14_07rkk"]
 [ext_resource type="Script" uid="uid://bfcye46web3eq" path="res://code/level/area_1_to_sub_1.gd" id="14_nww8t"]
-[ext_resource type="Script" uid="uid://c5or14hsj0cpo" path="res://code/level/area_1_to_area_2.gd" id="15_esjm4"]
 [ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="17_brs75"]
+[ext_resource type="PackedScene" uid="uid://lobddgmqlf6r" path="res://special_scene/exit_scene.tscn" id="18_xqpte"]
 [ext_resource type="Resource" uid="uid://dgk62usrkuvnx" path="res://Dialouge/area1/Safely_passed_stalker_story.dialogue" id="18_y8ft6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nww8t"]
@@ -190,22 +190,22 @@ position = Vector2(167, 90)
 position = Vector2(-160, 175)
 
 [node name="light7" parent="player and light" unique_id=1250538011 instance=ExtResource("14_07rkk")]
-position = Vector2(144, 79)
+position = Vector2(145, 92)
 
 [node name="light4" parent="player and light" unique_id=524600741 instance=ExtResource("14_07rkk")]
-position = Vector2(288, 79)
+position = Vector2(288, 92)
 
 [node name="light3" parent="player and light" unique_id=1274315241 instance=ExtResource("14_07rkk")]
-position = Vector2(1, 78)
+position = Vector2(1, 92)
 
 [node name="light" parent="player and light" unique_id=1361680919 instance=ExtResource("14_07rkk")]
-position = Vector2(-159, 79)
+position = Vector2(-159, 92)
 
 [node name="light6" parent="player and light" unique_id=2044038302 instance=ExtResource("14_07rkk")]
 position = Vector2(289, 176)
 
-[node name="Player" parent="player and light" unique_id=161175090 instance=ExtResource("2_wfdv8")]
-position = Vector2(-55, 86)
+[node name="Player" parent="player and light" unique_id=161175090 groups=["player"] instance=ExtResource("2_wfdv8")]
+position = Vector2(-74, 94)
 
 [node name="light8" parent="player and light" unique_id=1798131979 instance=ExtResource("14_07rkk")]
 position = Vector2(145, 177)
@@ -221,11 +221,12 @@ script = ExtResource("14_nww8t")
 position = Vector2(101, -13.25)
 shape = SubResource("RectangleShape2D_b30ca")
 
-[node name="Area1ToArea2" type="Area2D" parent="." unique_id=1541966820]
+[node name="exit_scene" parent="." unique_id=1561895768 instance=ExtResource("18_xqpte")]
 position = Vector2(196, 348)
-script = ExtResource("15_esjm4")
+target_scene = "uid://mv0ofh5672hf"
+target_spawn_point = "from_area2"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area1ToArea2" unique_id=602818119]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit_scene" unique_id=602818119]
 position = Vector2(-194.5, -135.5)
 shape = SubResource("RectangleShape2D_qniho")
 
@@ -237,5 +238,10 @@ ResuiredStage = 21
 position = Vector2(199, 166)
 shape = SubResource("RectangleShape2D_tpifi")
 
+[node name="default" type="Marker2D" parent="." unique_id=1833787333 groups=["spawn_points"]]
+position = Vector2(4, 183)
+
+[node name="from_area1" type="Marker2D" parent="." unique_id=362223202 groups=["spawn_points"]]
+position = Vector2(5, 183)
+
 [connection signal="body_entered" from="Area1ToSub1" to="Area1ToSub1" method="_on_body_entered"]
-[connection signal="body_entered" from="Area1ToArea2" to="Area1ToArea2" method="_on_body_entered"]

@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://bhs8cbue2jk7h"]
+
+[ext_resource type="Script" uid="uid://b0qqomjfv4oeo" path="res://special_scene/code/scene_manager.gd" id="1_qrlh6"]
+
+[sub_resource type="Animation" id="Animation_y3tbi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k2seg"]
+resource_name = "fade_in"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k6ghw"]
+resource_name = "fade_out"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r5twr"]
+_data = {
+&"RESET": SubResource("Animation_y3tbi"),
+&"fade_in": SubResource("Animation_k2seg"),
+&"fade_out": SubResource("Animation_k6ghw")
+}
+
+[node name="SceneManager" type="Node" unique_id=1918267024]
+process_mode = 3
+script = ExtResource("1_qrlh6")
+
+[node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=577668841]
+layer = 100
+
+[node name="ColorRect" type="ColorRect" parent="TransitionLayer" unique_id=1157922735]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TransitionLayer" unique_id=1450688058]
+libraries/ = SubResource("AnimationLibrary_r5twr")

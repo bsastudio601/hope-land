@@ -13,12 +13,12 @@
 [ext_resource type="Script" uid="uid://cvvs1lhpaxd8u" path="res://code/level/area_2_to_area_3.gd" id="9_1blg8"]
 [ext_resource type="PackedScene" uid="uid://buxdnwitu1upa" path="res://special_scene/player.tscn" id="9_6nvy1"]
 [ext_resource type="PackedScene" uid="uid://bernbnjmtnfl4" path="res://area/deco/flower_pot_long.tscn" id="9_skbhc"]
-[ext_resource type="Script" uid="uid://dno08qpj32cyq" path="res://code/level/area_2_to_area_1.gd" id="10_81kng"]
 [ext_resource type="PackedScene" uid="uid://ddf2gfryk6vjt" path="res://area/deco/plant_pot_long.tscn" id="10_omlhb"]
 [ext_resource type="Texture2D" uid="uid://cgyfow73yj6uk" path="res://sprite/character/stalker_idle.png" id="11_2wl6i"]
 [ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="14_omlhb"]
 [ext_resource type="PackedScene" uid="uid://dh0amhe0p8k0y" path="res://light.tscn" id="15_2wl6i"]
 [ext_resource type="Resource" uid="uid://b8fp6k8fwgqtf" path="res://Dialouge/area2/stalker_dialouge_1.dialogue" id="15_6nvy1"]
+[ext_resource type="PackedScene" uid="uid://lobddgmqlf6r" path="res://special_scene/exit_scene.tscn" id="18_n778j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2wl6i"]
 texture = ExtResource("1_1blg8")
@@ -55,7 +55,7 @@ sources/2 = SubResource("TileSetAtlasSource_1blg8")
 size = Vector2(480, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
-size = Vector2(20, 110)
+size = Vector2(20, 29)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n778j"]
 atlas = ExtResource("11_2wl6i")
@@ -78,7 +78,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hykm"]
-size = Vector2(3, 107)
+size = Vector2(6.5, 107)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81kng"]
 size = Vector2(144, 5)
@@ -140,7 +140,7 @@ dialouge_resources = ExtResource("15_6nvy1")
 ResuiredStage = 20
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stalker/ActionableSemiAuto" unique_id=1011550056]
-position = Vector2(387, 211)
+position = Vector2(387, 170.5)
 shape = SubResource("RectangleShape2D_b30ca")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="stalker/ActionableSemiAuto" unique_id=1361680157]
@@ -169,27 +169,27 @@ y_sort_enabled = true
 position = Vector2(167, 90)
 
 [node name="light7" parent="player and light" unique_id=1717198676 instance=ExtResource("15_2wl6i")]
-position = Vector2(97, 79)
+position = Vector2(81, 93)
 
 [node name="light2" parent="player and light" unique_id=1075581868 instance=ExtResource("15_2wl6i")]
-position = Vector2(97, -65)
+position = Vector2(81, -65)
 
 [node name="light5" parent="player and light" unique_id=358390524 instance=ExtResource("15_2wl6i")]
-position = Vector2(1, -65)
+position = Vector2(16, -65)
 
 [node name="light4" parent="player and light" unique_id=1721868144 instance=ExtResource("15_2wl6i")]
-position = Vector2(257, 79)
+position = Vector2(257, 92)
 
 [node name="light3" parent="player and light" unique_id=1878268056 instance=ExtResource("15_2wl6i")]
-position = Vector2(1, 78)
+position = Vector2(17, 93)
 
 [node name="light" parent="player and light" unique_id=1064847463 instance=ExtResource("15_2wl6i")]
-position = Vector2(-159, 79)
+position = Vector2(-159, 92)
 
 [node name="light6" parent="player and light" unique_id=2108878156 instance=ExtResource("15_2wl6i")]
 position = Vector2(257, 176)
 
-[node name="Player" parent="player and light" unique_id=161175090 instance=ExtResource("9_6nvy1")]
+[node name="Player" parent="player and light" unique_id=161175090 groups=["player"] instance=ExtResource("9_6nvy1")]
 position = Vector2(-55, 86)
 
 [node name="light8" parent="player and light" unique_id=770993942 instance=ExtResource("15_2wl6i")]
@@ -198,12 +198,13 @@ position = Vector2(49, 176)
 [node name="light9" parent="player and light" unique_id=1579632068 instance=ExtResource("15_2wl6i")]
 position = Vector2(-159, 176)
 
-[node name="Area2ToArea1" type="Area2D" parent="." unique_id=267858252]
+[node name="exit_scene" parent="." unique_id=1561895768 instance=ExtResource("18_n778j")]
 position = Vector2(196, 348)
-script = ExtResource("10_81kng")
+target_scene = "uid://x1e7867wda5r"
+target_spawn_point = "from_area1"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2ToArea1" unique_id=217938548]
-position = Vector2(283, -135)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit_scene" unique_id=217938548]
+position = Vector2(281.25, -135)
 shape = SubResource("RectangleShape2D_5hykm")
 
 [node name="Area2ToArea3" type="Area2D" parent="." unique_id=558726333]
@@ -214,5 +215,10 @@ script = ExtResource("9_1blg8")
 position = Vector2(-176, -693.5)
 shape = SubResource("RectangleShape2D_81kng")
 
-[connection signal="body_entered" from="Area2ToArea1" to="Area2ToArea1" method="_on_body_entered"]
+[node name="from_area2" type="Marker2D" parent="." unique_id=1442127754 groups=["spawn_points"]]
+position = Vector2(474, 183)
+
+[node name="default" type="Marker2D" parent="." unique_id=275916660 groups=["spawn_points"]]
+position = Vector2(471, 183)
+
 [connection signal="body_entered" from="Area2ToArea3" to="Area2ToArea3" method="_on_body_entered"]

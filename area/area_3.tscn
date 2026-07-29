@@ -154,16 +154,16 @@ position = Vector2(167, 90)
 position = Vector2(96, 111)
 
 [node name="light2" parent="player and light" unique_id=1442854746 instance=ExtResource("15_qansi")]
-position = Vector2(113, 15)
+position = Vector2(113, 28)
 
 [node name="light5" parent="player and light" unique_id=1319016375 instance=ExtResource("15_qansi")]
-position = Vector2(-15, 15)
+position = Vector2(-16, 28)
 
 [node name="light4" parent="player and light" unique_id=416145304 instance=ExtResource("15_qansi")]
 position = Vector2(1, 111)
 
 [node name="light3" parent="player and light" unique_id=153892739 instance=ExtResource("15_qansi")]
-position = Vector2(-143, 15)
+position = Vector2(-143, 28)
 
 [node name="light" parent="player and light" unique_id=2080729141 instance=ExtResource("15_qansi")]
 position = Vector2(-143, 111)
