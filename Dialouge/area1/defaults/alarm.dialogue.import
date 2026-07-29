@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://p8edvug7phcn"
+path="res://.godot/imported/alarm.dialogue-dd525423abfa8216f712f84b02d88262.tres"
+
+[deps]
+
+source_file="res://Dialouge/area1/defaults/alarm.dialogue"
+dest_files=["res://.godot/imported/alarm.dialogue-dd525423abfa8216f712f84b02d88262.tres"]
+
+[params]
+
+defaults=true

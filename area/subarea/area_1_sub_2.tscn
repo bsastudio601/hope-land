@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://cdk3rio1h06xy" path="res://sprite/buildings/area1_sub2_stair2.png" id="5_kvdhe"]
 [ext_resource type="Script" uid="uid://3rvmveg45hv1" path="res://code/level/sub_2_to_sub_3.gd" id="6_7g8ba"]
 [ext_resource type="Script" uid="uid://bqb700q8mudqs" path="res://code/level/sub_2_to_sub_1.gd" id="7_d5v3k"]
+[ext_resource type="PackedScene" uid="uid://cm0lv73ka36tk" path="res://special_scene/actionable_range.tscn" id="8_kvdhe"]
+[ext_resource type="Resource" uid="uid://ddymwjs0curng" path="res://Dialouge/area1/defaults/wrong_room.dialogue" id="9_ku4ur"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d5v3k"]
 texture = ExtResource("1_eblm0")
@@ -19,10 +21,13 @@ sources/0 = SubResource("TileSetAtlasSource_d5v3k")
 size = Vector2(112, 8.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mvxys"]
-size = Vector2(16, 2)
+size = Vector2(18, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d5v3k"]
 size = Vector2(4, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sd5b8"]
+size = Vector2(16, 20)
 
 [node name="Area1_Sub2" type="Node2D" unique_id=142454865]
 
@@ -68,7 +73,7 @@ position = Vector2(196, 348)
 script = ExtResource("6_7g8ba")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sub2ToSub3" unique_id=571373403]
-position = Vector2(65, -222)
+position = Vector2(65, -170)
 shape = SubResource("RectangleShape2D_mvxys")
 
 [node name="Sub2ToSub1" type="Area2D" parent="." unique_id=221834251]
@@ -78,6 +83,14 @@ script = ExtResource("7_d5v3k")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sub2ToSub1" unique_id=698723779]
 position = Vector2(-167, -531)
 shape = SubResource("RectangleShape2D_d5v3k")
+
+[node name="ActionableRange3" parent="." unique_id=269722015 instance=ExtResource("8_kvdhe")]
+dialouge_resources = ExtResource("9_ku4ur")
+until = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRange3" unique_id=1898450892]
+position = Vector2(261, 119)
+shape = SubResource("RectangleShape2D_sd5b8")
 
 [connection signal="body_entered" from="Sub2ToSub3" to="Sub2ToSub3" method="_on_body_entered"]
 [connection signal="body_entered" from="Sub2ToSub1" to="Sub2ToSub1" method="_on_body_entered"]

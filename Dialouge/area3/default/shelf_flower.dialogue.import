@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bhdjq7kyxcebp"
+path="res://.godot/imported/shelf_flower.dialogue-1c02c5cd98219c01af472a33a304d097.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/default/shelf_flower.dialogue"
+dest_files=["res://.godot/imported/shelf_flower.dialogue-1c02c5cd98219c01af472a33a304d097.tres"]
+
+[params]
+
+defaults=true

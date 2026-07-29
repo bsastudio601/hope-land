@@ -19,6 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="17_brs75"]
 [ext_resource type="PackedScene" uid="uid://lobddgmqlf6r" path="res://special_scene/exit_scene.tscn" id="18_xqpte"]
 [ext_resource type="Resource" uid="uid://dgk62usrkuvnx" path="res://Dialouge/area1/Safely_passed_stalker_story.dialogue" id="18_y8ft6"]
+[ext_resource type="PackedScene" uid="uid://cm0lv73ka36tk" path="res://special_scene/actionable_range.tscn" id="20_3dnaf"]
+[ext_resource type="Resource" uid="uid://bdoh5mkk3pes3" path="res://Dialouge/area1/defaults/neighbor1.dialogue" id="21_wu0a8"]
+[ext_resource type="Resource" uid="uid://b21p41p2vglg8" path="res://Dialouge/area1/defaults/neighbor2.dialogue" id="22_4pws1"]
+[ext_resource type="Resource" uid="uid://ja0r52mbkj3t" path="res://Dialouge/area1/defaults/grocery_shop.dialogue" id="23_bgvv4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nww8t"]
 texture = ExtResource("1_wjdma")
@@ -44,7 +48,7 @@ texture = ExtResource("1_wjdma")
 sources/0 = SubResource("TileSetAtlasSource_nww8t")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4kkl"]
-size = Vector2(480, 4)
+size = Vector2(480, 82)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brs75"]
 size = Vector2(6, 108.5)
@@ -60,6 +64,15 @@ size = Vector2(18, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_07rkk"]
 size = Vector2(21, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
+size = Vector2(19, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehu8n"]
+size = Vector2(19, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_guvke"]
+size = Vector2(56, 20)
 
 [node name="Area_1" type="Node2D" unique_id=1387682372]
 
@@ -147,7 +160,7 @@ collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Buildings/buildign collision" unique_id=1476852597]
-position = Vector2(240, 268)
+position = Vector2(240, 247)
 shape = SubResource("RectangleShape2D_t4kkl")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Buildings/buildign collision" unique_id=1227114756]
@@ -240,3 +253,27 @@ shape = SubResource("RectangleShape2D_07rkk")
 
 [node name="from_area1_sub1" type="Marker2D" parent="exit_scene2" unique_id=1303489135 groups=["spawn_points"]]
 position = Vector2(-117, -293)
+
+[node name="ActionableRange" parent="." unique_id=269722015 instance=ExtResource("20_3dnaf")]
+dialouge_resources = ExtResource("21_wu0a8")
+until = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRange" unique_id=875209801]
+position = Vector2(144, 152)
+shape = SubResource("RectangleShape2D_b30ca")
+
+[node name="ActionableRange2" parent="." unique_id=1184209717 instance=ExtResource("20_3dnaf")]
+dialouge_resources = ExtResource("22_4pws1")
+until = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRange2" unique_id=1732237364]
+position = Vector2(327, 150)
+shape = SubResource("RectangleShape2D_ehu8n")
+
+[node name="ActionableRange3" parent="." unique_id=1765884130 instance=ExtResource("20_3dnaf")]
+dialouge_resources = ExtResource("23_bgvv4")
+until = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRange3" unique_id=792878752]
+position = Vector2(399, 154)
+shape = SubResource("RectangleShape2D_guvke")

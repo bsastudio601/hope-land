@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ddymwjs0curng"
+path="res://.godot/imported/wrong_room.dialogue-857ebcc17c3559e1699bbf7d32cbe7ba.tres"
+
+[deps]
+
+source_file="res://Dialouge/area1/defaults/wrong_room.dialogue"
+dest_files=["res://.godot/imported/wrong_room.dialogue-857ebcc17c3559e1699bbf7d32cbe7ba.tres"]
+
+[params]
+
+defaults=true

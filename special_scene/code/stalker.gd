@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var visible_from := 20
-@export var visible_until := 21
+@export var visible_until := 22
 
 func _ready() -> void:
 	GameState.stage_changed.connect(check_stage)

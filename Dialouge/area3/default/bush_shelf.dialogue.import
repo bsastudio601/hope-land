@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cva55cptm51oy"
+path="res://.godot/imported/bush_shelf.dialogue-0fff388d2157847e82c128492ce1797f.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/default/bush_shelf.dialogue"
+dest_files=["res://.godot/imported/bush_shelf.dialogue-0fff388d2157847e82c128492ce1797f.tres"]
+
+[params]
+
+defaults=true

@@ -45,6 +45,10 @@
 [ext_resource type="Resource" uid="uid://cgi4iir8q3auu" path="res://Dialouge/area3/finally_picking_up_the_flowers.dialogue" id="36_jmwm7"]
 [ext_resource type="Resource" uid="uid://dw81lxa36xe5e" path="res://Dialouge/area3/before_evening_closing_story.dialogue" id="39_6dkk7"]
 [ext_resource type="PackedScene" uid="uid://cfq4gw3ntc534" path="res://special_scene/cutscene.tscn" id="40_xig2b"]
+[ext_resource type="PackedScene" uid="uid://cm0lv73ka36tk" path="res://special_scene/actionable_range.tscn" id="46_6a16x"]
+[ext_resource type="Resource" uid="uid://bhdjq7kyxcebp" path="res://Dialouge/area3/default/shelf_flower.dialogue" id="47_36u8s"]
+[ext_resource type="Resource" uid="uid://cva55cptm51oy" path="res://Dialouge/area3/default/bush_shelf.dialogue" id="48_lyjfi"]
+[ext_resource type="Resource" uid="uid://dkamwgawdkm0a" path="res://Dialouge/area3/default/bucket_flower.dialogue" id="49_l4git"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_riqtw"]
 texture = ExtResource("1_guqvc")
@@ -276,7 +280,16 @@ size = Vector2(34, 31)
 size = Vector2(32, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4kkl"]
-size = Vector2(112.5, 66)
+size = Vector2(125, 75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82tj2"]
+size = Vector2(35, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_igdt8"]
+size = Vector2(12.5, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tqmdu"]
+size = Vector2(12.5, 44)
 
 [node name="Area3_Sub1" type="Node2D" unique_id=1055504114]
 
@@ -596,7 +609,7 @@ dialouge_resources = ExtResource("39_6dkk7")
 ResuiredStage = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable6" unique_id=1181072557]
-position = Vector2(241, 147)
+position = Vector2(239.5, 147.5)
 shape = SubResource("RectangleShape2D_t4kkl")
 
 [node name="cutscene" parent="." unique_id=696761095 instance=ExtResource("40_xig2b")]
@@ -608,5 +621,29 @@ required_stage = 18
 visible = false
 text = "You finlly closed the shop to go home. but its quite dark outside."
 required_stage = 19
+
+[node name="ActionableRange" parent="." unique_id=269722015 instance=ExtResource("46_6a16x")]
+dialouge_resources = ExtResource("47_36u8s")
+until = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRange" unique_id=2145423764]
+position = Vector2(204.5, 101.5)
+shape = SubResource("RectangleShape2D_82tj2")
+
+[node name="ActionableRange2" parent="." unique_id=294143244 instance=ExtResource("46_6a16x")]
+dialouge_resources = ExtResource("48_lyjfi")
+until = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRange2" unique_id=1600114243]
+position = Vector2(170.75, 150)
+shape = SubResource("RectangleShape2D_igdt8")
+
+[node name="ActionableRange3" parent="." unique_id=1894424200 instance=ExtResource("46_6a16x")]
+dialouge_resources = ExtResource("49_l4git")
+until = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRange3" unique_id=1835730901]
+position = Vector2(307, 164)
+shape = SubResource("RectangleShape2D_tqmdu")
 
 [connection signal="body_entered" from="Area3Sub1ToArea3" to="Area3Sub1ToArea3" method="_on_body_entered"]

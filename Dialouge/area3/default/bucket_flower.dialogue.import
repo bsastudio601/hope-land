@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dkamwgawdkm0a"
+path="res://.godot/imported/bucket_flower.dialogue-cfce5d17c579586c6194dee296697c5e.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/default/bucket_flower.dialogue"
+dest_files=["res://.godot/imported/bucket_flower.dialogue-cfce5d17c579586c6194dee296697c5e.tres"]
+
+[params]
+
+defaults=true

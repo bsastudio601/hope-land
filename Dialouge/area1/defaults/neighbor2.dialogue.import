@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b21p41p2vglg8"
+path="res://.godot/imported/neighbor2.dialogue-c69b849015e67aa1b95eb00d39efae43.tres"
+
+[deps]
+
+source_file="res://Dialouge/area1/defaults/neighbor2.dialogue"
+dest_files=["res://.godot/imported/neighbor2.dialogue-c69b849015e67aa1b95eb00d39efae43.tres"]
+
+[params]
+
+defaults=true

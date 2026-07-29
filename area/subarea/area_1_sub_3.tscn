@@ -22,6 +22,8 @@
 [ext_resource type="Resource" uid="uid://criiyg4tq3n2f" path="res://Dialouge/area1/goodnightt_bed_dialouge_story.dialogue" id="20_tejr2"]
 [ext_resource type="PackedScene" uid="uid://cm0lv73ka36tk" path="res://special_scene/actionable_range.tscn" id="21_iantu"]
 [ext_resource type="Resource" uid="uid://de21o852u3iqe" path="res://Dialouge/area1/defaults/bed.dialogue" id="22_cnm7h"]
+[ext_resource type="Resource" uid="uid://dlyvpxvps0en2" path="res://Dialouge/area1/defaults/kitchen.dialogue" id="23_40x3i"]
+[ext_resource type="Resource" uid="uid://p8edvug7phcn" path="res://Dialouge/area1/defaults/alarm.dialogue" id="24_nhoi6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdl2k"]
 texture = ExtResource("1_sjf37")
@@ -54,6 +56,12 @@ size = Vector2(20, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tpifi"]
 size = Vector2(20, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82tj2"]
+size = Vector2(82, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nu7rv"]
+size = Vector2(16, 20)
 
 [node name="Area1_Sub3" type="Node2D" unique_id=1156910619]
 
@@ -166,7 +174,7 @@ shape = SubResource("RectangleShape2D_b4m4j")
 
 [node name="cutscene" parent="." unique_id=696761095 instance=ExtResource("17_b4m4j")]
 visible = false
-text = "This game is meant to be finisht in one sitting."
+text = "This game is meant to be finished in one sitting."
 
 [node name="cutscene2" parent="." unique_id=1842260510 instance=ExtResource("17_b4m4j")]
 visible = false
@@ -211,5 +219,21 @@ until = 23
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRange" unique_id=723471253]
 position = Vector2(179, 166)
 shape = SubResource("RectangleShape2D_tpifi")
+
+[node name="ActionableRange2" parent="." unique_id=881467000 instance=ExtResource("21_iantu")]
+dialouge_resources = ExtResource("23_40x3i")
+until = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRange2" unique_id=729651916]
+position = Vector2(208, 113)
+shape = SubResource("RectangleShape2D_82tj2")
+
+[node name="ActionableRange3" parent="." unique_id=874435761 instance=ExtResource("21_iantu")]
+dialouge_resources = ExtResource("24_nhoi6")
+until = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRange3" unique_id=1588672700]
+position = Vector2(173, 144)
+shape = SubResource("RectangleShape2D_nu7rv")
 
 [connection signal="body_entered" from="Sub3ToSub2" to="Sub3ToSub2" method="_on_body_entered"]
