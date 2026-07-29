@@ -76,6 +76,11 @@ size = Vector2(56, 20)
 
 [node name="Area_1" type="Node2D" unique_id=1387682372]
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1705857477]
+offset_right = 490.0
+offset_bottom = 104.0
+color = Color(0.3781889, 0.63387, 0.76311827, 1)
+
 [node name="DayNight" parent="." unique_id=125602509 instance=ExtResource("1_xqpte")]
 position = Vector2(444, 150)
 color = Color(1, 1, 1, 1)
@@ -217,7 +222,7 @@ position = Vector2(-159, 92)
 position = Vector2(289, 176)
 
 [node name="Player" parent="player and light" unique_id=161175090 groups=["player"] instance=ExtResource("2_wfdv8")]
-position = Vector2(32, 84)
+position = Vector2(15, 84)
 
 [node name="light8" parent="player and light" unique_id=1798131979 instance=ExtResource("14_07rkk")]
 position = Vector2(145, 177)
@@ -226,13 +231,16 @@ position = Vector2(145, 177)
 position = Vector2(1, 176)
 
 [node name="exit_scene" parent="." unique_id=1561895768 instance=ExtResource("18_xqpte")]
-position = Vector2(196, 348)
+position = Vector2(9, 184)
 target_scene = "uid://mv0ofh5672hf"
 target_spawn_point = "from_area2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit_scene" unique_id=602818119]
-position = Vector2(-194, -164)
+position = Vector2(-7, -3)
 shape = SubResource("RectangleShape2D_qniho")
+
+[node name="from_area1" type="Marker2D" parent="exit_scene" unique_id=755645430 groups=["spawn_points"]]
+position = Vector2(0, -2)
 
 [node name="ActionableSemiAuto" parent="." unique_id=430921512 instance=ExtResource("17_brs75")]
 dialouge_resources = ExtResource("18_y8ft6")
