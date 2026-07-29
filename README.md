@@ -30,7 +30,7 @@ ESC to go back to main menu from credit scene
 # Why?
 After making 2 arcade like simple game in godot i wanted to try somthing hard but short, an indie game. So i decided to come up with a character design.
 then i made a story around the character and gave the story to my friend for reviewing. after we were happy with the stroy we just decided to send it.
-but not so surprisingly it took me more than 50 hours to finsih a short portion of the game.
+but not so surprisingly it took me more than 50 hours to finsih a short portion of the game. the project file even got courropted once.
 
 # Updates
 As of now the game has only one act which talkes less than 5 min to complete. act 1 took me so long because i had to made every assets from scratch and the dialouge system.
@@ -47,4 +47,7 @@ I also watched a varity of tutorial from youtube. the spawn point system i leart
 Next i used LibreSprite to make the art. many of the character is based on my friedns. I used gemini to convert my friends picture to a pixel art style. thoug it was not 32x32 so i had to redraw them in my style to make the character look good. I also used gemini to generate a few mocup of the map adn buildign design.
 I also used the Dialouge Manager to manage the dialouges. The story is written my ME and my FRIEND.
 
-# concusign
+# conclusion
+This was a great learing experience for me abotu game dev and it has made me respect indie game dev even more after seeing how time consuming it is. Specially after the time my project file got courropted. 
+
+Well hope you like it and follow me for the full game in future soon!
