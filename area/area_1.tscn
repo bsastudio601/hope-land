@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://ddf2gfryk6vjt" path="res://area/deco/plant_pot_long.tscn" id="10_07rkk"]
 [ext_resource type="PackedScene" uid="uid://bernbnjmtnfl4" path="res://area/deco/flower_pot_long.tscn" id="12_c8be8"]
 [ext_resource type="PackedScene" uid="uid://crmb7ban0l8nx" path="res://area/deco/plant_pot_small.tscn" id="13_rfaka"]
+[ext_resource type="PackedScene" uid="uid://dh0amhe0p8k0y" path="res://light.tscn" id="14_07rkk"]
 [ext_resource type="Script" uid="uid://bfcye46web3eq" path="res://code/level/area_1_to_sub_1.gd" id="14_nww8t"]
 [ext_resource type="Script" uid="uid://c5or14hsj0cpo" path="res://code/level/area_1_to_area_2.gd" id="15_esjm4"]
 [ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="17_brs75"]
@@ -170,8 +171,42 @@ position = Vector2(384, 155)
 [node name="plant_pot_small" parent="deco" unique_id=765640966 instance=ExtResource("13_rfaka")]
 position = Vector2(173, 149)
 
-[node name="Player" parent="." unique_id=161175090 instance=ExtResource("2_wfdv8")]
-position = Vector2(98, 174)
+[node name="plant_pot_small2" parent="deco" unique_id=1745099115 instance=ExtResource("13_rfaka")]
+position = Vector2(264, 149)
+
+[node name="plant_pot_small3" parent="deco" unique_id=425614517 instance=ExtResource("13_rfaka")]
+position = Vector2(444, 150)
+
+[node name="player and light" type="Node2D" parent="." unique_id=1890838984]
+y_sort_enabled = true
+position = Vector2(167, 90)
+
+[node name="light10" parent="player and light" unique_id=1717198676 instance=ExtResource("14_07rkk")]
+position = Vector2(-160, 175)
+
+[node name="light7" parent="player and light" unique_id=1250538011 instance=ExtResource("14_07rkk")]
+position = Vector2(144, 79)
+
+[node name="light4" parent="player and light" unique_id=524600741 instance=ExtResource("14_07rkk")]
+position = Vector2(288, 79)
+
+[node name="light3" parent="player and light" unique_id=1274315241 instance=ExtResource("14_07rkk")]
+position = Vector2(1, 78)
+
+[node name="light" parent="player and light" unique_id=1361680919 instance=ExtResource("14_07rkk")]
+position = Vector2(-159, 79)
+
+[node name="light6" parent="player and light" unique_id=2044038302 instance=ExtResource("14_07rkk")]
+position = Vector2(289, 176)
+
+[node name="Player" parent="player and light" unique_id=161175090 instance=ExtResource("2_wfdv8")]
+position = Vector2(-55, 86)
+
+[node name="light8" parent="player and light" unique_id=1798131979 instance=ExtResource("14_07rkk")]
+position = Vector2(145, 177)
+
+[node name="light9" parent="player and light" unique_id=124952994 instance=ExtResource("14_07rkk")]
+position = Vector2(1, 176)
 
 [node name="Area1ToSub1" type="Area2D" parent="." unique_id=1977632159]
 position = Vector2(98, 174)

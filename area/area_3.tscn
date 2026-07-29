@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://crmb7ban0l8nx" path="res://area/deco/plant_pot_small.tscn" id="8_qansi"]
 [ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="9_uul3j"]
 [ext_resource type="Resource" uid="uid://c7wn5t7wx1o22" path="res://Dialouge/area3/first_time_entering_the_shop_story.dialogue" id="10_7dksl"]
+[ext_resource type="PackedScene" uid="uid://dh0amhe0p8k0y" path="res://light.tscn" id="15_qansi"]
+[ext_resource type="PackedScene" uid="uid://bkalk28w085wh" path="res://special_scene/day_night.tscn" id="16_dp41y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7dksl"]
 texture = ExtResource("1_gungc")
@@ -144,8 +146,33 @@ position = Vector2(72, 63)
 [node name="plant_pot_small" parent="Buildings/deco" unique_id=765640966 instance=ExtResource("8_qansi")]
 position = Vector2(47, 30)
 
-[node name="Player" parent="." unique_id=161175090 instance=ExtResource("5_uul3j")]
-position = Vector2(98, 174)
+[node name="player and light" type="Node2D" parent="." unique_id=1648859316]
+y_sort_enabled = true
+position = Vector2(167, 90)
+
+[node name="light7" parent="player and light" unique_id=1717198676 instance=ExtResource("15_qansi")]
+position = Vector2(81, 127)
+
+[node name="light2" parent="player and light" unique_id=1442854746 instance=ExtResource("15_qansi")]
+position = Vector2(112, 30)
+
+[node name="light5" parent="player and light" unique_id=1319016375 instance=ExtResource("15_qansi")]
+position = Vector2(-15, 29)
+
+[node name="light4" parent="player and light" unique_id=416145304 instance=ExtResource("15_qansi")]
+position = Vector2(-15, 128)
+
+[node name="light3" parent="player and light" unique_id=153892739 instance=ExtResource("15_qansi")]
+position = Vector2(-143, 31)
+
+[node name="light" parent="player and light" unique_id=2080729141 instance=ExtResource("15_qansi")]
+position = Vector2(-142, 126)
+
+[node name="light6" parent="player and light" unique_id=1778441086 instance=ExtResource("15_qansi")]
+position = Vector2(241, 28)
+
+[node name="Player" parent="player and light" unique_id=161175090 instance=ExtResource("5_uul3j")]
+position = Vector2(-129, 106)
 
 [node name="Area3ToArea2" type="Area2D" parent="." unique_id=1333461680]
 position = Vector2(196, 348)
@@ -170,6 +197,9 @@ ResuiredStage = 7
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableSemiAuto" unique_id=244620334]
 position = Vector2(91, 115)
 shape = SubResource("RectangleShape2D_b30ca")
+
+[node name="DayNight" parent="." unique_id=125602509 instance=ExtResource("16_dp41y")]
+color = Color(1, 1, 1, 1)
 
 [connection signal="body_entered" from="Area3ToArea2" to="Area3ToArea2" method="_on_body_entered"]
 [connection signal="body_entered" from="Area3ToArea3Sub1" to="Area3ToArea3Sub1" method="_on_body_entered"]

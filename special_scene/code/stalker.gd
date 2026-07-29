@@ -8,9 +8,4 @@ func _ready() -> void:
 	check_stage()
 
 func check_stage():
-	print("Stage:", GameState.stage)
-	print("Before:", visible)
-
 	visible = GameState.stage >= visible_from and GameState.stage <= visible_until
-
-	print("After:", visible)

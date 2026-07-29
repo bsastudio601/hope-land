@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dh0amhe0p8k0y"]
+
+[ext_resource type="Script" uid="uid://dnrps5bvqkwu4" path="res://special_scene/code/light.gd" id="1_5qqhr"]
+[ext_resource type="Texture2D" uid="uid://bjssyw534is5x" path="res://sprite/deco/streetlampv1.png" id="1_we4ua"]
+
+[sub_resource type="Gradient" id="Gradient_njlvs"]
+offsets = PackedFloat32Array(0, 0.3764706, 0.7058824)
+colors = PackedColorArray(1, 1, 1, 1, 0.22222221, 0.22222221, 0.22222221, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_t4kkl"]
+gradient = SubResource("Gradient_njlvs")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="light" type="Node2D" unique_id=1717198676]
+script = ExtResource("1_5qqhr")
+
+[node name="body" type="Sprite2D" parent="." unique_id=325773069]
+texture = ExtResource("1_we4ua")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=810294027]
+position = Vector2(1, -7.999998)
+scale = Vector2(1.8046266, 1.734436)
+texture = SubResource("GradientTexture2D_t4kkl")
+offset = Vector2(0.5, 0.5)
