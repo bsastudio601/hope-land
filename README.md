@@ -26,6 +26,13 @@ ESC to go back to main menu from credit scene
 * has a modular dialouge system!
 * the npc vabe subtle animations
 * has a unique story!
+# How to install
+clone the repo
+```bash git clone https://github.com/YOUR_USERNAME/HopeLand.git```
+
+Open the project using Godot 4.7 !
+After opening press F5 or click the play button
+
 
 # Why?
 After making 2 arcade like simple game in godot i wanted to try somthing hard but short, an indie game. So i decided to come up with a character design.
