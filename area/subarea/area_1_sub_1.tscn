@@ -70,11 +70,14 @@ position = Vector2(283, 123)
 
 [node name="deco" type="Node2D" parent="." unique_id=1735687641]
 
+[node name="plant_pot_small2" parent="deco" unique_id=765640966 instance=ExtResource("5_giefn")]
+position = Vector2(251, 118)
+
 [node name="reception desk" type="Sprite2D" parent="deco" unique_id=1087444922]
 position = Vector2(272, 137)
 texture = ExtResource("6_q57sm")
 
-[node name="plant_pot_small" parent="deco" unique_id=765640966 instance=ExtResource("5_giefn")]
+[node name="plant_pot_small" parent="deco" unique_id=2042696210 instance=ExtResource("5_giefn")]
 position = Vector2(172, 122)
 
 [node name="flower_pot_long" parent="deco" unique_id=827975198 instance=ExtResource("6_xpvt1")]

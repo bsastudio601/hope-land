@@ -108,7 +108,7 @@ size = Vector2(48, 5)
 size = Vector2(20, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_82tj2"]
-size = Vector2(25, 12)
+size = Vector2(25, 22)
 
 [node name="Area_2" type="Node2D" unique_id=1661015884]
 
@@ -166,7 +166,7 @@ position = Vector2(216, 79.5)
 shape = SubResource("RectangleShape2D_c7m7q")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Buildings/buildign collision" unique_id=1309164377]
-polygon = PackedVector2Array(287, 158, 367, 158, 367, 156, 400, 156, 400, 158, 480, 158, 480, 0, 288, 0)
+polygon = PackedVector2Array(287, 158, 367, 158, 400, 158, 480, 158, 480, 0, 288, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buildings/buildign collision" unique_id=1578435923]
 position = Vector2(72, 80)
@@ -307,9 +307,9 @@ shape = SubResource("RectangleShape2D_21vgb")
 
 [node name="ActionableRange3" parent="." unique_id=438096719 instance=ExtResource("19_c7tsm")]
 dialouge_resources = ExtResource("23_abo2e")
-from = 21
+from = 20
 until = 22
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRange3" unique_id=1687686442]
-position = Vector2(384.5, 158)
+position = Vector2(384.5, 153)
 shape = SubResource("RectangleShape2D_82tj2")
