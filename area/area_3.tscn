@@ -21,6 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://lobddgmqlf6r" path="res://special_scene/exit_scene.tscn" id="16_my0vn"]
 [ext_resource type="PackedScene" uid="uid://cm0lv73ka36tk" path="res://special_scene/actionable_range.tscn" id="19_5mggs"]
 [ext_resource type="Resource" uid="uid://ciim1jfblwg1n" path="res://Dialouge/area3/default/shop1.dialogue" id="20_pstdh"]
+[ext_resource type="PackedScene" uid="uid://bbelaalx2j64s" path="res://special_scene/actionable_restricted_range.tscn" id="22_n3vke"]
+[ext_resource type="Resource" uid="uid://swi5jrwcg4uy" path="res://Dialouge/area3/default/trying to enter shop before .dialogue" id="23_7arja"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7dksl"]
 texture = ExtResource("1_gungc")
@@ -110,7 +112,7 @@ size = Vector2(203, 48)
 size = Vector2(18, 5.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
-size = Vector2(22, 3)
+size = Vector2(44, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itbh6"]
 size = Vector2(48, 5)
@@ -120,6 +122,12 @@ size = Vector2(48, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4kkl"]
 size = Vector2(20, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pipyi"]
+size = Vector2(20, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dev4u"]
+size = Vector2(22, 20)
 
 [node name="Area_3" type="Node2D" unique_id=1163629412]
 
@@ -140,33 +148,28 @@ tile_set = SubResource("TileSet_b30ca")
 
 [node name="Buildings" type="Node2D" parent="." unique_id=2003245598]
 
-[node name="building_1" type="Sprite2D" parent="Buildings" unique_id=950152347]
-position = Vector2(328, 200)
-texture = ExtResource("3_k1x1i")
-
 [node name="building_2" type="Sprite2D" parent="Buildings" unique_id=738971287]
 position = Vector2(444, 46)
 texture = ExtResource("3_k1x1i")
-
-[node name="building_3" type="Sprite2D" parent="Buildings" unique_id=1325461928]
-position = Vector2(423, 180)
-texture = ExtResource("4_1b5nc")
 
 [node name="building_7" type="Sprite2D" parent="Buildings" unique_id=64090589]
 position = Vector2(-17, 47)
 texture = ExtResource("4_1b5nc")
 
-[node name="building_5" type="Sprite2D" parent="Buildings" unique_id=789485254]
-position = Vector2(328, 312)
-texture = ExtResource("5_r2eoa")
+[node name="deco" type="Node2D" parent="Buildings/building_7" unique_id=93196294]
+position = Vector2(89, 16)
 
-[node name="building_6" type="Sprite2D" parent="Buildings" unique_id=522535714]
-position = Vector2(448, 255)
-texture = ExtResource("6_kf43n")
+[node name="plant_pot_small2" parent="Buildings/building_7/deco" unique_id=1012707338 instance=ExtResource("8_qansi")]
+position = Vector2(80, 191)
 
-[node name="building_4" type="Sprite2D" parent="Buildings" unique_id=958886812]
-position = Vector2(406, 275)
-texture = ExtResource("5_r2eoa")
+[node name="plant_pot_long4" parent="Buildings/building_7/deco" unique_id=1563511823 instance=ExtResource("11_33j1a")]
+position = Vector2(55, 165)
+
+[node name="plant_pot_long3" parent="Buildings/building_7/deco" unique_id=832239961 instance=ExtResource("11_33j1a")]
+position = Vector2(-61, 165)
+
+[node name="plant_pot_small" parent="Buildings/building_7/deco" unique_id=765640966 instance=ExtResource("8_qansi")]
+position = Vector2(47, 30)
 
 [node name="buildign collision" type="StaticBody2D" parent="Buildings" unique_id=1294619128]
 collision_layer = 2
@@ -215,12 +218,6 @@ texture = ExtResource("8_pstdh")
 position = Vector2(283, -1)
 texture = ExtResource("5_7v6d8")
 
-[node name="deco" type="Node2D" parent="Buildings" unique_id=93196294]
-position = Vector2(72, 63)
-
-[node name="plant_pot_small" parent="Buildings/deco" unique_id=765640966 instance=ExtResource("8_qansi")]
-position = Vector2(47, 30)
-
 [node name="deco" type="Node2D" parent="." unique_id=1641838244]
 
 [node name="flower_pot_long" parent="deco" unique_id=827975198 instance=ExtResource("10_itbh6")]
@@ -241,15 +238,6 @@ position = Vector2(400, 100)
 [node name="player and light" type="Node2D" parent="." unique_id=1648859316]
 y_sort_enabled = true
 position = Vector2(167, 90)
-
-[node name="plant_pot_long3" parent="player and light" unique_id=832239961 instance=ExtResource("11_33j1a")]
-position = Vector2(-156, 138)
-
-[node name="plant_pot_long4" parent="player and light" unique_id=1563511823 instance=ExtResource("11_33j1a")]
-position = Vector2(-40, 138)
-
-[node name="plant_pot_small" parent="player and light" unique_id=1012707338 instance=ExtResource("8_qansi")]
-position = Vector2(-15, 164)
 
 [node name="light7" parent="player and light" unique_id=1717198676 instance=ExtResource("15_qansi")]
 position = Vector2(96, 111)
@@ -273,7 +261,29 @@ position = Vector2(-143, 111)
 position = Vector2(241, 28)
 
 [node name="Player" parent="player and light" unique_id=161175090 groups=["player"] instance=ExtResource("5_uul3j")]
-position = Vector2(-77, 21)
+position = Vector2(95, -1)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=421849474]
+position = Vector2(328, 200)
+
+[node name="building_1" type="Sprite2D" parent="Node2D" unique_id=950152347]
+texture = ExtResource("3_k1x1i")
+
+[node name="building_3" type="Sprite2D" parent="Node2D" unique_id=1325461928]
+position = Vector2(95, -20)
+texture = ExtResource("4_1b5nc")
+
+[node name="building_5" type="Sprite2D" parent="Node2D" unique_id=789485254]
+position = Vector2(0, 112)
+texture = ExtResource("5_r2eoa")
+
+[node name="building_6" type="Sprite2D" parent="Node2D" unique_id=522535714]
+position = Vector2(120, 55)
+texture = ExtResource("6_kf43n")
+
+[node name="building_4" type="Sprite2D" parent="Node2D" unique_id=958886812]
+position = Vector2(78, 75)
+texture = ExtResource("5_r2eoa")
 
 [node name="Area3ToArea3Sub1" type="Area2D" parent="." unique_id=1991700041]
 position = Vector2(392, 696)
@@ -288,7 +298,7 @@ dialouge_resources = ExtResource("10_7dksl")
 ResuiredStage = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableSemiAuto" unique_id=244620334]
-position = Vector2(91, 115)
+position = Vector2(90, 120.5)
 shape = SubResource("RectangleShape2D_b30ca")
 
 [node name="DayNight" parent="." unique_id=785252588 instance=ExtResource("16_dp41y")]
@@ -330,5 +340,20 @@ shape = SubResource("RectangleShape2D_t4kkl")
 position = Vector2(0, -11.745)
 tile_map_data = PackedByteArray("AAAAAA8AAAABAAMAAAABAA8AAAABAAMAAAACAA8AAAABAAMAAAADAA8AAAABAAMAAAAEAA8AAAABAAMAAAAFAA8AAAABAAMAAAAGAA8AAAABAAMAAAAHAA8AAAABAAMAAAAIAA8AAAADAAMAAAAIABAAAAACAAMAAAAIABEAAAACAAMAAAA=")
 tile_set = SubResource("TileSet_b30ca")
+
+[node name="ActionableRestrictedRange" parent="." unique_id=1831660712 instance=ExtResource("22_n3vke")]
+until = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRestrictedRange" unique_id=147944733]
+position = Vector2(91, 110)
+shape = SubResource("RectangleShape2D_pipyi")
+
+[node name="ActionableRange" parent="ActionableRestrictedRange" unique_id=300487673 instance=ExtResource("19_5mggs")]
+dialouge_resources = ExtResource("23_7arja")
+until = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRestrictedRange/ActionableRange" unique_id=568373886]
+position = Vector2(91, 107)
+shape = SubResource("RectangleShape2D_dev4u")
 
 [connection signal="body_entered" from="Area3ToArea3Sub1" to="Area3ToArea3Sub1" method="_on_body_entered"]

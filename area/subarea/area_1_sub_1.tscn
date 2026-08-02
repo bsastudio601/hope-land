@@ -4,8 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://cv1ug7tpxdhjg" path="res://sprite/buildings/Area1_sub1_stair1.png" id="2_mmyt5"]
 [ext_resource type="PackedScene" uid="uid://buxdnwitu1upa" path="res://special_scene/player.tscn" id="3_pknjr"]
 [ext_resource type="Texture2D" uid="uid://bgja23mmxemnt" path="res://sprite/buildings/Area1_sub1_stair1_1.png" id="4_q57sm"]
+[ext_resource type="PackedScene" uid="uid://crmb7ban0l8nx" path="res://area/deco/plant_pot_small.tscn" id="5_giefn"]
 [ext_resource type="PackedScene" uid="uid://beyrr56tgobmd" path="res://special_scene/rokeya.tscn" id="5_pknjr"]
 [ext_resource type="Texture2D" uid="uid://12tgvrip3fsp" path="res://sprite/deco/item_repection_desk.png" id="6_q57sm"]
+[ext_resource type="PackedScene" uid="uid://bernbnjmtnfl4" path="res://area/deco/flower_pot_long.tscn" id="6_xpvt1"]
 [ext_resource type="Script" uid="uid://i7ruvsnic1td" path="res://code/level/sub_1_to_sub_2.gd" id="8_hj2e4"]
 [ext_resource type="PackedScene" uid="uid://0n2jag7tvx6x" path="res://special_scene/actionable_semi_auto.tscn" id="9_5xf8n"]
 [ext_resource type="Resource" uid="uid://byjwb6c41f6on" path="res://Dialouge/area1/rokeya_notices_story.dialogue" id="10_t6i5d"]
@@ -14,6 +16,8 @@
 [ext_resource type="Resource" uid="uid://dsaijjtgaim2h" path="res://Dialouge/area1/Rokeya_at_evening_story.dialogue" id="13_x5jm1"]
 [ext_resource type="PackedScene" uid="uid://lobddgmqlf6r" path="res://special_scene/exit_scene.tscn" id="14_gjs2o"]
 [ext_resource type="Resource" uid="uid://dtv7hh3scgskf" path="res://Dialouge/area1/rokeya_talks_evening_story.dialogue" id="14_tg4ru"]
+[ext_resource type="PackedScene" uid="uid://cm0lv73ka36tk" path="res://special_scene/actionable_range.tscn" id="17_yrs2a"]
+[ext_resource type="Resource" uid="uid://boe55bl7r67ot" path="res://Dialouge/area1/defaults/rokeya idle.dialogue" id="18_p7nhe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xf8n"]
 texture = ExtResource("1_bla3c")
@@ -42,6 +46,9 @@ radius = 15.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bri4n"]
 size = Vector2(22, 9)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_b30ca"]
+radius = 18.027756
+
 [node name="Area1_Sub1" type="Node2D" unique_id=233714471]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2141562091]
@@ -67,8 +74,14 @@ position = Vector2(283, 123)
 position = Vector2(272, 137)
 texture = ExtResource("6_q57sm")
 
+[node name="plant_pot_small" parent="deco" unique_id=765640966 instance=ExtResource("5_giefn")]
+position = Vector2(172, 122)
+
+[node name="flower_pot_long" parent="deco" unique_id=827975198 instance=ExtResource("6_xpvt1")]
+position = Vector2(228, 141)
+
 [node name="Player" parent="." unique_id=161175090 groups=["player"] instance=ExtResource("3_pknjr")]
-position = Vector2(185, 126)
+position = Vector2(187, 129)
 
 [node name="room2" type="Sprite2D" parent="." unique_id=536096333]
 position = Vector2(239, 142)
@@ -114,7 +127,7 @@ dialouge_resources = ExtResource("13_x5jm1")
 ResuiredStage = 22
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableSemiAuto2" unique_id=982271387]
-position = Vector2(185.5, 147)
+position = Vector2(188, 162)
 shape = SubResource("RectangleShape2D_82tj2")
 
 [node name="Actionable2" parent="." unique_id=209032342 instance=ExtResource("11_t8bax")]
@@ -135,5 +148,14 @@ shape = SubResource("RectangleShape2D_bri4n")
 
 [node name="from_area1_main" type="Marker2D" parent="exit_scene" unique_id=575881156 groups=["spawn_points"]]
 position = Vector2(187, 157)
+
+[node name="ActionableRange" parent="." unique_id=269722015 instance=ExtResource("17_yrs2a")]
+dialouge_resources = ExtResource("18_p7nhe")
+from = 8
+until = 21
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRange" unique_id=2103858246]
+position = Vector2(283, 133)
+shape = SubResource("CircleShape2D_b30ca")
 
 [connection signal="body_entered" from="Sub1ToSub2" to="Sub1ToSub2" method="_on_body_entered"]

@@ -41,6 +41,38 @@ spawn_points=""
 
 [input]
 
+ui_left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194319,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":-1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
+]
+}
+ui_right={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194321,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
+]
+}
+ui_up={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194320,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":11,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":1,"axis_value":-1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
+]
+}
+ui_down={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194322,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":1,"axis_value":1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
+]
+}
 move_left={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
@@ -65,20 +97,15 @@ move_down={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
-space={
-"deadzone": 0.2,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
-]
-}
 next={
 "deadzone": 0.2,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
 ]
 }
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialouge/area1/leftover_food_story.dialogue", "res://Dialouge/area1/rokeya_notices_story.dialogue", "res://Dialouge/area1/rokeya_talks_1_story.dialogue", "res://Dialouge/area3/behind_the_desk_story.dialogue", "res://Dialouge/area3/preparing_the_flower_pots_on_the_shelves_story.dialogue", "res://Dialouge/area3/first_time_entering_the_shop_story.dialogue", "res://Dialouge/area3/meeting_dipon_story.dialogue", "res://Dialouge/area3/behind_the_desk_dialouge_story.dialogue", "res://Dialouge/area3/prompting_to_wait_behind_the_desk.dialogue", "res://Dialouge/area3/waiting_behind_the_desk_sudden_story.dialogue", "res://Dialouge/area3/farhan_diallouge_not_known_story.dialogue", "res://Dialouge/area3/you_need_somethig_to cut_the_flowers.dialogue", "res://Dialouge/area3/grabbing_the_knife_from_the_desk.dialogue", "res://Dialouge/area3/finally_picking_up_the_flowers.dialogue", "res://Dialouge/area3/farhan_dialouge_2_story.dialogue", "res://Dialouge/area3/before_evening_closing_story.dialogue", "res://Dialouge/area2/stalker_dialouge_1.dialogue", "res://Dialouge/area1/Safely_passed_stalker_story.dialogue", "res://Dialouge/area1/Rokeya_at_evening_story.dialogue", "res://Dialouge/area1/rokeya_talks_evening_story.dialogue", "res://Dialouge/area1/goodnightt_bed_dialouge_story.dialogue", "res://Dialouge/area1/defaults/bed.dialogue", "res://Dialouge/area1/defaults/kitchen.dialogue", "res://Dialouge/area1/defaults/alarm.dialogue", "res://Dialouge/area1/defaults/grocery_shop.dialogue", "res://Dialouge/area1/defaults/neighbor1.dialogue", "res://Dialouge/area1/defaults/neighbor2.dialogue", "res://Dialouge/area2/default/cafe.dialogue", "res://Dialouge/area2/default/park.dialogue", "res://Dialouge/area3/default/shop1.dialogue", "res://Dialouge/area3/default/shelf_flower.dialogue", "res://Dialouge/area3/default/bush_shelf.dialogue", "res://Dialouge/area3/default/bucket_flower.dialogue", "res://Dialouge/area1/defaults/wrong_room.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialouge/area1/leftover_food_story.dialogue", "res://Dialouge/area1/rokeya_notices_story.dialogue", "res://Dialouge/area1/rokeya_talks_1_story.dialogue", "res://Dialouge/area3/behind_the_desk_story.dialogue", "res://Dialouge/area3/preparing_the_flower_pots_on_the_shelves_story.dialogue", "res://Dialouge/area3/first_time_entering_the_shop_story.dialogue", "res://Dialouge/area3/meeting_dipon_story.dialogue", "res://Dialouge/area3/behind_the_desk_dialouge_story.dialogue", "res://Dialouge/area3/prompting_to_wait_behind_the_desk.dialogue", "res://Dialouge/area3/waiting_behind_the_desk_sudden_story.dialogue", "res://Dialouge/area3/farhan_diallouge_not_known_story.dialogue", "res://Dialouge/area3/you_need_somethig_to cut_the_flowers.dialogue", "res://Dialouge/area3/grabbing_the_knife_from_the_desk.dialogue", "res://Dialouge/area3/finally_picking_up_the_flowers.dialogue", "res://Dialouge/area3/farhan_dialouge_2_story.dialogue", "res://Dialouge/area3/before_evening_closing_story.dialogue", "res://Dialouge/area2/stalker_dialouge_1.dialogue", "res://Dialouge/area1/Safely_passed_stalker_story.dialogue", "res://Dialouge/area1/Rokeya_at_evening_story.dialogue", "res://Dialouge/area1/rokeya_talks_evening_story.dialogue", "res://Dialouge/area1/goodnightt_bed_dialouge_story.dialogue", "res://Dialouge/area1/defaults/bed.dialogue", "res://Dialouge/area1/defaults/kitchen.dialogue", "res://Dialouge/area1/defaults/alarm.dialogue", "res://Dialouge/area1/defaults/grocery_shop.dialogue", "res://Dialouge/area1/defaults/neighbor1.dialogue", "res://Dialouge/area1/defaults/neighbor2.dialogue", "res://Dialouge/area2/default/cafe.dialogue", "res://Dialouge/area2/default/park.dialogue", "res://Dialouge/area3/default/shop1.dialogue", "res://Dialouge/area3/default/shelf_flower.dialogue", "res://Dialouge/area3/default/bush_shelf.dialogue", "res://Dialouge/area3/default/bucket_flower.dialogue", "res://Dialouge/area1/defaults/wrong_room.dialogue", "res://Dialouge/area1/defaults/trying to go out before eating.dialogue", "res://Dialouge/area3/default/trying to enter shop before .dialogue", "res://Dialouge/area3/default/trying to go out with customer..dialogue", "res://Dialouge/area2/default/stalker idle1.dialogue", "res://Dialouge/area1/defaults/rokeya idle.dialogue")
 
 [layer_names]
 

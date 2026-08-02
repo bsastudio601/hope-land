@@ -1,0 +1,14 @@
+~ start
+Rokeya: Oh Tithi! why are you back? did anything happen?
+
+- Say that you are just back for some stuff from your room.
+	Tithi: Nothing, I needed to take some stuff from my room
+	Rokeya: oh. It was good to see you again!
+	Tithi: Thanks
+	=> END
+- Say that you are back to talk to her.
+	Rokeya: Really? Thats nice. But isnt your shop still open?
+	Tithi: yes.
+	Rokeya: you should go back shortly there might be customers waiting.
+	Tithi : yeah, I was just about to head back.
+	=> END

@@ -5,7 +5,7 @@ She gave you a steaming cup of tea
 
 Tithi: Thank you.
 
-You take a sip of the tea, it’s almost like tes has that coffee charm.
+You take a sip of the tea, it’s almost like tea has that coffee charm.
 
 Rokeya: So how was your day? First day as a flower shop owner.
 
@@ -19,13 +19,37 @@ Rokeya: That’s great for a first day!
 
 Rokeya: Had any problems with anything?
 
+- don't say about the strange person
+	=> didntsay
+- say about the strange person
+	=> didsay
+
+
+
+
+~ didsay
+
+Tithi: at the time of coming back there was a creppy stranger standing in front of the alleyway. he asked me if i was new here.
+
+Rokeya: Thats strange no one has seen some one like that.
+
+Rokeya: i will talk about it with the neighbors tomorrow.
+
+=> continue 
+
+~ didntsay
+
 Tithi: No, everything was okay.
 
 Rokeya: I’m glad to hear that Tithi.
 
 Rokeya: You’ve been a good kid you know, and I’m proud of you for everything.
 
-You stay quite for a bit, then suddenly your chest tightens a bit.
+=> continue
+
+~ continue
+
+You stay quiet for a bit, then suddenly your chest tightens.
 
 You aren’t great with sudden affections.
 

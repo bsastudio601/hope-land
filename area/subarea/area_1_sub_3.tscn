@@ -26,6 +26,8 @@
 [ext_resource type="Resource" uid="uid://de21o852u3iqe" path="res://Dialouge/area1/defaults/bed.dialogue" id="22_cnm7h"]
 [ext_resource type="Resource" uid="uid://dlyvpxvps0en2" path="res://Dialouge/area1/defaults/kitchen.dialogue" id="23_40x3i"]
 [ext_resource type="Resource" uid="uid://p8edvug7phcn" path="res://Dialouge/area1/defaults/alarm.dialogue" id="24_nhoi6"]
+[ext_resource type="PackedScene" uid="uid://bbelaalx2j64s" path="res://special_scene/actionable_restricted_range.tscn" id="27_b8qeb"]
+[ext_resource type="Resource" uid="uid://syfw7o06xxrs" path="res://Dialouge/area1/defaults/trying to go out before eating.dialogue" id="28_f6map"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdl2k"]
 texture = ExtResource("1_sjf37")
@@ -75,7 +77,7 @@ radius = 8.0
 height = 58.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b4m4j"]
-size = Vector2(18, 2)
+size = Vector2(18, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b30ca"]
 size = Vector2(23, 21)
@@ -91,6 +93,12 @@ size = Vector2(82, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nu7rv"]
 size = Vector2(16, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8qeb"]
+size = Vector2(20, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bri4n"]
+size = Vector2(22, 20)
 
 [node name="Area1_Sub3" type="Node2D" unique_id=1156910619]
 
@@ -203,7 +211,7 @@ position = Vector2(392, 696)
 script = ExtResource("16_6n1wv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sub3ToSub2" unique_id=543525900]
-position = Vector2(-102, -585)
+position = Vector2(-102, -584.5)
 shape = SubResource("RectangleShape2D_b4m4j")
 
 [node name="cutscene" parent="." unique_id=696761095 instance=ExtResource("17_b4m4j")]
@@ -270,5 +278,20 @@ until = 24
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRange3" unique_id=1588672700]
 position = Vector2(173, 144)
 shape = SubResource("RectangleShape2D_nu7rv")
+
+[node name="ActionableRestrictedRange" parent="." unique_id=1831660712 instance=ExtResource("27_b8qeb")]
+until = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRestrictedRange" unique_id=984336913]
+position = Vector2(290, 111.5)
+shape = SubResource("RectangleShape2D_b8qeb")
+
+[node name="ActionableRange" parent="ActionableRestrictedRange" unique_id=120988105 instance=ExtResource("21_iantu")]
+dialouge_resources = ExtResource("28_f6map")
+until = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRestrictedRange/ActionableRange" unique_id=414347480]
+position = Vector2(290, 106)
+shape = SubResource("RectangleShape2D_bri4n")
 
 [connection signal="body_entered" from="Sub3ToSub2" to="Sub3ToSub2" method="_on_body_entered"]

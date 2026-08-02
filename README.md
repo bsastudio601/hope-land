@@ -6,7 +6,7 @@ The short story is suppose to have 2 chatper with 5 or more acts in each chapter
 # Controls
 
 W A S D / UP DOWN LEFT RIGHT arrows to move
-Enter to select/interact (doors, npc ,furniture)
+Space to select/interact (doors, npc ,furniture)
 ESC to go back to main menu from credit scene
 
 

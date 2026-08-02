@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://8o2f1xw1joik"
+path="res://.godot/imported/stalker idle1.dialogue-93e707eaafaf638a436b7274c8fef580.tres"
+
+[deps]
+
+source_file="res://Dialouge/area2/default/stalker idle1.dialogue"
+dest_files=["res://.godot/imported/stalker idle1.dialogue-93e707eaafaf638a436b7274c8fef580.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://uekvsqtgxq3d"
+path="res://.godot/imported/trying to go out with customer..dialogue-e14a9275f5e7c5091cd75af7c81f340c.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/default/trying to go out with customer..dialogue"
+dest_files=["res://.godot/imported/trying to go out with customer..dialogue-e14a9275f5e7c5091cd75af7c81f340c.tres"]
+
+[params]
+
+defaults=true

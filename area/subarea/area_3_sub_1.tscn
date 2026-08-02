@@ -49,6 +49,7 @@
 [ext_resource type="Resource" uid="uid://bhdjq7kyxcebp" path="res://Dialouge/area3/default/shelf_flower.dialogue" id="47_36u8s"]
 [ext_resource type="Resource" uid="uid://cva55cptm51oy" path="res://Dialouge/area3/default/bush_shelf.dialogue" id="48_lyjfi"]
 [ext_resource type="Resource" uid="uid://dkamwgawdkm0a" path="res://Dialouge/area3/default/bucket_flower.dialogue" id="49_l4git"]
+[ext_resource type="PackedScene" uid="uid://bbelaalx2j64s" path="res://special_scene/actionable_restricted_range.tscn" id="50_36u8s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_riqtw"]
 texture = ExtResource("1_guqvc")
@@ -290,6 +291,9 @@ size = Vector2(12.5, 44)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tqmdu"]
 size = Vector2(12.5, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bri4n"]
+size = Vector2(22, 20)
 
 [node name="Area3_Sub1" type="Node2D" unique_id=1055504114]
 
@@ -645,5 +649,21 @@ until = 24
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRange3" unique_id=1835730901]
 position = Vector2(307, 164)
 shape = SubResource("RectangleShape2D_tqmdu")
+
+[node name="ActionableRestrictedRange" parent="." unique_id=1831660712 instance=ExtResource("50_36u8s")]
+from = 9
+until = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRestrictedRange" unique_id=1843077730]
+position = Vector2(283, 203)
+shape = SubResource("RectangleShape2D_bri4n")
+
+[node name="ActionableRestrictedRange2" parent="." unique_id=140604120 instance=ExtResource("50_36u8s")]
+from = 12
+until = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableRestrictedRange2" unique_id=1820607562]
+position = Vector2(283, 203)
+shape = SubResource("RectangleShape2D_bri4n")
 
 [connection signal="body_entered" from="Area3Sub1ToArea3" to="Area3Sub1ToArea3" method="_on_body_entered"]

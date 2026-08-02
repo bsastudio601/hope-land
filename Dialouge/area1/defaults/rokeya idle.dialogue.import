@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://boe55bl7r67ot"
+path="res://.godot/imported/rokeya idle.dialogue-209d736d6a41ba5a26ae0862966533e8.tres"
+
+[deps]
+
+source_file="res://Dialouge/area1/defaults/rokeya idle.dialogue"
+dest_files=["res://.godot/imported/rokeya idle.dialogue-209d736d6a41ba5a26ae0862966533e8.tres"]
+
+[params]
+
+defaults=true

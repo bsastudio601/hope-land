@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bbelaalx2j64s"]
+
+[ext_resource type="Script" uid="uid://dnx02m2wx503f" path="res://special_scene/code/actionable_restricted_range.gd" id="1_7fm1s"]
+
+[node name="ActionableRestrictedRange" type="StaticBody2D" unique_id=1831660712]
+collision_layer = 3
+script = ExtResource("1_7fm1s")

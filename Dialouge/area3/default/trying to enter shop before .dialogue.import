@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://swi5jrwcg4uy"
+path="res://.godot/imported/trying to enter shop before .dialogue-b56cdcf7745407700369555d30185637.tres"
+
+[deps]
+
+source_file="res://Dialouge/area3/default/trying to enter shop before .dialogue"
+dest_files=["res://.godot/imported/trying to enter shop before .dialogue-b56cdcf7745407700369555d30185637.tres"]
+
+[params]
+
+defaults=true

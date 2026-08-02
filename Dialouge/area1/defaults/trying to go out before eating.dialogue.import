@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://syfw7o06xxrs"
+path="res://.godot/imported/trying to go out before eating.dialogue-23c284c537ab5af334950b8e13ae3fb0.tres"
+
+[deps]
+
+source_file="res://Dialouge/area1/defaults/trying to go out before eating.dialogue"
+dest_files=["res://.godot/imported/trying to go out before eating.dialogue-23c284c537ab5af334950b8e13ae3fb0.tres"]
+
+[params]
+
+defaults=true

@@ -59,7 +59,7 @@ size = Vector2(6, 108.5)
 size = Vector2(480, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qniho"]
-size = Vector2(4, 50)
+size = Vector2(22, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tpifi"]
 size = Vector2(18, 5)
@@ -246,11 +246,11 @@ target_scene = "uid://mv0ofh5672hf"
 target_spawn_point = "from_area2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit_scene" unique_id=602818119]
-position = Vector2(-7, -3)
+position = Vector2(-18, -3)
 shape = SubResource("RectangleShape2D_qniho")
 
 [node name="from_area1" type="Marker2D" parent="exit_scene" unique_id=755645430 groups=["spawn_points"]]
-position = Vector2(0, -2)
+position = Vector2(12, -2)
 
 [node name="ActionableSemiAuto" parent="." unique_id=430921512 instance=ExtResource("17_brs75")]
 dialouge_resources = ExtResource("18_y8ft6")
